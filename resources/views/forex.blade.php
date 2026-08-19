@@ -32,77 +32,66 @@
     </div>
   </section>
 
-  <!-- ===== MAJOR PAIRS ===== -->
+    <!-- ===== MAJOR / MINOR / EXOTIC / LEVERAGE — COLUMN CARDS ===== -->
   <section class="highlights-section">
     <div class="container">
-      <div class="grid-cards">
+      <div class="pairs-grid">
 
-        <div class="row-card fade-section">
-          <div class="card-row">
-            <img src="{{ asset('pics/platform/major-pairs.png') }}" alt="Major currency pairs">
-            <div class="card-copy">
-              <p class="eyebrow">Largest Market</p>
-              <h3>Major Pairs</h3>
-              <p>
-                Major currency pairs pair the US dollar with other strong currencies: EUR/USD, GBP/USD,
-                USD/JPY, USD/CHF, AUD/USD, NZD/USD and USD/CAD. They offer the tightest spreads and
-                deepest liquidity, making them ideal for traders of all experience levels.
-              </p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">Trade Majors</a>
-            </div>
+        <article class="pairs-card fade-section">
+          <img src="{{ asset('pics/platform/major-pairs.png') }}" alt="Major currency pairs">
+          <div class="pairs-card-body">
+            <p class="eyebrow">Largest Market</p>
+            <h3>Major Pairs</h3>
+            <p>
+              Major currency pairs pair the US dollar with other strong currencies: EUR/USD, GBP/USD,
+              USD/JPY, USD/CHF, AUD/USD, NZD/USD and USD/CAD. They offer the tightest spreads and
+              deepest liquidity, making them ideal for traders of all experience levels.
+            </p>
+            <a href="{{ route('home') }}#pricing" class="about-btn">Trade Majors</a>
           </div>
-        </div>
+        </article>
 
-        <!-- ===== MINOR PAIRS ===== -->
-        <div class="row-card fade-section">
-          <div class="card-row reverse">
-            <img src="{{ asset('pics/platform/minor-pairs.png') }}" alt="Minor currency pairs">
-            <div class="card-copy">
-              <p class="eyebrow">Cross Pairs</p>
-              <h3>Minor Pairs</h3>
-              <p>
-                Minor (or cross) currency pairs don't include the US dollar. Popular crosses include
-                EUR/GBP, EUR/JPY, GBP/JPY, EUR/AUD and AUD/JPY. These pairs offer excellent trading
-                opportunities with slightly wider spreads than the majors.
-              </p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">Trade Minors</a>
-            </div>
+        <article class="pairs-card fade-section">
+          <img src="{{ asset('pics/platform/minor-pairs.png') }}" alt="Minor currency pairs">
+          <div class="pairs-card-body">
+            <p class="eyebrow">Cross Pairs</p>
+            <h3>Minor Pairs</h3>
+            <p>
+              Minor (or cross) currency pairs don't include the US dollar. Popular crosses include
+              EUR/GBP, EUR/JPY, GBP/JPY, EUR/AUD and AUD/JPY. These pairs offer excellent trading
+              opportunities with slightly wider spreads than the majors.
+            </p>
+            <a href="{{ route('home') }}#pricing" class="about-btn">Trade Minors</a>
           </div>
-        </div>
+        </article>
 
-        <!-- ===== EXOTIC PAIRS ===== -->
-        <div class="row-card fade-section">
-          <div class="card-row">
-            <img src="{{ asset('pics/platform/exotic-pairs.png') }}" alt="Exotic currency pairs">
-            <div class="card-copy">
-              <p class="eyebrow">Emerging Markets</p>
-              <h3>Exotic Pairs</h3>
-              <p>
-                Exotic pairs pair a major currency with the currency of an emerging economy: USD/TRY,
-                USD/ZAR, USD/MXN, USD/SGD and EUR/TRY. They feature higher volatility and wider spreads,
-                offering significant profit potential for experienced traders.
-              </p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">Trade Exotics</a>
-            </div>
+        <article class="pairs-card fade-section">
+          <img src="{{ asset('pics/platform/exotic-pairs.png') }}" alt="Exotic currency pairs">
+          <div class="pairs-card-body">
+            <p class="eyebrow">Emerging Markets</p>
+            <h3>Exotic Pairs</h3>
+            <p>
+              Exotic pairs pair a major currency with the currency of an emerging economy: USD/TRY,
+              USD/ZAR, USD/MXN, USD/SGD and EUR/TRY. They feature higher volatility and wider spreads,
+              offering significant profit potential for experienced traders.
+            </p>
+            <a href="{{ route('home') }}#pricing" class="about-btn">Trade Exotics</a>
           </div>
-        </div>
+        </article>
 
-        <!-- ===== FLEXIBLE LEVERAGE ===== -->
-        <div class="row-card fade-section">
-          <div class="card-row reverse">
-            <img src="{{ asset('pics/platform/leverage.png') }}" alt="Flexible leverage">
-            <div class="card-copy">
-              <p class="eyebrow">Leverage &amp; Margin</p>
-              <h3>Flexible Leverage</h3>
-              <p>
-                Forex trading with leverage allows you to control larger positions with a smaller
-                capital outlay. We offer flexible leverage up to 1:500, enabling you to tailor your
-                risk exposure to match your trading strategy and experience level.
-              </p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">Start Trading</a>
-            </div>
+        <article class="pairs-card fade-section">
+          <img src="{{ asset('pics/platform/leverage.png') }}" alt="Flexible leverage">
+          <div class="pairs-card-body">
+            <p class="eyebrow">Leverage &amp; Margin</p>
+            <h3>Flexible Leverage</h3>
+            <p>
+              Forex trading with leverage allows you to control larger positions with a smaller
+              capital outlay. We offer flexible leverage up to 1:500, enabling you to tailor your
+              risk exposure to match your trading strategy and experience level.
+            </p>
+            <a href="{{ route('home') }}#pricing" class="about-btn">Start Trading</a>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>

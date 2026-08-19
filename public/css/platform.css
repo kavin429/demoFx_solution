@@ -137,3 +137,67 @@
   .content-cta h2 { font-size: 24px; }
   .highlights-lead { margin-bottom: 28px; }
 }
+
+
+/* ============================================================
+   Pairs grid — Major/Minor/Exotic/Leverage as column cards
+   ============================================================ */
+
+.pairs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pairs-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.pairs-card:hover {
+  border-color: var(--lavender);
+  transform: translateY(-4px);
+}
+
+.pairs-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.pairs-card-body {
+  padding: 20px 18px;
+}
+
+.pairs-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--lavender-soft);
+  margin-bottom: 10px;
+}
+
+.pairs-card-body p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.pairs-card-body .about-btn {
+  padding: 9px 18px;
+  font-size: 13px;
+}
+
+/* Responsive — step down before it gets cramped */
+@media (max-width: 1100px) {
+  .pairs-grid { grid-template-columns: repeat(2, 1fr); }
+  .pairs-card img { height: 180px; }
+}
+
+@media (max-width: 600px) {
+  .pairs-grid { grid-template-columns: 1fr; }
+}
