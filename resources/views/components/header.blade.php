@@ -27,11 +27,11 @@
         </span>
     </div>
 
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
     <nav>
         <ul class="menu" id="navMenu">
@@ -78,29 +78,70 @@
 
             <li><a href="{{ route('about') }}">Company</a></li>
             <li><a href="{{ route('home') }}#pricing">Accounts</a></li>
-
-            <li class="lang-selector">
-                <button type="button" class="lang-btn" aria-expanded="false">
-                    <span class="lang-flag">EN</span>
-                    <svg class="chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </li>
-
-            <li class="login-btn"><a href="https://trade.DemoFXsolutions.com/login">Login</a></li>
         </ul>
+        <div class="hero-buttons">
+           <a href="https://trade.DemoFXsolutions.com/login">Login</a>
+</div>
     </nav>
 </header>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('header nav');
+    const body = document.body;
+
+    // Create the overlay dynamically so you don't have to touch other templates
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+
+    function openMenu() {
+        hamburger.classList.add('active');
+        nav.classList.add('active');
+        overlay.classList.add('active');
+        body.classList.add('nav-open');
+        hamburger.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+        body.classList.remove('nav-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburger.addEventListener('click', function () {
+        nav.classList.contains('active') ? closeMenu() : openMenu();
+    });
+
+    // Tap outside the panel closes it
+    overlay.addEventListener('click', closeMenu);
+
+    // Tapping a nav link closes the menu too (so it doesn't stay open after navigation on same-page anchors)
+    nav.querySelectorAll('ul.menu > li > a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Dropdown toggles — accordion style on mobile
     document.querySelectorAll('header .dropdown-btn, header .lang-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
             if (window.innerWidth > 768) return;
             const parent = btn.closest('.dropdown, .lang-selector');
-            const isOpen = parent.classList.toggle('active');
-            btn.setAttribute('aria-expanded', isOpen);
+            const isOpen = parent.classList.contains('active');
+
+            // Close all other dropdowns first
+            document.querySelectorAll('header .dropdown.active, header .lang-selector.active').forEach(function (el) {
+                if (el !== parent) {
+                    el.classList.remove('active');
+                    const otherBtn = el.querySelector('.dropdown-btn, .lang-btn');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            parent.classList.toggle('active', !isOpen);
+            btn.setAttribute('aria-expanded', !isOpen);
         });
     });
 });

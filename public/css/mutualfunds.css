@@ -1,0 +1,539 @@
+/* ============================================================
+   Mutual Funds Page Styles
+   Depends on: style.css (uses shared CSS variables)
+   ============================================================ */
+
+/* ============================================================
+   Fund Management Section
+   ============================================================ */
+
+.container1 {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.fund-management-section {
+  padding: 90px 0;
+}
+
+.fund-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.fund-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.fund-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fund-paragraph {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+/* ============================================================
+   Growth Plan Section
+   ============================================================ */
+
+.growth-plan-section {
+  padding: 60px 0 90px;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.growth-heading {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.growth-sub {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--lavender-soft);
+  margin-bottom: 8px;
+}
+
+.growth-note {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+.growth-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+}
+
+.growth-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.growth-table thead {
+  background: var(--surface-3);
+}
+
+.growth-table th {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 14px 18px;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.growth-table td {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.growth-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.growth-plan-section hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
+/* ============================================================
+   Income Plan / Slides Section
+   ============================================================ */
+
+.income-plan-section {
+  padding: 90px 24px;
+  background: var(--bg-alt);
+}
+
+.income-heading {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.slides-wrapper {
+  max-width: var(--container);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides-container {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--lavender) var(--surface-2);
+}
+
+.slides-container::-webkit-scrollbar {
+  height: 6px;
+}
+.slides-container::-webkit-scrollbar-track {
+  background: var(--surface-2);
+  border-radius: 3px;
+}
+.slides-container::-webkit-scrollbar-thumb {
+  background: var(--lavender);
+  border-radius: 3px;
+}
+
+.slide {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.slide:hover {
+  border-color: var(--lavender);
+  transform: translateY(-2px);
+}
+
+.slide h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--lavender-soft);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.slide ul {
+  list-style: none;
+}
+
+.slide ul li {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  line-height: 1.5;
+}
+
+.slide ul li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Dot indicators */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.dots span.active {
+  background: var(--lavender);
+  transform: scale(1.2);
+}
+
+/* ============================================================
+   Pro Account Summary
+   ============================================================ */
+
+.pro-account-summary {
+  padding: 60px 24px 90px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.summary-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.summary-header h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.account-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--lavender);
+  background: rgba(166, 140, 240, 0.12);
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--lavender);
+}
+
+.summary-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.summary-points {
+  list-style: none;
+}
+
+.summary-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+.summary-points li:last-child {
+  border-bottom: none;
+}
+
+.summary-points li i {
+  color: var(--lavender);
+  font-size: 16px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.summary-points li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Legal Accordion
+   ============================================================ */
+
+#legal {
+  padding: 60px 24px 90px;
+  background: var(--bg-alt);
+}
+
+.legal-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-container h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.legal-container h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--lavender-soft);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.legal-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.legal-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+
+.legal-question:hover {
+  background: var(--surface-3);
+}
+
+.legal-question i {
+  color: var(--lavender);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.legal-icon {
+  margin-left: auto;
+  color: var(--lavender);
+  font-size: 18px;
+  font-weight: 700;
+  transition: transform .2s ease;
+}
+
+.legal-item.active .legal-icon {
+  transform: rotate(45deg);
+}
+
+.legal-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  padding: 0 20px;
+}
+
+.legal-answer p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.legal-answer ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.legal-answer ul li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+
+.legal-item.active .legal-answer {
+  max-height: 800px;
+  padding-bottom: 20px;
+}
+
+.legal-item.active {
+  border-color: var(--lavender);
+}
+
+/* ============================================================
+   Responsive — Tablet
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ============================================================
+   Responsive — Mobile
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .fund-title {
+    font-size: 24px;
+  }
+
+  .fund-subtitle {
+    font-size: 14px;
+  }
+
+  .fund-management-section {
+    padding: 60px 0;
+  }
+
+  .growth-plan-section {
+    padding: 40px 0 60px;
+  }
+
+  .growth-heading {
+    font-size: 24px;
+  }
+
+  .growth-sub {
+    font-size: 17px;
+  }
+
+  .growth-table th,
+  .growth-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .slide {
+    flex: 0 0 250px;
+    padding: 20px;
+  }
+
+  .income-plan-section {
+    padding: 60px 16px;
+  }
+
+  .income-heading {
+    font-size: 24px;
+  }
+
+  .pro-account-summary {
+    padding: 40px 16px 60px;
+  }
+
+  .summary-card {
+    padding: 24px 20px;
+  }
+
+  .summary-header h2 {
+    font-size: 18px;
+  }
+
+  .account-amount {
+    font-size: 15px;
+  }
+
+  .summary-points li {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #legal {
+    padding: 40px 16px 60px;
+  }
+
+  .legal-container h2 {
+    font-size: 20px;
+  }
+
+  .legal-question {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    flex: 0 0 calc(100vw - 64px);
+  }
+
+  .growth-table th,
+  .growth-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}

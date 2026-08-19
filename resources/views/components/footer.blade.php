@@ -4,17 +4,19 @@
 
     <!-- Row 1: Logo + tagline + Social (full width) -->
     <div class="footer-brand-full">
-      <img src="{{ asset('pics/logo.png') }}" alt="DemoFX Solution Logo" class="footer-logo">
-      <p class="footer-tagline">
-        A leading global trading company offering Forex, Metals, Indices and Cryptocurrencies on every device. (Demo platform)
-      </p>
-      <a href="https://trade.DemoFXsolutions.com/login" class="footer-cta">Open an Account</a>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+      <div class="footer-brand-left">
+        <img src="{{ asset('pics/logo.png') }}" alt="DemoFX Solution Logo" class="footer-logo">
+        <p class="footer-tagline">A leading global trading company offering Forex, Metals, Indices and Cryptocurrencies on every device. (Demo platform)</p>
+      </div>
+      <div class="footer-brand-right">
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <a href="https://trade.DemoFXsolutions.com/login" class="footer-cta">Open an Account</a>
       </div>
     </div>
 
@@ -68,31 +70,48 @@
       </div>
     </div>
 
-    <!-- Row 3: Global offices & support (full width) -->
-    <div class="footer-global-full">
-      <h4>Global Offices &amp; Support</h4>
-      <ul>
-        <li><i class="fas fa-building"></i> London &mdash; 9 Scott Court, 50 Silverthorne Road, London, United Kingdom, SW8 3HD</li>
-        <li><i class="fab fa-whatsapp"></i> WhatsApp: <a href="#">Demo &mdash; not a live number</a></li>
-        <li><i class="fab fa-telegram"></i> Telegram: <a href="#">Demo &mdash; not a live number</a></li>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:support@DemoFXsolutions.com">support@DemoFXsolutions.com</a></li>
-      </ul>
+ <div class="footer-global-full">
+  <h4>Global Offices &amp; Support</h4>
+  <div class="office-grid">
+    <div class="office-card">
+      <span class="office-icon"><i class="ph ph-buildings"></i></span>
+      <div class="office-text">
+        <strong>Address</strong>
+        <p>9 Scott Court, 50 Silverthorne Road, London, United Kingdom, SW8 3HD</p>
+      </div>
+    </div>
+    <div class="office-card">
+      <span class="office-icon"><i class="fab fa-whatsapp"></i></span>
+      <div class="office-text">
+        <strong>WhatsApp</strong>
+        <p><a href="#">Demo &mdash; not a live number</a></p>
+      </div>
+    </div>
+    <div class="office-card">
+      <span class="office-icon"><i class="fab fa-telegram"></i></span>
+      <div class="office-text">
+        <strong>Telegram</strong>
+        <p><a href="#">Demo &mdash; not a live number</a></p>
+      </div>
+    </div>
+    <div class="office-card">
+      <span class="office-icon"><i class="ph ph-envelope-simple"></i></span>
+      <div class="office-text">
+        <strong>Email</strong>
+        <p><a href="mailto:support@DemoFXsolutions.com">support@DemoFXsolutions.com</a></p>
+      </div>
     </div>
   </div>
+</div>
 
   <!-- Bottom -->
   <div class="footer-bottom">
     <p>© {{ date('Y') }} DemoFX Solution &mdash; Demo Project. Not a real financial entity.</p>
-      <!-- Legal -->
-    <section class="partner-section">
-      <div class="footer-legal">
     <div class="legal-titles">
       <h3 class="legal-title"><a href="{{ route('legal') }}">Legal</a></h3>
       <h3 class="legal-title"><a href="{{ route('risk-warning') }}">General Risk Warning</a></h3>
       <h3 class="legal-title"><a href="{{ route('risk-disclosure') }}">Risk Disclosure</a></h3>
     </div>
-  </div>
-    </section>
   </div>
 
 </footer>

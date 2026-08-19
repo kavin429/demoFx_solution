@@ -150,25 +150,25 @@
 
   <!-- Cards -->
   <div class="feature-card top">
-    <i class="ti ti-user-check"></i>
+    <i class="ph ph-seal-check"></i>
     <h3>Experienced</h3>
     <p>Our team of seasoned professionals brings years of expertise to deliver top-notch services and support.</p>
   </div>
 
   <div class="feature-card right">
-    <i class="ti ti-users"></i>
+    <i class="ph ph-users-three"></i>
     <h3>Professionals</h3>
     <p>Our dedicated team of skilled experts is committed to providing personalized guidance and analysis.</p>
   </div>
 
   <div class="feature-card bottom">
-    <i class="ti ti-clock"></i>
+    <i class="ph ph-clock"></i>
     <h3>Always Available</h3>
     <p>Our platform offers 24/7 accessibility, ensuring you can trade anytime, anywhere.</p>
   </div>
 
   <div class="feature-card left">
-    <i class="ti ti-shield-lock"></i>
+    <i class="ph ph-shield-check"></i>
     <h3>We're Responsible</h3>
     <p>We prioritize safety, compliance, and ethical practices, ensuring responsible trading environments.</p>
   </div>
@@ -185,6 +185,9 @@ const lines = {
 };
 
 function connectCards() {
+  const svg = container.querySelector('.connect-lines');
+  if (!svg || getComputedStyle(svg).display === 'none') return;
+
   const top = document.querySelector('.feature-card.top').getBoundingClientRect();
   const right = document.querySelector('.feature-card.right').getBoundingClientRect();
   const bottom = document.querySelector('.feature-card.bottom').getBoundingClientRect();
@@ -557,6 +560,126 @@ window.addEventListener('resize', connectCards);
 
   </div>
 </section>
+
+<section id="payment-methods" class="payment-section">
+  <div class="payment-content">
+
+    <div class="payment-head">
+      <div class="payment-head-left">
+        <p class="payment-label">Payment Methods</p>
+        <h2>Global channels trusted by demo clients</h2>
+        <p>
+          We work with modern wallets, cards, and bank partners so you can top up your account
+          quickly and securely. Every deposit is routed through encrypted channels and reviewed
+          before it reaches your trading wallet.
+        </p>
+      </div>
+
+      <div class="payment-tabs" role="tablist">
+        <button class="payment-tab active" data-cat="all">All <span class="count">18</span></button>
+        <button class="payment-tab" data-cat="crypto">Crypto <span class="count">2</span></button>
+        <button class="payment-tab" data-cat="cards">Cards <span class="count">6</span></button>
+        <button class="payment-tab" data-cat="wallets">Wallets <span class="count">6</span></button>
+        <button class="payment-tab" data-cat="bank">Bank <span class="count">4</span></button>
+      </div>
+    </div>
+
+    <div class="route-stage">
+      <svg class="route-line" preserveAspectRatio="none" viewBox="0 0 1000 300">
+        <path d="M0,150 C 250,60 350,240 500,150 C 650,60 750,240 1000,150" />
+      </svg>
+
+      <div class="route-endpoints">
+        <div class="route-node"><span class="dot"></span> Your account</div>
+        <div class="route-node end"><span class="dot"></span> Trading wallet</div>
+      </div>
+
+      <div class="payment-grid" id="paymentGrid">
+        <article class="payment-card" data-cat="crypto">
+          <img src="<?php echo e(asset('pics/payment/c1.png')); ?>" alt="Tether">
+          <span>Tether</span>
+        </article>
+        <article class="payment-card" data-cat="crypto">
+          <img src="<?php echo e(asset('pics/payment/c2.png')); ?>" alt="Ethereum">
+          <span>Ethereum</span>
+        </article>
+        <article class="payment-card" data-cat="wallets">
+          <img src="<?php echo e(asset('pics/payment/c3.png')); ?>" alt="PayPal">
+          <span>PayPal</span>
+        </article>
+        <article class="payment-card" data-cat="cards">
+          <img src="<?php echo e(asset('pics/payment/c4.png')); ?>" alt="VISA">
+          <span>VISA</span>
+        </article>
+        <article class="payment-card" data-cat="wallets">
+          <img src="<?php echo e(asset('pics/payment/c5.png')); ?>" alt="PayPal">
+          <span>PayPal</span>
+        </article>
+        <article class="payment-card" data-cat="wallets">
+          <img src="<?php echo e(asset('pics/payment/c6.png')); ?>" alt="PaymentAsia">
+          <span>PaymentAsia</span>
+        </article>
+        <article class="payment-card" data-cat="wallets">
+          <img src="<?php echo e(asset('pics/payment/c7.png')); ?>" alt="PayTrust">
+          <span>PayTrust</span>
+        </article>
+        <article class="payment-card" data-cat="wallets">
+          <img src="<?php echo e(asset('pics/payment/c8.png')); ?>" alt="PayPort">
+          <span>PayPort</span>
+        </article>
+        <article class="payment-card" data-cat="bank">
+          <img src="<?php echo e(asset('pics/payment/c9.png')); ?>" alt="World Pay">
+          <span>World Pay</span>
+        </article>
+        <article class="payment-card" data-cat="cards">
+          <img src="<?php echo e(asset('pics/payment/c10.png')); ?>" alt="Verified by VISA">
+          <span>Verified by VISA</span>
+        </article>
+        <article class="payment-card" data-cat="bank">
+          <img src="<?php echo e(asset('pics/payment/c11.png')); ?>" alt="myFatoorah">
+          <span>myFatoorah</span>
+        </article>
+        <article class="payment-card" data-cat="wallets">
+          <img src="<?php echo e(asset('pics/payment/c12.png')); ?>" alt="Magic Pay">
+          <span>Magic Pay</span>
+        </article>
+        <article class="payment-card" data-cat="bank">
+          <img src="<?php echo e(asset('pics/payment/c13.png')); ?>" alt="Dragon Pay">
+          <span>Dragon Pay</span>
+        </article>
+        <article class="payment-card" data-cat="bank">
+          <img src="<?php echo e(asset('pics/payment/c14.png')); ?>" alt="Bank Transfer">
+          <span>Bank Transfer</span>
+        </article>
+        <article class="payment-card" data-cat="cards">
+          <img src="<?php echo e(asset('pics/payment/c15.png')); ?>" alt="Google Pay">
+          <span>Google Pay</span>
+        </article>
+        <article class="payment-card" data-cat="cards">
+          <img src="<?php echo e(asset('pics/payment/c16.png')); ?>" alt="Apple Pay">
+          <span>Apple Pay</span>
+        </article>
+        <article class="payment-card" data-cat="cards">
+          <img src="<?php echo e(asset('pics/payment/c17.png')); ?>" alt="MasterCard SecureCode">
+          <span>MasterCard SecureCode</span>
+        </article>
+        <article class="payment-card" data-cat="cards">
+          <img src="<?php echo e(asset('pics/payment/c18.png')); ?>" alt="Stripe">
+          <span>Stripe</span>
+        </article>
+      </div>
+    </div>
+
+    <div class="payment-foot">
+      <div class="payment-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Deposits are usually processed quickly; you will be notified once the funds reach your account.</span>
+      </div>
+      <div class="payment-meta">Showing <strong id="countLabel">18</strong> channels</div>
+    </div>
+
+  </div>
+</section>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startPush('scripts'); ?>
@@ -682,6 +805,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   steps.forEach((step, i) => {
     setTimeout(() => step.classList.add("show"), i * 200);
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".payment-tab");
+  const cards = document.querySelectorAll(".payment-card");
+  const countLabel = document.getElementById("countLabel");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      tabs.forEach(t => t.classList.remove("active"));
+      this.classList.add("active");
+
+      const cat = this.dataset.cat;
+      let visible = 0;
+
+      cards.forEach(card => {
+        const show = cat === "all" || card.dataset.cat === cat;
+        card.style.display = show ? "" : "none";
+        if (show) visible++;
+      });
+
+      countLabel.textContent = visible;
+    });
   });
 });
 </script>

@@ -1,15 +1,13 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Forex Trading - DemoFX Solution'); ?>
 
-@section('title', 'Forex Trading - DemoFX Solution')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- ===== PAGE WRAPPER CARD ===== -->
 <div class="page-card">
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <video autoplay muted loop playsinline class="hero-video">
-      <source src="{{ asset('pics/Metals1.mp4') }}" type="video/mp4">
+      <source src="<?php echo e(asset('pics/Metals1.mp4')); ?>" type="video/mp4">
     </video>
     <div class="overlay"></div>
     <div class="hero-content">
@@ -39,7 +37,7 @@
 
         <div class="row-card fade-section">
           <div class="card-row">
-            <img src="{{ asset('pics/platform/major-pairs.png') }}" alt="Major currency pairs">
+            <img src="<?php echo e(asset('pics/platform/major-pairs.png')); ?>" alt="Major currency pairs">
             <div class="card-copy">
               <p class="eyebrow">Largest Market</p>
               <h3>Major Pairs</h3>
@@ -48,7 +46,7 @@
                 USD/JPY, USD/CHF, AUD/USD, NZD/USD and USD/CAD. They offer the tightest spreads and
                 deepest liquidity, making them ideal for traders of all experience levels.
               </p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">Trade Majors</a>
+              <a href="<?php echo e(route('home')); ?>#pricing" class="about-btn">Trade Majors</a>
             </div>
           </div>
         </div>
@@ -56,7 +54,7 @@
         <!-- ===== MINOR PAIRS ===== -->
         <div class="row-card fade-section">
           <div class="card-row reverse">
-            <img src="{{ asset('pics/platform/minor-pairs.png') }}" alt="Minor currency pairs">
+            <img src="<?php echo e(asset('pics/platform/minor-pairs.png')); ?>" alt="Minor currency pairs">
             <div class="card-copy">
               <p class="eyebrow">Cross Pairs</p>
               <h3>Minor Pairs</h3>
@@ -65,7 +63,7 @@
                 EUR/GBP, EUR/JPY, GBP/JPY, EUR/AUD and AUD/JPY. These pairs offer excellent trading
                 opportunities with slightly wider spreads than the majors.
               </p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">Trade Minors</a>
+              <a href="<?php echo e(route('home')); ?>#pricing" class="about-btn">Trade Minors</a>
             </div>
           </div>
         </div>
@@ -73,7 +71,7 @@
         <!-- ===== EXOTIC PAIRS ===== -->
         <div class="row-card fade-section">
           <div class="card-row">
-            <img src="{{ asset('pics/platform/exotic-pairs.png') }}" alt="Exotic currency pairs">
+            <img src="<?php echo e(asset('pics/platform/exotic-pairs.png')); ?>" alt="Exotic currency pairs">
             <div class="card-copy">
               <p class="eyebrow">Emerging Markets</p>
               <h3>Exotic Pairs</h3>
@@ -82,7 +80,7 @@
                 USD/ZAR, USD/MXN, USD/SGD and EUR/TRY. They feature higher volatility and wider spreads,
                 offering significant profit potential for experienced traders.
               </p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">Trade Exotics</a>
+              <a href="<?php echo e(route('home')); ?>#pricing" class="about-btn">Trade Exotics</a>
             </div>
           </div>
         </div>
@@ -90,7 +88,7 @@
         <!-- ===== FLEXIBLE LEVERAGE ===== -->
         <div class="row-card fade-section">
           <div class="card-row reverse">
-            <img src="{{ asset('pics/platform/leverage.png') }}" alt="Flexible leverage">
+            <img src="<?php echo e(asset('pics/platform/leverage.png')); ?>" alt="Flexible leverage">
             <div class="card-copy">
               <p class="eyebrow">Leverage &amp; Margin</p>
               <h3>Flexible Leverage</h3>
@@ -99,7 +97,7 @@
                 capital outlay. We offer flexible leverage up to 1:500, enabling you to tailor your
                 risk exposure to match your trading strategy and experience level.
               </p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">Start Trading</a>
+              <a href="<?php echo e(route('home')); ?>#pricing" class="about-btn">Start Trading</a>
             </div>
           </div>
         </div>
@@ -145,7 +143,7 @@
     <div class="container">
       <h2>Start Trading Forex <span>Today</span></h2>
       <p>Open an account and access the world's largest financial market.</p>
-      <a href="{{ route('home') }}#pricing" class="content-cta__btn">Open an Account</a>
+      <a href="<?php echo e(route('home')); ?>#pricing" class="content-cta__btn">Open an Account</a>
     </div>
   </section>
 
@@ -166,12 +164,13 @@
   </section>
 
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('css/platform.css') }}">
-@endpush
+<?php $__env->startPush('styles'); ?>
+<link rel="stylesheet" href="<?php echo e(asset('css/platform.css')); ?>">
+<?php $__env->stopPush(); ?>
 
-@push('scripts')
-<script src="{{ asset('js/products.js') }}"></script>
-@endpush
+<?php $__env->startPush('scripts'); ?>
+<script src="<?php echo e(asset('js/products.js')); ?>"></script>
+<?php $__env->stopPush(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\projects\demo_solutions\resources\views/forex.blade.php ENDPATH**/ ?>

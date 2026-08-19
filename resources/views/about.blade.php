@@ -39,7 +39,7 @@
       <!-- Cards -->
       <div class="who-cards">
         <div class="who-card">
-           <i class="ti ti-building-bank who-icon"></i>
+           <i class="ph ph-bank who-icon"></i>
           <h3>Our Mission</h3>
           <p>
             To deliver reliable accounting, tax consultancy, and financial 
@@ -47,7 +47,7 @@
           </p>
         </div>
         <div class="who-card">
-           <i class="ti ti-shield-check who-icon"></i>
+           <i class="ph ph-shield-check who-icon"></i>
           <h3>Our Commitment</h3>
           <p>
             We are committed to supporting individuals and businesses with 
@@ -70,27 +70,27 @@
 <section class="highlights" id="highlights">
   <div class="container grid-4">
     <div class="card">
-      <i class="fas fa-bolt"></i>
+      <i class="ph ph-lightning"></i>
       <h3>1m ToB</h3>
       <span>on average across FX instruments</span>
     </div>
     <div class="card">
-      <i class="fas fa-chart-line"></i>
+      <i class="ph ph-chart-line-up"></i>
       <h3>100 Lots</h3>
       <span>per click trading</span>
     </div>
     <div class="card">
-      <i class="fas fa-balance-scale"></i>
+      <i class="ph ph-scales"></i>
       <h3>BBO Pricing</h3>
       <span>Best Bid-Offer</span>
     </div>
     <div class="card">
-      <i class="fas fa-server"></i>
+      <i class="ph ph-desktop-tower"></i>
       <h3>Free VPS</h3>
       <span>Elite & Pro Accounts</span>
     </div>
     <div class="card">
-      <i class="fas fa-shield-alt"></i>
+      <i class="ph ph-lock-key"></i>
       <h3>Segregated</h3>
       <span>Client accounts</span>
     </div>

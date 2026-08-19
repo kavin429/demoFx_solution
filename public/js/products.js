@@ -28,11 +28,9 @@ document.querySelectorAll(".dropdown-toggle").forEach(item => {
 window.addEventListener("scroll", function() {
   const header = document.querySelector("header");
   const hero = document.querySelector(".hero");
+  if (!header || !hero) return;
 
-  // Get hero height
-  const heroHeight = hero.offsetHeight;
-
-  if (window.scrollY > heroHeight - 80) {
+  if (window.scrollY > hero.offsetHeight - 80) {
     header.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
@@ -40,80 +38,24 @@ window.addEventListener("scroll", function() {
 });
 
 
-// Dark Mode Toggle
-const toggleBtn = document.getElementById("darkModeToggle");
 
-if (toggleBtn) {
-
-  // Check saved theme
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    toggleBtn.textContent = "☀️";
-  }
-
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-      toggleBtn.textContent = "☀️";
-      localStorage.setItem("theme", "dark");
-    } else {
-      toggleBtn.textContent = "🌙";
-      localStorage.setItem("theme", "light");
-    }
-  });
-
-}
-
-//up button 
-
-// Back to Top Button
-const backToTop = document.getElementById("backToTop");
-
-if (backToTop) {
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
-  });
-
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-
-}
 
 
 // ANIMATION
+{
+  const sections = document.querySelectorAll(".fade-section");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  }, { threshold: 0.15 });
 
-const sections = document.querySelectorAll(".fade-section");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show"); // fade out again when leaving
-    }
-  });
-}, { threshold: 0.15 });
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
+  sections.forEach((section) => observer.observe(section));
+}
 
 
-// forest
-const hamburger = document.querySelector('.forex-header .hamburger');
-const nav = document.querySelector('.forex-header nav');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  nav.classList.toggle('active');
-});

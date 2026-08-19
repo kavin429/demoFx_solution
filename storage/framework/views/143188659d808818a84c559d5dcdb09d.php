@@ -15,7 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
   <link rel="stylesheet" href="<?php echo e(asset('css/components.css')); ?>">
-  <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo e(asset('css/home.css')); ?>">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
   <?php echo $__env->yieldPushContent('styles'); ?>
 </head>
@@ -40,15 +41,19 @@
   <script src="<?php echo e(asset('js/test.js')); ?>"></script>
 
   <!-- Mobile menu toggle (shared across all pages) -->
+  <div class="nav-overlay" id="navOverlay"></div>
   <script>
     function toggleMenu() {
       const header = document.querySelector("header");
       const nav = header ? header.querySelector("nav") : null;
       const hamburger = header ? header.querySelector(".hamburger") : null;
+      const overlay = document.getElementById("navOverlay");
       if (!nav || !hamburger) return;
 
-      nav.classList.toggle("active");
+      const isOpen = nav.classList.toggle("active");
       hamburger.classList.toggle("active");
+      if (overlay) overlay.classList.toggle("active", isOpen);
+      document.body.style.overflow = isOpen ? "hidden" : "";
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -57,16 +62,29 @@
 
       const nav = header.querySelector("nav");
       const hamburger = header.querySelector(".hamburger");
+      const overlay = document.getElementById("navOverlay");
       if (!nav || !hamburger) return;
+
+      function closeMenu() {
+        nav.classList.remove("active");
+        hamburger.classList.remove("active");
+        if (overlay) overlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
 
       // Close mobile menu when a nav link is selected.
       nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", function () {
-          nav.classList.remove("active");
-          hamburger.classList.remove("active");
-        });
+        link.addEventListener("click", closeMenu);
       });
+
+      // Close mobile menu when overlay is clicked
+      if (overlay) {
+        overlay.addEventListener("click", closeMenu);
+      }
     });
+
+
+
   </script>
 
   <!-- Page-specific scripts get injected here -->

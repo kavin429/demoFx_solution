@@ -74,8 +74,8 @@
   window.addEventListener("scroll", function() {
     const header = document.querySelector("header");
     const hero = document.querySelector(".hero");
+    if (!header || !hero) return;
 
-    // Get hero height
     const heroHeight = hero.offsetHeight;
 
     if (window.scrollY > heroHeight - 80) {
@@ -156,6 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll('#products .product-card');
   const dotsContainer = document.querySelector('#products .slider-dots');
   const section = document.querySelector('#products');
+
+  if (!slider || !section || !dotsContainer) return;
 
   let prodIndex = 0;
   let startX = 0, isDown = false;
@@ -469,38 +471,34 @@ faqItems.forEach(item => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  const faqSection = document.querySelector("#faq");
   const faqImage = document.querySelector(".faq-image");
   const faqItems = document.querySelectorAll(".faq-item");
+  if (!faqSection) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // animate image
-        faqImage.classList.add("active");
-
-        // stagger animation for faq items
+        if (faqImage) faqImage.classList.add("active");
         faqItems.forEach((item, index) => {
-          setTimeout(() => {
-            item.classList.add("show");
-          }, index * 200); // 200ms delay between each card
+          setTimeout(() => item.classList.add("show"), index * 200);
         });
       } else {
-        // reset when leaving section
-        faqImage.classList.remove("active");
+        if (faqImage) faqImage.classList.remove("active");
         faqItems.forEach(item => item.classList.remove("show"));
       }
     });
-  }, { threshold: 0.3 }); // triggers when 30% visible
+  }, { threshold: 0.3 });
 
-  observer.observe(document.querySelector("#faq"));
+  observer.observe(faqSection);
 });
 
 //card
 
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".partner-track");
+  if (!track) return;
 
-  // Duplicate logos dynamically for seamless infinite loop
   track.innerHTML += track.innerHTML;
 
   // Pause on hover
@@ -552,11 +550,7 @@ const backToTop = document.getElementById("backToTop");
 if (backToTop) {
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
+    backToTop.classList.toggle("visible", window.scrollY > 300);
   });
 
   backToTop.addEventListener("click", () => {
