@@ -25,13 +25,13 @@
       <div class="footer-col">
         <h4>Markets</h4>
         <ul>
-          <li><a href="{{ route('forex') }}">Forex Trading</a></li>
-          <li><a href="{{ route('metals') }}">Metals Trading</a></li>
-          <li><a href="{{ route('indices') }}">Indices Trading</a></li>
-          <li><a href="{{ route('crypto') }}">Cryptocurrencies Trading</a></li>
+          <li><a href="{{ route('products.show', 'forex') }}">Forex Trading</a></li>
+          <li><a href="{{ route('products.show', 'metals') }}">Metals Trading</a></li>
+          <li><a href="{{ route('products.show', 'indices') }}">Indices Trading</a></li>
+          <li><a href="{{ route('products.show', 'crypto') }}">Cryptocurrencies Trading</a></li>
           <li><a href="#">Shares</a></li>
           <li><a href="#">ETFs</a></li>
-          <li><a href="#">Commodities</a></li>
+          <li><a href="{{ route('products.show', 'commodities') }}">Commodities</a></li>
           <li><a href="#">Futures</a></li>
           <li><a href="#">Real Stocks</a></li>
         </ul>

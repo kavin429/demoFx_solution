@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Static Landing Pages
@@ -11,10 +11,6 @@ use App\Http\Controllers\HomeController;
 */
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', fn() => view('about'))->name('about');
-Route::get('/forex', fn() => view('forex'))->name('forex');
-Route::get('/metals', fn() => view('metals'))->name('metals');
-Route::get('/indices', fn() => view('indices'))->name('indices');
-Route::get('/crypto', fn() => view('crypto'))->name('crypto');
 Route::get('/platform', fn() => view('platform'))->name('platform');
 Route::get('/contact', fn() => view('contact'))->name('contact');
 Route::get('/mutualfunds', fn() => view('mutualfunds'))->name('mutualfunds');
@@ -23,6 +19,8 @@ Route::get('/mutualfunds', fn() => view('mutualfunds'))->name('mutualfunds');
 Route::view('/legal', 'legal')->name('legal');
 Route::view('/risk-warning', 'risk-warning')->name('risk-warning');
 Route::view('/risk-disclosure', 'risk-disclosure')->name('risk-disclosure');
+
+Route::get('/trading/{slug}', [ProductController::class, 'show'])->name('products.show');
 
 /*
 |--------------------------------------------------------------------------

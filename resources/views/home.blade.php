@@ -248,28 +248,28 @@ window.addEventListener('resize', connectCards);
       <h3>Forex</h3>
       <p>The foreign exchange market (Forex) is the largest and most liquid market in the world, 
         open 24 hours a day, five days a week.</p>
-      <a href="{{ route('forex') }}" class="arrow-link">Learn More</a>
+      <a href="{{ route('products.show', 'forex') }}" class="arrow-link">Learn More</a>
     </div>
     <div class="product-card">
       
       <h3>Metals</h3>
       <p>Precious metals like gold, silver, platinum, and palladium 
         are considered safe-haven assets, widely used by traders.</p>
-      <a href="{{ route('metals') }}" class="arrow-link">Learn More</a>
+      <a href="{{ route('products.show', 'metals') }}" class="arrow-link">Learn More</a>
     </div>
     <div class="product-card">
       
       <h3>Indices</h3>
       <p>Stock market indices represent the performance of groups of leading companies 
         across global economies. Popular indices like S&P 500, NASDAQ, and FTSE provide exposure.</p>
-      <a href="{{ route('indices') }}" class="arrow-link">Learn More</a>
+      <a href="{{ route('products.show', 'indices') }}" class="arrow-link">Learn More</a>
     </div>
     <div class="product-card">
       
       <h3>Crypto Currency</h3>
       <p>Cryptocurrencies are decentralized digital assets built on blockchain technology. 
         Popular coins like Bitcoin, and Ripple are known for high volatility and growth potential.</p>
-      <a href="{{ route('crypto') }}" class="arrow-link">Learn More</a>
+      <a href="{{ route('products.show', 'crypto') }}" class="arrow-link">Learn More</a>
     </div>
     
     <!-- more cards -->

@@ -44,14 +44,15 @@
                     </svg>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="{{ route('forex') }}">Forex</a></li>
-                    <li><a href="{{ route('metals') }}">Metals</a></li>
-                    <li><a href="{{ route('indices') }}">Indices</a></li>
-                    <li><a href="{{ route('crypto') }}">Crypto Currencies</a></li>
+                    <li><a href="{{ route('products.show', 'forex') }}">Forex</a></li>
+                    <li><a href="{{ route('products.show', 'metals') }}">Metals</a></li>
+                    <li><a href="{{ route('products.show', 'indices') }}">Indices</a></li>
+                    <li><a href="{{ route('products.show', 'crypto') }}">Crypto Currencies</a></li>
+                    <li><a href="{{ route('products.show', 'commodities') }}">Commodities</a></li>
                 </ul>
             </li>
 
-            <li class="dropdown">
+            <!-- <li class="dropdown">
                 <button type="button" class="dropdown-btn" aria-expanded="false">
                     <span>Offering</span>
                     <svg class="chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +63,7 @@
                     <li><a href="{{ route('platform') }}">Platform</a></li>
                     <li><a href="{{ route('about') }}">About Us</a></li>
                 </ul>
-            </li>
+            </li> -->
 
             <li class="dropdown">
                 <button type="button" class="dropdown-btn" aria-expanded="false">
@@ -76,7 +77,23 @@
                 </ul>
             </li>
 
-            <li><a href="{{ route('about') }}">Company</a></li>
+            <li class="dropdown">
+                <button type="button" class="dropdown-btn" aria-expanded="false">
+                    <span>Company</span>
+                    <svg class="chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ route('contact') }}">Why DemoFX Solution</a></li>
+                    <li><a href="{{ route('contact') }}">Reviews</a></li>
+                    <li><a href="{{ route('contact') }}">DemoFX Solution Blog</a></li>
+                    <li><a href="{{ route('contact') }}">Market Updates</a></li>
+                    <li><a href="{{ route('contact') }}">Forecast & Predictions</a></li>
+                    <li><a href="{{ route('contact') }}">FAQs</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ route('home') }}#pricing">Contact Us</a></li>
             <li><a href="{{ route('home') }}#pricing">Accounts</a></li>
         </ul>
         <div class="hero-buttons">
