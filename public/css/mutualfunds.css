@@ -69,7 +69,7 @@
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
-  color: var(--lavender-soft);
+  color: var(--text);
   margin-bottom: 8px;
 }
 
@@ -159,7 +159,7 @@
   -webkit-overflow-scrolling: touch;
   padding-bottom: 12px;
   scrollbar-width: thin;
-  scrollbar-color: var(--lavender) var(--surface-2);
+  scrollbar-color: var(--text-muted) var(--surface-2);
 }
 
 .slides-container::-webkit-scrollbar {
@@ -170,7 +170,7 @@
   border-radius: 3px;
 }
 .slides-container::-webkit-scrollbar-thumb {
-  background: var(--lavender);
+  background: var(--text-muted);
   border-radius: 3px;
 }
 
@@ -185,7 +185,7 @@
 }
 
 .slide:hover {
-  border-color: var(--lavender);
+  border-color: var(--border-strong);
   transform: translateY(-2px);
 }
 
@@ -193,7 +193,7 @@
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 600;
-  color: var(--lavender-soft);
+  color: var(--text);
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
@@ -233,7 +233,7 @@
 }
 
 .dots span.active {
-  background: var(--lavender);
+  background: var(--text);
   transform: scale(1.2);
 }
 
@@ -273,11 +273,11 @@
 .account-amount {
   font-size: 18px;
   font-weight: 700;
-  color: var(--lavender);
-  background: rgba(166, 140, 240, 0.12);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
   padding: 6px 16px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--lavender);
+  border: 1px solid var(--border-strong);
 }
 
 .summary-sub {
@@ -345,7 +345,7 @@
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 600;
-  color: var(--lavender-soft);
+  color: var(--text-secondary);
   text-align: center;
   margin-bottom: 36px;
 }
@@ -428,7 +428,7 @@
 }
 
 .legal-item.active {
-  border-color: var(--lavender);
+  border-color: var(--border-strong);
 }
 
 /* ============================================================

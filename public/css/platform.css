@@ -13,7 +13,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: var(--lavender);
+  color: var(--text-muted);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@
   content: '';
   width: 14px;
   height: 1px;
-  background: var(--lavender);
+  background: var(--text-muted);
   display: inline-block;
 }
 .eyebrow--center {
@@ -156,7 +156,7 @@
   flex-direction: column; /* image on top, body fills the rest */
 }
 .pairs-card:hover {
-  border-color: var(--lavender);
+  border-color: var(--border-strong);
   transform: translateY(-4px);
 }
 
@@ -165,7 +165,14 @@
   height: 150px;
   object-fit: cover;
   display: block;
-  flex-shrink: 0; /* image never gets squashed by a tall body */
+  flex-shrink: 0;
+  filter: grayscale(60%) brightness(0.95);
+  transition: filter .25s ease, transform .25s ease;
+}
+
+.pairs-card:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.03);
 }
 
 .pairs-card-body {
@@ -179,7 +186,7 @@
   font-family: var(--font-display);
   font-size: 17px;
   font-weight: 600;
-  color: var(--lavender-soft);
+  color: var(--text);
   margin-bottom: 10px;
 }
 
@@ -235,7 +242,7 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(180deg, var(--lavender), var(--lavender-strong));
+  background: linear-gradient(180deg, var(--text-secondary), var(--text-muted));
 }
 
 .product-description h2 {
@@ -244,7 +251,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--lavender);
+  color: var(--text-muted);
   margin-bottom: 22px;
 }
 .product-description h2::after {
@@ -252,7 +259,7 @@
   display: block;
   width: 32px;
   height: 2px;
-  background: var(--lavender);
+  background: var(--text-muted);
   margin-top: 12px;
 }
 
@@ -265,7 +272,7 @@
   font-family: var(--font-display);
   font-size: 46px;
   font-weight: 700;
-  color: var(--lavender-soft);
+  color: var(--text);
   float: left;
   line-height: 0.8;
   padding: 6px 8px 0 0;

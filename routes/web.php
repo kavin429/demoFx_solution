@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Static Landing Pages
@@ -21,6 +22,7 @@ Route::view('/risk-warning', 'risk-warning')->name('risk-warning');
 Route::view('/risk-disclosure', 'risk-disclosure')->name('risk-disclosure');
 
 Route::get('/trading/{slug}', [ProductController::class, 'show'])->name('products.show');
+Route::get('/company', [PageController::class, 'company'])->name('company');
 
 /*
 |--------------------------------------------------------------------------

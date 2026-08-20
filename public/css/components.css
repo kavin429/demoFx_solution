@@ -1,104 +1,247 @@
 /* ============================================================
-   Header
+   Header — Modern Refresh
    ============================================================ */
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 14px 28px;
-  background: rgba(12, 8, 21, 0.9);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  gap: 24px;
+  padding: 12px 32px;
+  background: rgba(8, 8, 8, 0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background .2s ease, border-color .2s ease;
 }
 
-.logo-img { height: 38px; }
+.logo-img {
+  height: 66px;
+  width: 220px;
+  object-fit: fill;
+  transition: transform .2s ease;
+}
+.logo-img:hover { transform: scale(1.03); }
 
 header nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 28px;
 }
 
 header nav ul.menu {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 26px;
   list-style: none;
 }
 
 header nav ul.menu > li > a,
 .dropdown-btn,
 .lang-btn {
+  position: relative;
   color: var(--text-secondary);
   text-decoration: none;
   background: none;
   border: none;
   font-family: var(--font-body);
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 500;
+  letter-spacing: .1px;
   display: flex;
   align-items: center;
   gap: 5px;
   cursor: pointer;
-  padding: 6px 0;
-  transition: color .15s ease;
+  padding: 8px 2px;
+  transition: color .18s ease;
 }
+
+/* subtle animated underline on hover */
+header nav ul.menu > li > a::after,
+.dropdown-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 1.5px;
+  background: var(--lavender);
+  transition: width .2s ease;
+}
+header nav ul.menu > li > a:hover::after,
+.dropdown-btn:hover::after,
+.dropdown.active > .dropdown-btn::after { width: 100%; }
+
 header nav ul.menu > li > a:hover,
 .dropdown-btn:hover,
-.lang-btn:hover { color: var(--text); }
+.lang-btn:hover,
+.dropdown.active > .dropdown-btn { color: var(--text); }
 
-.chevron { flex-shrink: 0; transition: transform .3s cubic-bezier(.4,0,.2,1); }
+.chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: transform .3s cubic-bezier(.4,0,.2,1), color .18s ease;
+}
+.dropdown-btn:hover .chevron { color: var(--text-secondary); }
 .dropdown.active .chevron,
 .lang-selector.active .chevron { transform: rotate(180deg); }
 
+/* ============================================================
+   Mega dropdown (Trading menu)
+   ============================================================ */
+
+.dropdown-mega-menu {
+  min-width: 300px;
+  padding: 8px;
+  left: 0;
+  transform-origin: top left;
+}
+
+.dropdown-mega-head {
+  display: block;
+  width: 100%;
+  padding: 8px 10px 12px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.dropdown-mega-label {
+  display: block;
+  width: 100%;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--lavender);
+  white-space: nowrap;
+}
+
+.dropdown-mega-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dropdown-mega-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  transition: background .15s ease, transform .15s ease;
+}
+.dropdown-mega-item:hover {
+  background: var(--surface-3);
+  transform: translateX(2px);
+}
+
+.dropdown-mega-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: rgba(167, 139, 250, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  color: var(--lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: background .15s ease, border-color .15s ease;
+}
+.dropdown-mega-item:hover .dropdown-mega-icon {
+  background: rgba(167, 139, 250, 0.16);
+  border-color: rgba(167, 139, 250, 0.32);
+}
+
+.dropdown-mega-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.dropdown-mega-text strong {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+.dropdown-mega-text small {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* ============================================================
+   Dropdown (desktop) — shared open/close animation
+   ============================================================ */
+
 .dropdown { position: relative; }
+
 .dropdown-menu {
-  list-style: none;
   position: absolute;
-  top: calc(100% + 14px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--surface-2);
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 210px;
+  background: rgba(14, 14, 14, 0.96);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  min-width: 190px;
-  padding: 8px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.45), 0 2px 8px rgba(0,0,0,.3);
+  padding: 6px;
+  list-style: none;
+  z-index: 100;
+
   opacity: 0;
   visibility: hidden;
-  transition: opacity .15s ease, transform .15s ease;
+  transform: translateY(-6px) scale(.98);
+  transition: opacity .18s ease, transform .18s cubic-bezier(.4,0,.2,1), visibility .18s;
 }
-.dropdown:hover .dropdown-menu {
+
+.dropdown.active > .dropdown-menu,
+.dropdown:hover > .dropdown-menu,
+.dropdown.active > .dropdown-mega-menu,
+.dropdown:hover > .dropdown-mega-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0) scale(1);
 }
+
 .dropdown-menu li a {
   display: block;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: var(--radius-sm);
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--text-secondary);
+  text-decoration: none;
+  transition: background .15s ease, color .15s ease, padding-left .15s ease;
 }
 .dropdown-menu li a:hover {
   background: var(--surface-3);
   color: var(--text);
+  padding-left: 18px;
 }
 
 .lang-selector { position: relative; }
 .lang-flag {
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: .5px;
   color: var(--text-secondary);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
-  padding: 3px 7px;
+  padding: 4px 8px;
+  transition: border-color .15s ease, color .15s ease;
 }
+.lang-flag:hover { border-color: var(--lavender); color: var(--text); }
+
+/* ============================================================
+   Product tabs — segmented pill control
+   ============================================================ */
 
 .product-tabs {
   display: inline-flex;
@@ -107,49 +250,78 @@ header nav ul.menu > li > a:hover,
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 4px;
+  padding: 3px;
 }
 
 .product-tab {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
+  justify-content: center;
+  gap: 1px;
+  padding: 4px 12px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   cursor: pointer;
-  transition: background .15s ease, color .15s ease;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 
-.product-tab:hover:not(.tab-disabled) {
-  color: var(--text-secondary);
+.product-tab:hover:not(.tab-disabled):not(.tab-active) {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .product-tab.tab-active {
-  background: rgba(166, 140, 240, 0.16);
-  color: var(--lavender-soft);
+  background: var(--lavender);
+  color: var(--text-on-accent);
+  box-shadow: 0 2px 10px rgba(167, 139, 250, 0.35);
 }
 
 .product-tab.tab-disabled {
   color: var(--text-muted);
-  opacity: .5;
+  opacity: .55;
   cursor: default;
   pointer-events: none;
 }
 
 .tab-soon {
-  background: var(--lavender-deep);
-  color: var(--lavender-pale);
-  font-size: 10px;
+  order: -1;
+  background: none;
+  color: var(--lavender);
+  font-size: 8px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .3px;
-  padding: 2px 6px;
-  border-radius: 999px;
-  line-height: 1.4;
+  letter-spacing: .5px;
+  padding: 0;
+  line-height: 0.5;
 }
+
+/* ============================================================
+   Login / CTA button
+   ============================================================ */
+
+.hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--lavender);
+  color: var(--text-on-accent);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  transition: background .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.hero-buttons a:hover {
+  background: var(--lavender-strong);
+  color: var(--text-on-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(167, 139, 250, 0.3);
+}
+.hero-buttons a:active { transform: translateY(0); }
 
 /* ============================================================
    Hamburger toggle
@@ -162,33 +334,33 @@ header nav ul.menu > li > a:hover,
   cursor: pointer;
   background: none;
   border: none;
-  padding: 0;
+  padding: 8px;
   position: relative;
   z-index: 1002;
 }
 .hamburger span {
-  width: 26px;
+  width: 22px;
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: transform .2s ease, opacity .2s ease;
+  transition: transform .25s ease, opacity .2s ease;
 }
 .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ============================================================
-   Header — responsive
+   Mobile nav overlay + drawer
    ============================================================ */
 
-/* Mobile nav overlay backdrop */
 .nav-overlay {
   display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 999;
   opacity: 0;
   transition: opacity .25s ease;
 }
@@ -198,95 +370,95 @@ header nav ul.menu > li > a:hover,
 }
 
 @media (max-width: 768px) {
+  header { padding: 12px 20px; overflow: visible; left: 0; right: 0; }
   .hamburger { display: flex; }
   .product-tabs { display: none; }
-
-  header {
-    overflow: visible;
-  }
 
   header nav {
     position: fixed;
     top: 0; right: 0;
     height: 100vh;
     height: 100dvh;
-    width: 280px;
-    background: var(--bg-alt);
+    width: 300px;
+    max-width: 84vw;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
     border-left: 1px solid var(--border);
-    padding: 80px 24px 24px;
+    padding: 88px 22px 28px;
     transform: translateX(100%);
     visibility: hidden;
-    transition: transform .25s ease, visibility .25s ease;
+    transition: transform .3s cubic-bezier(.4,0,.2,1), visibility .3s;
     z-index: 1001;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    box-shadow: -12px 0 40px rgba(0,0,0,.4);
   }
   header nav.active { transform: translateX(0); visibility: visible; }
+
   header nav ul.menu {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 2px;
   }
   header nav ul.menu > li { width: 100%; }
+  header nav ul.menu > li > a { padding: 12px 4px; font-size: 15px; }
+
+  .dropdown-btn { width: 100%; justify-content: space-between; padding: 12px 4px; font-size: 15px; }
+
   .dropdown.active > .dropdown-btn {
-    color: var(--text);
-    background: rgba(166, 140, 240, 0.08);
-    border-radius: var(--radius-sm);
+    color: var(--lavender);
   }
-  .dropdown-menu {
+
+  .dropdown-menu,
+  .dropdown-mega-menu {
     position: static;
-    transform: none;
+    transform: none !important;
+    opacity: 1;
+    visibility: visible;
     display: grid;
     grid-template-rows: 0fr;
     box-shadow: none;
     width: 100%;
     border: none;
     background: transparent;
-    padding: 0 0 0 16px;
-    opacity: 0;
-    transition: grid-template-rows .25s ease, opacity .2s ease, padding .25s ease;
-    overflow: hidden;
-    border-radius: 0;
+    backdrop-filter: none;
+    padding: 0 0 0 12px;
     min-width: 0;
+    transition: grid-template-rows .25s ease, padding .25s ease;
   }
-  .dropdown-menu > * { overflow: hidden; }
-  .dropdown.active .dropdown-menu {
+  .dropdown-menu > *,
+  .dropdown-mega-menu > * { overflow: hidden; }
+
+  .dropdown.active .dropdown-menu,
+  .dropdown.active .dropdown-mega-menu {
     grid-template-rows: 1fr;
-    opacity: 1;
-    padding: 4px 0 4px 16px;
+    padding: 2px 0 10px 12px;
   }
-  .dropdown.active .chevron { transform: rotate(180deg); }
-  .lang-selector.active .chevron { transform: rotate(180deg); }
+
+  .dropdown-mega-head { padding-left: 0; border-color: var(--border); }
+  .dropdown-mega-item { padding: 10px 8px; }
 
   .dropdown-menu li a {
-    padding: 10px 14px;
+    padding: 11px 12px;
     border-left: 2px solid transparent;
-    transition: background .15s ease, color .15s ease, border-color .15s ease;
     font-size: 14px;
     color: var(--text-secondary);
   }
   .dropdown-menu li a:hover {
-    background: rgba(166, 140, 240, 0.08);
-    border-left-color: var(--lavender-soft);
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: var(--lavender);
     color: var(--text);
+    padding-left: 12px;
   }
 
-  header nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-buttons { margin-top: 8px; }
-}
-body.nav-open {
-  overflow: hidden;
+  .hero-buttons { margin-top: 16px; }
+  .hero-buttons a { width: 100%; justify-content: center; }
 }
 
-.nav-overlay {
-  z-index: 999; /* header is 1000, nav panel is 1001 — overlay must stay under both */
-}
-
-
+body.nav-open { overflow: hidden; }
 
 /* ============================================================
    Footer
@@ -381,8 +553,8 @@ body.nav-open {
   transition: border-color .15s ease, color .15s ease, transform .15s ease;
 }
 .footer-social a:hover {
-  border-color: var(--lavender);
-  color: var(--lavender);
+  border-color: var(--text-secondary);
+  color: var(--text);
   transform: translateY(-2px);
 }
 
@@ -412,7 +584,7 @@ body.nav-open {
   width: 26px;
   height: 2px;
   border-radius: 2px;
-  background: var(--lavender);
+  background: var(--text-secondary);
 }
 
 .footer-col ul { list-style: none; }
@@ -426,7 +598,7 @@ body.nav-open {
   font-size: 13.5px;
   transition: color .15s ease;
 }
-.footer-col ul li a:hover { color: var(--lavender-soft); }
+.footer-col ul li a:hover { color: var(--text); }
 .footer-global-full {
   border-top: 1px solid var(--border);
   padding-top: 32px;
@@ -447,7 +619,7 @@ body.nav-open {
   width: 26px;
   height: 2px;
   border-radius: 2px;
-  background: var(--lavender);
+  background: var(--text-secondary);
 }
 
 .office-grid {
@@ -467,7 +639,7 @@ body.nav-open {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(166, 140, 240, 0.14);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--lavender);
   display: flex;
   align-items: center;
@@ -499,7 +671,7 @@ body.nav-open {
   color: var(--text-secondary);
   transition: color .15s ease;
 }
-.office-text p a:hover { color: var(--lavender-soft); }
+.office-text p a:hover { color: var(--text); }
 
 /* ============================================================
    Bottom bar — copyright + legal links
@@ -536,7 +708,7 @@ body.nav-open {
   color: var(--text-secondary);
   transition: color .15s ease;
 }
-.legal-titles a:hover { color: var(--lavender-soft); }
+.legal-titles a:hover { color: var(--text); }
 
 .partner-slider { overflow: hidden; max-width: 420px; }
 .partner-track {
@@ -615,13 +787,13 @@ body.nav-open {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--lavender);
-  color: var(--text-on-accent);
+  background: var(--text);
+  color: var(--bg);
   border: none;
   font-size: 18px;
   cursor: pointer;
   z-index: 900;
-  box-shadow: 0 6px 18px rgba(166, 140, 240, 0.35);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 
   /* hidden by default */
   opacity: 0;
@@ -636,4 +808,4 @@ body.nav-open {
   transform: translateY(0);
 }
 
-.back-to-top:hover { background: var(--lavender-strong); }
+.back-to-top:hover { background: var(--text-secondary); }

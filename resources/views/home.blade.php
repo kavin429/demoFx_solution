@@ -322,31 +322,6 @@ window.addEventListener('resize', connectCards);
 
 
 
-<!-- Pricing / Account Types -->
-<section id="pricing">
-  <div class="pricing-container">
-    <h2>Our <span>Plans</span></h2>
-    <div class="pricing-grid">
-
-@foreach($plans as $plan)
-    <article class="pricing-card @if($loop->last) highlight-card @endif">
-      <div class="price">${{ number_format($plan->price, 0) }}</div>
-      <h3>{{ $plan->name }}</h3>
-      <ul>
-        <li>Leverage {{ $plan->leverage }}</li>
-        <li>Min lot size {{ $plan->min_lot_size }}</li>
-        <li>Starting from {{ $plan->starting_pips }} pips</li>
-        <li>{{ $plan->swap }}</li>
-        <li>Commission {{ $plan->commission }}%</li>
-        <li>{{ $plan->spread }}</li>
-      </ul>
-      <a href="https://trade.DemoFXsolutions.com/login" class="btn">Choose plan</a>
-    </article>
-@endforeach
-
-    </div>
-  </div>
-</section>
 
 <!-- Meet Our Client Section-->
 <section id="testimonials">
