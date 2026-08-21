@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>@yield('title', 'DemoFX Solution')</title>
-  <link rel="icon" type="pics/icon.png" href="pics/logo.png" />
+  <title>@yield('title', 'Fundamental Capital Ltd')</title>
+  <link rel="icon" type="image/png" href="{{ asset('pics/logo1.png') }}" />
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/components.css') }}">
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/account.css') }}">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
   @stack('styles')

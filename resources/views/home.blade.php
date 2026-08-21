@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'DemoFX Solution')
+@section('title', 'Fundamental Capital Ltd')
 
 @section('content')
 <!-- ===== HERO SECTION ===== -->
@@ -11,7 +11,7 @@
 <p id="hero-text" class="gradient-text-small">Where strategy meets opportunity without limits</p>
 
     <div class="hero-buttons">
-      <a href="https://trade.DemoFXsolutions.com">Get Started</a>
+      <a href="https://trade.fundamentalcapitalltd.com">Get Started</a>
      <!-- <a href="#" id="watchVideoBtn">Watch Video</a> -->
     </div>
   </div>
@@ -112,10 +112,10 @@
 
   </div>
  <div class="about-text">
-  <h2>About <span>DemoFX Solution</span></h2>
+  <h2>About <span>Fundamental Capital Ltd</span></h2>
 
   <p>
-    DemoFX Solution is a trading platform and financial service developed under 
+    Fundamental Capital Ltd is a trading platform and financial service developed under 
     CORE FINANCE LIMITED, a globally recognized company specializing in innovative 
     financial solutions. Through this platform, we provide clients with seamless access 
     to a wide range of trading instruments including Forex, Cryptocurrencies, Metals, 
@@ -123,7 +123,7 @@
   </p>
 
   <p>
-    Backed by the expertise and infrastructure of CORE FINANCE LIMITED, DemoFX Solution 
+    Backed by the expertise and infrastructure of CORE FINANCE LIMITED, Fundamental Capital Ltd 
     delivers a secure, transparent, and technology-driven trading environment. Our mission 
     is to empower traders and investors with reliable tools, competitive conditions, 
     and real-time market insights to achieve their financial goals.
@@ -327,7 +327,7 @@ window.addEventListener('resize', connectCards);
 <section id="testimonials">
   <div class="section-header">
     <h2>Meet Our <span>Clients</span></h2>
-    <a href="https://trade.DemoFXsolutions.com/login" class="btn">Be Our Client</a>
+    <a href="https://trade.fundamentalcapitalltd.com/login" class="btn">Be Our Client</a>
   </div>
 
  
@@ -353,7 +353,7 @@ window.addEventListener('resize', connectCards);
           </div>
         </div>
         <p>
-          DemoFX Solution delivers exceptional trading conditions. 
+          Fundamental Capital Ltd delivers exceptional trading conditions. 
           The execution speed is impressive, and the analytics tools help 
           me make informed decisions. It's a reliable platform for serious traders.
         </p>
@@ -416,7 +416,7 @@ window.addEventListener('resize', connectCards);
           </div>
         </div>
         <p>
-          Trading with DemoFX Solution has been a great experience. 
+          Trading with Fundamental Capital Ltd has been a great experience. 
           The interface is modern, execution is reliable, and 
           I feel confident managing my investments here.
         </p>

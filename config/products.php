@@ -3,7 +3,7 @@
 return [
 
     'forex' => [
-        'title' => 'Forex Trading - DemoFX Solution',
+        'title' => 'Forex Trading - Fundamental Capital Ltd',
         'heroImage' => 'pics/platform/forex.png',
         'heroTitle' => 'Forex',
         'heroTitleSpan' => 'Trading',
@@ -11,7 +11,7 @@ return [
 
         'introEyebrow' => 'Global Currency Market',
         'introTitle' => 'Why Trade Forex with',
-        'introTitleSpan' => 'DemoFX Solution',
+        'introTitleSpan' => 'Fundamental Capital Ltd',
         'introLead' => 'The foreign exchange market is the largest and most liquid financial market in the world, with over $6.6 trillion traded daily. From major pairs that move the global economy to exotic pairs offering unique opportunities, we provide competitive spreads, fast execution, and professional-grade tools.',
 
         'cards' => [
@@ -65,7 +65,7 @@ return [
     ],
 
     'metals' => [
-        'title' => 'Metals Trading - DemoFX Solution',
+        'title' => 'Metals Trading - Fundamental Capital Ltd',
         'heroImage' => 'pics/platform/metals.png',
         'heroTitle' => 'Metals',
         'heroTitleSpan' => 'Trading',
@@ -73,7 +73,7 @@ return [
 
         'introEyebrow' => 'Safe-Haven Assets',
         'introTitle' => 'Why Trade Metals with',
-        'introTitleSpan' => 'DemoFX Solution',
+        'introTitleSpan' => 'Fundamental Capital Ltd',
         'introLead' => 'Precious metals have served as a store of value and a hedge against inflation and market volatility for centuries. Whether you\'re trading gold as a safe haven during uncertain times or silver for its industrial demand, we provide competitive spreads, deep liquidity, and fast execution on every major metal.',
 
         'cards' => [
@@ -127,7 +127,7 @@ return [
     ],
 
     'indices' => [
-        'title' => 'Indices Trading - DemoFX Solution',
+        'title' => 'Indices Trading - Fundamental Capital Ltd',
         'heroImage' => 'pics/platform/indices.png',
         'heroTitle' => 'Indices',
         'heroTitleSpan' => 'Trading',
@@ -135,7 +135,7 @@ return [
 
         'introEyebrow' => 'Global Equity Markets',
         'introTitle' => 'Why Trade Indices with',
-        'introTitleSpan' => 'DemoFX Solution',
+        'introTitleSpan' => 'Fundamental Capital Ltd',
         'introLead' => 'Stock indices let you gain exposure to an entire economy or sector without picking individual stocks. Trade the performance of hundreds of leading companies in one position, with tight spreads, flexible leverage, and access to the world\'s major markets around the clock.',
 
         'cards' => [
@@ -189,7 +189,7 @@ return [
     ],
 
     'crypto' => [
-        'title' => 'Crypto Trading - DemoFX Solution',
+        'title' => 'Crypto Trading - Fundamental Capital Ltd',
         'heroImage' => 'pics/platform/crypto.png',
         'heroTitle' => 'Crypto',
         'heroTitleSpan' => 'Trading',
@@ -197,7 +197,7 @@ return [
 
         'introEyebrow' => 'Digital Assets',
         'introTitle' => 'Why Trade Crypto with',
-        'introTitleSpan' => 'DemoFX Solution',
+        'introTitleSpan' => 'Fundamental Capital Ltd',
         'introLead' => 'Cryptocurrencies have emerged as one of the most actively traded asset classes in the world, offering significant volatility and round-the-clock market access. From Bitcoin to leading altcoins, we provide competitive spreads, fast execution, and the ability to trade both rising and falling markets.',
 
         'cards' => [
@@ -252,7 +252,7 @@ return [
 
 
     'commodities' => [
-        'title' => 'Commodities Trading - DemoFX Solution',
+        'title' => 'Commodities Trading - Fundamental Capital Ltd',
         'heroImage' => 'pics/platform/commodities.png',
         'heroTitle' => 'Commodities',
         'heroTitleSpan' => 'Trading',
@@ -260,7 +260,7 @@ return [
  
         'introEyebrow' => 'Real-World Assets',
         'introTitle' => 'Why Trade Commodities with',
-        'introTitleSpan' => 'DemoFX Solution',
+        'introTitleSpan' => 'Fundamental Capital Ltd',
         'introLead' => 'Commodities are the raw materials that power the global economy, from the energy that fuels industry to the agricultural products that feed the world. Trading commodities lets you speculate on supply and demand shifts driven by geopolitics, weather, and economic growth, with competitive spreads and fast execution across every major market.',
  
         'cards' => [

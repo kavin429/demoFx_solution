@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CompanyController;
 /*
 |--------------------------------------------------------------------------
 | Static Landing Pages
@@ -15,14 +16,14 @@ Route::get('/about', fn() => view('about'))->name('about');
 Route::get('/platform', fn() => view('platform'))->name('platform');
 Route::get('/contact', fn() => view('contact'))->name('contact');
 Route::get('/mutualfunds', fn() => view('mutualfunds'))->name('mutualfunds');
-
+Route::get('/account', fn() => view('account'))->name('account');
 
 Route::view('/legal', 'legal')->name('legal');
 Route::view('/risk-warning', 'risk-warning')->name('risk-warning');
 Route::view('/risk-disclosure', 'risk-disclosure')->name('risk-disclosure');
 
 Route::get('/trading/{slug}', [ProductController::class, 'show'])->name('products.show');
-Route::get('/company', [PageController::class, 'company'])->name('company');
+Route::get('/company/{slug}', [CompanyController::class, 'show'])->name('products.company');
 
 /*
 |--------------------------------------------------------------------------

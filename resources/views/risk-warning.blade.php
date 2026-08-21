@@ -1,6 +1,6 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
-@section('title', 'General Risk Warning - DemoFX Solution')
+@section('title', 'General Risk Warning - Fundamental Capital Ltd')
 
 @section('content')
 <section class="legal-page">
@@ -18,7 +18,7 @@
         </p>
 
         <p>
-            <strong>DemoFX Solution</strong> is a demonstration project. No real capital is at risk on this site,
+            <strong>Fundamental Capital Ltd</strong> is a demonstration project. No real capital is at risk on this site,
             and nothing here should be treated as financial advice or an invitation to trade real funds.
         </p>
     </div>

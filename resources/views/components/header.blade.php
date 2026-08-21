@@ -1,8 +1,8 @@
-<!-- ===== HEADER ===== -->
+﻿<!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
         <a href="{{ route('home') }}">
-            <img src="{{ asset('pics/logo.png') }}" alt="DemoFX Solution Logo" class="logo-img">
+            <img src="{{ asset('pics/logo.png') }}" alt="Fundamental Capital Ltd Logo" class="logo-img">
         </a>
     </div>
 
@@ -25,13 +25,13 @@
         ['url' => route('contact'), 'icon' => 'ph-shield-check',   'label' => 'Risk Disclosure'],
     ],
     'Company' => [
-        ['url' => route('company') . '#why-demofx',    'icon' => 'ph-shield-check',  'label' => 'Why DemoFX Solution'],
-        ['url' => route('company') . '#reviews',        'icon' => 'ph-star',          'label' => 'Reviews'],
-        ['url' => route('company') . '#blog',           'icon' => 'ph-newspaper',     'label' => 'DemoFX Solution Blog'],
-        ['url' => route('company') . '#market-updates', 'icon' => 'ph-trend-up',      'label' => 'Market Updates'],
-        ['url' => route('company') . '#forecasts',      'icon' => 'ph-chart-line-up', 'label' => 'Forecast & Predictions'],
-        ['url' => route('company') . '#faqs',           'icon' => 'ph-question',      'label' => 'FAQs'],
-    ],
+    ['url' => route('products.company', 'why-fundamentalCapital'), 'icon' => 'ph-shield-check',  'label' => 'Why Fundamental Capital Ltd'],
+    ['url' => route('products.company', 'reviews'),                'icon' => 'ph-star',          'label' => 'Reviews'],
+    ['url' => route('products.company', 'blog'),                   'icon' => 'ph-newspaper',     'label' => 'Fundamental Capital Ltd Blog'],
+    ['url' => route('products.company', 'market-updates'),         'icon' => 'ph-trend-up',      'label' => 'Market Updates'],
+    ['url' => route('products.company', 'forecasts'),               'icon' => 'ph-chart-line-up', 'label' => 'Forecast & Predictions'],
+    ['url' => route('products.company', 'faqs'),                    'icon' => 'ph-question',      'label' => 'FAQs'],
+],
 
         ];
     @endphp
@@ -90,11 +90,11 @@
                 </li>
             @endforeach
 
-            <li><a href="{{ route('home') }}#pricing">Contact Us</a></li>
-            <li><a href="{{ route('home') }}#pricing">Accounts</a></li>
+            <li><a href="{{route('contact') }}">Contact Us</a></li>
+            <li><a href="{{ route('account') }}">Accounts</a></li>
         </ul>
         <div class="hero-buttons">
-           <a href="https://trade.DemoFXsolutions.com/login">Login</a>
+           <a href="https://trade.fundamentalcapitalltd.com/login">Login</a>
         </div>
     </nav>
 </header>

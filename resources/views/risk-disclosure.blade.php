@@ -1,6 +1,6 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
-@section('title', 'Risk Disclosure - DemoFX Solution')
+@section('title', 'Risk Disclosure - Fundamental Capital Ltd')
 
 @section('content')
 <section class="legal-page">
@@ -8,7 +8,7 @@
         <h1>Risk Disclosure</h1>
 
         <p>
-            Past performance is not indicative of future results. <strong>DemoFX Solution</strong> is a
+            Past performance is not indicative of future results. <strong>Fundamental Capital Ltd</strong> is a
             demonstration brand and is <strong>not currently authorised or regulated by any financial
             authority</strong>. Any resemblance to a licensed broker is for illustrative purposes only.
         </p>

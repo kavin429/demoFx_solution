@@ -1,6 +1,6 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
-@section('title', 'Legal - DemoFX Solution')
+@section('title', 'Legal - Fundamental Capital Ltd')
 
 @section('content')
 <section class="legal-page">
@@ -8,7 +8,7 @@
         <h1>Legal</h1>
 
         <p>
-            This website is a <strong>demo platform</strong> operated under the name <strong>DemoFX Solution</strong>
+            This website is a <strong>demo platform</strong> operated under the name <strong>Fundamental Capital Ltd</strong>
             for demonstration and development purposes only. It is not a live trading service, and no real funds,
             accounts, or financial products are involved.
         </p>

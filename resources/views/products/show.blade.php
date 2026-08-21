@@ -31,7 +31,7 @@
               <p class="eyebrow">{{ $card['eyebrow'] }}</p>
               <h3>{{ $card['title'] }}</h3>
               <p>{{ $card['text'] }}</p>
-              <a href="{{ route('home') }}#pricing" class="about-btn">{{ $card['btnText'] }}</a>
+              <a href="https://trade.fundamentalcapitalltd.com/login" class="about-btn">{{ $card['btnText'] }}</a>
             </div>
           </article>
         @endforeach
@@ -61,7 +61,7 @@
     <div class="container">
       <h2>{{ $product['ctaTitle'] }} <span>{{ $product['ctaTitleSpan'] }}</span></h2>
       <p>{{ $product['ctaText'] }}</p>
-      <a href="{{ route('home') }}#pricing" class="content-cta__btn">Open an Account</a>
+      <a href="https://trade.fundamentalcapitalltd.com/login" class="content-cta__btn">Open an Account</a>
     </div>
   </section>
 

@@ -5,7 +5,7 @@
     <!-- Row 1: Logo + tagline + Social (full width) -->
     <div class="footer-brand-full">
       <div class="footer-brand-left">
-        <img src="{{ asset('pics/logo.png') }}" alt="DemoFX Solution Logo" class="footer-logo">
+        <img src="{{ asset('pics/logo.png') }}" alt="Fundamental Capital Ltd Logo" class="footer-logo">
         <p class="footer-tagline">A leading global trading company offering Forex, Metals, Indices and Cryptocurrencies on every device. (Demo platform)</p>
       </div>
       <div class="footer-brand-right">
@@ -16,7 +16,7 @@
           <a href="#"><i class="fab fa-youtube"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-        <a href="https://trade.DemoFXsolutions.com/login" class="footer-cta">Open an Account</a>
+        <a href="https://trade.fundamentalcapitalltd.com/login" class="footer-cta">Open an Account</a>
       </div>
     </div>
 
@@ -29,11 +29,7 @@
           <li><a href="{{ route('products.show', 'metals') }}">Metals Trading</a></li>
           <li><a href="{{ route('products.show', 'indices') }}">Indices Trading</a></li>
           <li><a href="{{ route('products.show', 'crypto') }}">Cryptocurrencies Trading</a></li>
-          <li><a href="#">Shares</a></li>
-          <li><a href="#">ETFs</a></li>
           <li><a href="{{ route('products.show', 'commodities') }}">Commodities</a></li>
-          <li><a href="#">Futures</a></li>
-          <li><a href="#">Real Stocks</a></li>
         </ul>
       </div>
 
@@ -52,20 +48,32 @@
           <li><a href="{{ route('platform') }}">Desktop</a></li>
           <li><a href="{{ route('platform') }}">WebTrader</a></li>
           <li><a href="{{ route('platform') }}">Mobile</a></li>
-          <li><a href="https://trade.DemoFXsolutions.com/login">Platform Login</a></li>
+          <li><a href="https://trade.fundamentalcapitalltd.com/login">Platform Login</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="{{ route('about') }}">Why DemoFX Solution</a></li>
+          <li><a href="{{ route('about') }}">Why Fundamental Capital Ltd</a></li>
           <li><a href="#">Reviews</a></li>
-          <li><a href="#">DemoFX Solution Blog</a></li>
+          <li><a href="#">Fundamental Capital Ltd Blog</a></li>
           <li><a href="#">Market Updates</a></li>
           <li><a href="#">Forecast &amp; Predictions</a></li>
           <li><a href="{{ route('contact') }}">Contact Us</a></li>
           <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="{{ route('about') }}">Why Fundamental Capital Ltd</a></li>
+          <li><a href="#">Trading Calculators</a></li>
+          <li><a href="#">Economic Calendar</a></li>
+          <li><a href="#">Trading Glossary</a></li>
+          <li><a href="#">Education Center</a></li>
+          <li><a href="{{ route('contact') }}">Risk Disclosure</a></li>
         </ul>
       </div>
     </div>
@@ -98,7 +106,7 @@
       <span class="office-icon"><i class="ph ph-envelope-simple"></i></span>
       <div class="office-text">
         <strong>Email</strong>
-        <p><a href="mailto:support@DemoFXsolutions.com">support@DemoFXsolutions.com</a></p>
+        <p><a href="mailto:support@fundamentalcapitalltd.com">support@fundamentalcapitalltd.com</a></p>
       </div>
     </div>
   </div>
@@ -106,7 +114,8 @@
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© {{ date('Y') }} DemoFX Solution &mdash; Demo Project. Not a real financial entity.</p>
+    <p class="footer-reg"> &middot; Company Number: 12548364</p>
+    <p>© {{ date('Y') }} Fundamental Capital Ltd &mdash;Licence Number: 975143 (FCA).</p>
     <div class="legal-titles">
       <h3 class="legal-title"><a href="{{ route('legal') }}">Legal</a></h3>
       <h3 class="legal-title"><a href="{{ route('risk-warning') }}">General Risk Warning</a></h3>

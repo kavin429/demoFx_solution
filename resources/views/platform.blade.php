@@ -1,6 +1,6 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
-@section('title', 'Platform - DemoFX Solution')
+@section('title', 'Platform - Fundamental Capital Ltd')
 
 @section('content')
 <section class="platform-layout">
@@ -8,9 +8,9 @@
 
       <div class="platform-left">
         <section class="platform-section">
-          <h1 class="page-title">DemoFX Solution Financial Services Platform</h1>
+          <h1 class="page-title">Fundamental Capital Ltd Financial Services Platform</h1>
           <p class="page-desc">
-              The DemoFX Solution platform is designed to provide efficient and secure
+              The Fundamental Capital Ltd platform is designed to provide efficient and secure
   access to professional accounting, bookkeeping, tax consultancy, and financial
   management services. Our system enables clients to manage financial records,
   monitor reports, and access essential documentation through a user-friendly interface.

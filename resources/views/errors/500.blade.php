@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>500 | Server Error - DemoFX Solution</title>
+  <title>500 | Server Error - Fundamental Capital Ltd</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 <style>
   body{
@@ -121,7 +121,7 @@ footer{
 </div>
 
 <footer>
-  <p>© CORE FINANCE LIMITED - 10956602</p>
+  <p>© Fundamental Capital Ltd - 12548364</p>
 </footer>
 
 <script>

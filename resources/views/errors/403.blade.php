@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>403 | Forbidden Access - DemoFX Solution </title>
+  <title>403 | Forbidden Access - Fundamental Capital Ltd </title>
   <style>
     body { margin:0; padding:0; font-family: 'Tomorrow', sans-serif; height:100vh; background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #050819); display:flex; justify-content:center; align-items:center; overflow:hidden; }
     .text { position:absolute; top:10%; color:#fff; text-align:center; }
@@ -46,7 +46,7 @@
 </div>
 
 <footer>
-  <p>© CORE FINANCE LIMITED - 10956602</p>
+  <p>© Fundamental Capital Ltd - 12548364</p>
 </footer>
 
 <script>

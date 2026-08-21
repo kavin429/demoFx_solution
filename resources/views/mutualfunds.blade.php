@@ -1,23 +1,23 @@
 @extends('layouts.app')
 
-@section('title', 'Mutual Funds - DemoFX Solution')
+@section('title', 'Mutual Funds - Fundamental Capital Ltd')
 
 @section('content')
 <div class="container1">
     <section class="fund-management-section">
         
         <h1 class="fund-title">
-            DemoFX Solution Limited – United Kingdom
+            Fundamental Capital Ltd – United Kingdom
         </h1>
 
         <h4 class="fund-subtitle">
-            Company Number: 09711441
+            Company Number: 12548364
         </h4>
 
         <div class="fund-content">
 
             <p class="fund-paragraph">
-                DemoFX Solution Limited, incorporated under Companies House UK, is a 
+                Fundamental Capital Ltd, incorporated under Companies House UK, is a 
                 financial management and consultancy company specializing in global trading 
                 solutions across Forex, Metals, Indices, and Cryptocurrencies. With years of 
                 market experience and a strong analytical team, we offer a structured and secure 
@@ -31,12 +31,12 @@
                 expertise. Once enrolled, each client receives a dedicated account manager, 
                 continuous market monitoring, and a tailored trading plan aligned with the 
                 client's chosen investment tier. All funds remain under the client's ownership, 
-                while DemoFX Solution executes trades on their behalf using tested 
+                while Fundamental Capital Ltd executes trades on their behalf using tested 
                 market strategies and risk-managed systems.
             </p>
 
             <p class="fund-paragraph">
-                DemoFX Solution follows strict compliance with AML (Anti-Money 
+                Fundamental Capital Ltd follows strict compliance with AML (Anti-Money 
                 Laundering) and KYC (Know Your Customer) guidelines to ensure safe and 
                 legitimate fund handling. Risk disclosure is a core part of the program, and 
                 clients acknowledge market risks while benefiting from professional trade 
@@ -44,7 +44,7 @@
             </p>
 
             <p class="fund-paragraph">
-                Through our Fund Management Scheme, DemoFX Solution aims to provide 
+                Through our Fund Management Scheme, Fundamental Capital Ltd aims to provide 
                 clients with a simplified, secure, and high-return trading experience backed by 
                 expert management, transparent processes, and 24/7 support. Investors can 
                 participate confidently, knowing their accounts are handled by professionals 
@@ -197,7 +197,7 @@
 </div>
 
 <section class="income-plan-section">
-    <h2 class="income-heading">DemoFX Solution</h2>
+    <h2 class="income-heading">Fundamental Capital Ltd</h2>
 
     <!-- Navigation arrows 
     <button class="nav-arrow left-arrow">&#10094;</button>
@@ -280,14 +280,14 @@
       <h2>Pro Account Summary</h2>
       <span class="account-amount">$25,000 (USD)</span>
     </div>
-    <h4 class="summary-sub">DemoFX Solution – DemoFX Solution LTD</h4>
+    <h4 class="summary-sub">Fundamental Capital Ltd – Fundamental Capital Ltd</h4>
 
     <ul class="summary-points">
       <li><i class="fas fa-wallet"></i> <strong>Deposit Amount:</strong> 25,000 USD</li>
       <li><i class="fas fa-chart-line"></i> <strong>1st Month Return:</strong> 12,500 USD</li>
       <li><i class="fas fa-coins"></i> <strong>Monthly Growth:</strong> Each month, the return increases by 6,250 USD, 9,370 USD, 14,060 USD, 21,090 USD, and so on.</li>
       <li><i class="fas fa-clock"></i> <strong>Investment Recovery:</strong> Within 2 months, your full investment amount will be returned.</li>
-      <li><i class="fas fa-trophy"></i> <strong>Plan Type:</strong> DemoFX Solution – designed for steady monthly growth and sustainable profit accumulation.</li>
+      <li><i class="fas fa-trophy"></i> <strong>Plan Type:</strong> Fundamental Capital Ltd – designed for steady monthly growth and sustainable profit accumulation.</li>
       <li><i class="fas fa-check-circle"></i> <strong>Key Benefit:</strong> Continuous monthly income even after your initial investment is recovered.</li>
     </ul>
   </div>
@@ -299,7 +299,7 @@
 
     <div class="legal-container">
       <h2>LEGAL TERMS & CONDITIONS – FUND MANAGEMENT PLAN <br>(FOREX TRADING)</h2>
-      <h3>DemoFX Solution Limited (Company No. 09711441, United Kingdom)</h3>
+      <h3>Fundamental Capital Ltd (Company No. 12548364, United Kingdom)</h3>
 
       <!-- 1. Definitions -->
       <div class="legal-item">
@@ -308,7 +308,7 @@
           <span class="legal-icon">+</span>
         </button>
         <div class="legal-answer">
-          <p><strong>"Company"</strong> refers to DemoFX Solution Limited.</p> <br>
+          <p><strong>"Company"</strong> refers to Fundamental Capital Ltd.</p> <br>
           <p><strong>"Client"</strong> refers to the individual or entity participating in the fund management plan.</p> <br>
           <p><strong>"Funds"</strong> refer to the capital deposited by the Client for trading purposes.</p> <br>
           <p><strong>"Trading Account"</strong> refers to the account held in the Client's name used for executing trades.</p> <br>
@@ -542,7 +542,7 @@ function updateDots() {
 container.addEventListener("scroll", () => {
     const scrollLeft = container.scrollLeft;
     let closestIndex = 0;
-    let closestDistance = DemoFX;
+    let closestDistance = fundamentalCapital;
 
     slides.forEach((slide, index) => {
         const distance = Math.abs(slide.offsetLeft - container.offsetLeft - scrollLeft);

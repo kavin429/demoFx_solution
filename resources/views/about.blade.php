@@ -1,6 +1,6 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
-@section('title', 'About - DemoFX Solution')
+@section('title', 'About - Fundamental Capital Ltd')
 
 @section('content')
 <!-- ===== HERO SECTION ===== -->
@@ -10,7 +10,7 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1> <span>DemoFX Solution</span></h1>
+      <h1> <span>Fundamental Capital Ltd</span></h1>
       <p>One of the leading financial venture firms revolutionizing online forex trading.</p>
     </div>
   </section>
@@ -23,17 +23,17 @@
       <h1 class="section-title">Who We Are</h1>
 
 <p class="who-text">
-  DemoFX Solution is a digital trading platform developed and operated under 
-  DemoFX Solution LIMITED, a United Kingdom registered private limited company, 
-  incorporated on 11 September 2017 and officially registered with Companies House 
-  under company number 10956602.
+  Fundamental Capital Ltd is a digital trading platform developed and operated by 
+  Fundamental Capital Ltd, a United Kingdom registered private limited company, 
+  incorporated on 6 April 2020 and officially registered with Companies House 
+  under company number 12548364.
 </p>
 
 <p class="who-text">
-  DemoFX Solution LIMITED provides a strong foundation of financial expertise, with 
+  Fundamental Capital Ltd provides a strong foundation of financial expertise, with 
   core business activities including accounting and auditing services, bookkeeping, 
   tax consultancy, and financial management solutions. Building on this experience, 
-  DemoFX Solution delivers advanced online trading services to clients worldwide.
+  Fundamental Capital Ltd delivers advanced online trading services to clients worldwide.
 </p>
 
       <!-- Cards -->
