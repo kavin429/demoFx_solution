@@ -1,4 +1,4 @@
-// Toggle full menu
+﻿// Toggle full menu
   function toggleMenu() {
     document.querySelector("nav").classList.toggle("active");
     document.querySelector(".hamburger").classList.toggle("active");
@@ -446,26 +446,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// faq section
+// faq section (shared by all pages - icon +/x rotation handled by CSS via .active)
 
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach(item => {
   const question = item.querySelector(".faq-question");
-  const icon = item.querySelector(".faq-icon");
+  if (!question) return;
 
   question.addEventListener("click", () => {
     // close all others
     faqItems.forEach(i => {
-      if (i !== item) {
-        i.classList.remove("active");
-        i.querySelector(".faq-icon").textContent = "+";
-      }
+      if (i !== item) i.classList.remove("active");
     });
 
     // toggle current
     item.classList.toggle("active");
-    icon.textContent = item.classList.contains("active") ? "−" : "+";
   });
 });
 
@@ -525,17 +521,17 @@ if (toggleBtn) {
   // Check saved theme
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
-    toggleBtn.textContent = "☀️";
+    toggleBtn.textContent = "â˜€ï¸";
   }
 
   toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
-      toggleBtn.textContent = "☀️";
+      toggleBtn.textContent = "â˜€ï¸";
       localStorage.setItem("theme", "dark");
     } else {
-      toggleBtn.textContent = "🌙";
+      toggleBtn.textContent = "ðŸŒ™";
       localStorage.setItem("theme", "light");
     }
   });

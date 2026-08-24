@@ -18,21 +18,19 @@
         ['url' => route('products.show', 'crypto'),      'icon' => 'ph-currency-btc',            'label' => 'Crypto Currencies'],
     ],
     'Resources' => [
-        ['url' => route('contact'), 'icon' => 'ph-calculator',     'label' => 'Trading Calculators'],
-        ['url' => route('contact'), 'icon' => 'ph-calendar-blank', 'label' => 'Economic Calendar'],
-        ['url' => route('contact'), 'icon' => 'ph-book-open',      'label' => 'Trading Glossary'],
-        ['url' => route('contact'), 'icon' => 'ph-graduation-cap', 'label' => 'Education Center'],
-        ['url' => route('contact'), 'icon' => 'ph-shield-check',   'label' => 'Risk Disclosure'],
-    ],
-    'Company' => [
+    ['url' => route('products.resources', 'trading-calculators'),  'icon' => 'ph-calculator',     'label' => 'Trading Calculators'],
+    ['url' => route('products.resources', 'economic-calendar'),    'icon' => 'ph-calendar-blank', 'label' => 'Economic Calendar'],
+    ['url' => route('products.resources', 'trading-glossary'),     'icon' => 'ph-book-open',      'label' => 'Trading Glossary'],
+    ['url' => route('products.resources', 'news'),                 'icon' => 'ph-newspaper', 'label' => 'News'],
+    ['url' => route('products.resources', 'market-updates'),       'icon' => 'ph-trend-up',       'label' => 'Market Updates'],
+    ['url' => route('risk-disclosure'),                            'icon' => 'ph-shield-check',   'label' => 'Risk Disclosure'],
+],
+'Company' => [
     ['url' => route('products.company', 'why-fundamentalCapital'), 'icon' => 'ph-shield-check',  'label' => 'Why Fundamental Capital Ltd'],
     ['url' => route('products.company', 'reviews'),                'icon' => 'ph-star',          'label' => 'Reviews'],
     ['url' => route('products.company', 'blog'),                   'icon' => 'ph-newspaper',     'label' => 'Fundamental Capital Ltd Blog'],
-    ['url' => route('products.company', 'market-updates'),         'icon' => 'ph-trend-up',      'label' => 'Market Updates'],
-    ['url' => route('products.company', 'forecasts'),               'icon' => 'ph-chart-line-up', 'label' => 'Forecast & Predictions'],
     ['url' => route('products.company', 'faqs'),                    'icon' => 'ph-question',      'label' => 'FAQs'],
 ],
-
         ];
     @endphp
 

@@ -2,16 +2,8 @@
    Account Types / Plans Page
    Built on top of the global design tokens in style.css
    (--bg, --surface-2, --border, --radius, --lavender, etc.)
-   Adds two extra accent tones below so the page isn't just
-   lavender/black/white.
+   Uses only the default lavender theme — no custom accents.
    ============================================================ */
-
-:root {
-  --acc-teal: #3fae94;
-  --acc-teal-soft: rgba(63, 174, 148, .14);
-  --acc-amber: #c99a4a;
-  --acc-amber-soft: rgba(201, 154, 74, .14);
-}
 
 /* ---------- Hero ---------- */
 .plans-hero {
@@ -22,7 +14,7 @@
   text-align: center;
   padding: 90px 24px 50px;
   border-bottom: 1px solid var(--border);
-  background: radial-gradient(circle at 50% 0%, var(--acc-teal-soft), transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(167, 139, 250, .12), transparent 60%);
 }
 
 .plans-hero h1 {
@@ -95,8 +87,8 @@
 }
 
 .plan-card--popular {
-  border-color: var(--acc-amber);
-  box-shadow: 0 0 0 1px var(--acc-amber);
+  border-color: var(--lavender-strong);
+  box-shadow: 0 0 0 1px var(--lavender-strong);
 }
 
 .plan-card__badge {
@@ -104,7 +96,7 @@
   top: -13px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--acc-amber);
+  background: var(--lavender);
   color: var(--text-on-accent);
   font-size: 11px;
   font-weight: 700;
@@ -166,8 +158,8 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--acc-teal-soft);
-  color: var(--acc-teal);
+  background: rgba(167, 139, 250, .14);
+  color: var(--lavender);
   font-size: 11px;
   font-weight: 700;
   display: flex;
@@ -195,13 +187,15 @@
 }
 
 .plan-card--popular .plan-card__cta {
-  background: var(--acc-amber);
-  border-color: var(--acc-amber);
+  background: var(--lavender);
+  border-color: var(--lavender);
   color: var(--text-on-accent);
 }
 
 .plan-card--popular .plan-card__cta:hover {
-  filter: brightness(1.08);
+  background: var(--lavender-strong);
+  border-color: var(--lavender-strong);
+  color: var(--text-on-accent);
 }
 
 .plans-disclaimer {
@@ -254,8 +248,8 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--acc-teal-soft);
-  color: var(--acc-teal);
+  background: rgba(167, 139, 250, .14);
+  color: var(--lavender);
   font-weight: 700;
   font-size: 15px;
   display: flex;
@@ -280,15 +274,15 @@
   display: inline-block;
   padding: 13px 30px;
   border-radius: var(--radius-sm);
-  background: var(--acc-teal);
+  background: var(--lavender);
   color: var(--text-on-accent);
   font-weight: 700;
   font-size: 14.5px;
-  transition: filter .15s ease, transform .15s ease;
+  transition: background .15s ease, transform .15s ease;
 }
 
 .steps-cta:hover {
-  filter: brightness(1.08);
+  background: var(--lavender-strong);
   transform: translateY(-2px);
   color: var(--text-on-accent);
 }

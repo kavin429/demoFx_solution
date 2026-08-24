@@ -35,4 +35,7 @@ return [
         ],
     ],
 
+    'marketaux' => [
+    'token' => env('MARKETAUX_API_TOKEN'),
+],
 ];

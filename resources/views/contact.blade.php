@@ -111,10 +111,10 @@
   </div>
 </section>
 
-<!-- ======= Our Offices ======= -->
+<!-- ======= Our Office ======= -->
 <section class="offices">
   <div class="container">
-    <span class="eyebrow eyebrow--center">Our offices</span>
+    <span class="eyebrow eyebrow--center">Our office</span>
     <h2>Visit Us</h2>
     <p class="offices__intro">
       A global presence with local support — our multilingual team is available 24/7.

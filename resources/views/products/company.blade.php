@@ -12,12 +12,12 @@
 <div class="page-card">
 
     {{-- ===== HERO (always present) ===== --}}
-    <section class="hero">
-        <div class="hero-content">
-            <h1>{{ $page['heroTitle'] }}</h1>
-            <p>{{ $page['heroText'] }}</p>
-        </div>
-    </section>
+<section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('{{ asset('pics/company.png') }}');">
+    <div class="hero-content">
+        <h1>{{ $page['heroTitle'] }}</h1>
+        <p>{{ $page['heroText'] }}</p>
+    </div>
+</section>
 
     {{-- ===== INTRO TEXT BLOCK ===== --}}
     @isset($page['intro'])
@@ -71,27 +71,61 @@
         </section>
     @endisset
 
-    {{-- ===== ARTICLE LIST (Blog / Market Updates / Forecasts) ===== --}}
+        {{-- ===== ARTICLE LIST (Blog / Market Updates / Forecasts) — MARQUEE ===== --}}
     @isset($page['articles'])
-        <section class="highlights-section">
-            <div class="container">
-                <div class="grid-cards">
-                    @foreach ($page['articles'] as $item)
-                        <article class="row-card fade-section">
-                            <h3>{{ $item['title'] }}</h3>
-                            <div class="card-copy">
-                                <p>{{ $item['text'] ?? $item['excerpt'] ?? '' }}</p>
-                                @isset($item['date'])
-                                    <span class="location">{{ $item['date'] }}</span>
-                                @endisset
-                                @isset($item['url'])
-                                    <a href="{{ $item['url'] }}" class="arrow-link">Read more</a>
-                                @endisset
-                            </div>
-                        </article>
-                    @endforeach
+        @php
+            $articleCollection = collect($page['articles']);
+            $twoRows = $articleCollection->count() > 5;
+            $half     = $twoRows ? (int) ceil($articleCollection->count() / 2) : $articleCollection->count();
+            $topRow   = $articleCollection->slice(0, $half)->values();
+            $bottomRow = $twoRows ? $articleCollection->slice($half)->values() : collect();
+            if ($twoRows && $bottomRow->isEmpty()) { $bottomRow = $topRow; }
+        @endphp
+
+        <section class="highlights-section marquee-section">
+
+            {{-- Row 1: scrolls left → right --}}
+            <div class="marquee-row marquee-row--ltr">
+                <div class="marquee-track">
+                    @for ($pass = 0; $pass < 2; $pass++)
+                        @foreach ($topRow as $item)
+                            <article class="marquee-card fade-section">
+                                <h3>{{ $item['title'] }}</h3>
+                                <div class="card-copy">
+                                    <p>{{ $item['text'] ?? $item['excerpt'] ?? '' }}</p>
+                                    @isset($item['date'])
+                                        <span class="location">{{ $item['date'] }}</span>
+                                    @endisset
+                                </div>
+                                <a href="{{ $item['url'] ?? '#' }}" class="marquee-btn">Read more</a>
+                            </article>
+                        @endforeach
+                    @endfor
                 </div>
             </div>
+
+            {{-- Row 2: only when > 5 articles, scrolls right → left --}}
+            @if ($twoRows)
+            <div class="marquee-row marquee-row--rtl">
+                <div class="marquee-track">
+                    @for ($pass = 0; $pass < 2; $pass++)
+                        @foreach ($bottomRow as $item)
+                            <article class="marquee-card fade-section">
+                                <h3>{{ $item['title'] }}</h3>
+                                <div class="card-copy">
+                                    <p>{{ $item['text'] ?? $item['excerpt'] ?? '' }}</p>
+                                    @isset($item['date'])
+                                        <span class="location">{{ $item['date'] }}</span>
+                                    @endisset
+                                </div>
+                                <a href="{{ $item['url'] ?? '#' }}" class="marquee-btn">Read more</a>
+                            </article>
+                        @endforeach
+                    @endfor
+                </div>
+            </div>
+            @endif
+
         </section>
     @endisset
 
@@ -131,35 +165,24 @@
         </section>
     @endisset
 
-    {{-- ===== CLOSING CTA ===== --}}
-    @isset($page['cta'])
-        <section class="content-cta fade-section">
-            <div class="container">
-                <h2>{{ $page['cta']['title'] }}</h2>
-                <p>{{ $page['cta']['text'] }}</p>
-                <a href="{{ $page['cta']['btnUrl'] ?? route('account.open') }}" class="content-cta__btn">
-                    {{ $page['cta']['btnText'] ?? 'Open an Account' }}
-                </a>
-            </div>
-        </section>
-    @endisset
-
+    {{-- ===== CLOSING CTA (always shown, no per-page condition) ===== --}}
+<section class="content-cta fade-section">
+    <div class="container">
+        <h2>{{ $page['cta']['title'] ?? 'Ready to Start Trading?' }}</h2>
+        <p>{{ $page['cta']['text'] ?? 'Open an account and see the difference for yourself.' }}</p>
+        <a href="{{ $page['cta']['btnUrl'] ?? 'https://trade.fundamentalcapitalltd.com/login' }}" class="content-cta__btn">
+            {{ $page['cta']['btnText'] ?? 'Open an Account' }}
+        </a>
+    </div>
+</section>
 </div>
 @endsection
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/platform.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/trading.css') }}">
 @endpush
 
 @push('scripts')
     <script src="{{ asset('js/products.js') }}"></script>
-    @isset($page['faqItems'])
-        <script>
-            document.querySelectorAll('.faq-item').forEach(function (item) {
-                item.querySelector('.faq-question').addEventListener('click', function () {
-                    item.classList.toggle('active');
-                });
-            });
-        </script>
-    @endisset
+    {{-- FAQ accordion is handled by the shared script (public/js/test.js) --}}
 @endpush

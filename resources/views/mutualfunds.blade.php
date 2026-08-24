@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'Mutual Funds - Fundamental Capital Ltd')
 
@@ -7,7 +7,7 @@
     <section class="fund-management-section">
         
         <h1 class="fund-title">
-            Fundamental Capital Ltd – United Kingdom
+            Fundamental Capital Ltd â€“ United Kingdom
         </h1>
 
         <h4 class="fund-subtitle">
@@ -280,14 +280,14 @@
       <h2>Pro Account Summary</h2>
       <span class="account-amount">$25,000 (USD)</span>
     </div>
-    <h4 class="summary-sub">Fundamental Capital Ltd – Fundamental Capital Ltd</h4>
+    <h4 class="summary-sub">Fundamental Capital Ltd â€“ Fundamental Capital Ltd</h4>
 
     <ul class="summary-points">
       <li><i class="fas fa-wallet"></i> <strong>Deposit Amount:</strong> 25,000 USD</li>
       <li><i class="fas fa-chart-line"></i> <strong>1st Month Return:</strong> 12,500 USD</li>
       <li><i class="fas fa-coins"></i> <strong>Monthly Growth:</strong> Each month, the return increases by 6,250 USD, 9,370 USD, 14,060 USD, 21,090 USD, and so on.</li>
       <li><i class="fas fa-clock"></i> <strong>Investment Recovery:</strong> Within 2 months, your full investment amount will be returned.</li>
-      <li><i class="fas fa-trophy"></i> <strong>Plan Type:</strong> Fundamental Capital Ltd – designed for steady monthly growth and sustainable profit accumulation.</li>
+      <li><i class="fas fa-trophy"></i> <strong>Plan Type:</strong> Fundamental Capital Ltd â€“ designed for steady monthly growth and sustainable profit accumulation.</li>
       <li><i class="fas fa-check-circle"></i> <strong>Key Benefit:</strong> Continuous monthly income even after your initial investment is recovered.</li>
     </ul>
   </div>
@@ -295,19 +295,19 @@
 
 <section id="legal">
 
-  <div class="legal-wrapper">
+  <div class="faq-wrapper">
 
-    <div class="legal-container">
-      <h2>LEGAL TERMS & CONDITIONS – FUND MANAGEMENT PLAN <br>(FOREX TRADING)</h2>
+    <div class="faq-container">
+      <h2>LEGAL TERMS & CONDITIONS â€“ FUND MANAGEMENT PLAN <br>(FOREX TRADING)</h2>
       <h3>Fundamental Capital Ltd (Company No. 12548364, United Kingdom)</h3>
 
       <!-- 1. Definitions -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 1. Definitions
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p><strong>"Company"</strong> refers to Fundamental Capital Ltd.</p> <br>
           <p><strong>"Client"</strong> refers to the individual or entity participating in the fund management plan.</p> <br>
           <p><strong>"Funds"</strong> refer to the capital deposited by the Client for trading purposes.</p> <br>
@@ -317,12 +317,12 @@
       </div>
 
       <!-- 2. Scope of Service -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 2. Scope of Service
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>The Company provides professional fund management services for Forex, Metals, Indices, and Cryptocurrency markets.</p><br>
           <p>The Company shall trade on behalf of the Client strictly for investment and market growth purposes.</p><br>
           <p>The Company may provide signals, analysis, and trading strategies as part of account management.</p>
@@ -330,12 +330,12 @@
       </div>
 
       <!-- 3. Client Acknowledgements -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 3. Client Acknowledgements
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>The Client acknowledges that Forex trading carries high financial risk, including the potential loss of capital.</p> <br>
           <p>The Client confirms that they fully understand the risks and voluntarily participate.</p> <br>
           <p>The Client acknowledges that past performance does not guarantee future returns.</p> <br>
@@ -344,12 +344,12 @@
       </div>
 
       <!-- 4. Capital & Profit Structure -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 4. Capital & Profit Structure
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>All capital deposited remains the property of the Client.</p> <br>
           <p>Profit percentages, payout schedules, plan durations, and withdrawal rules shall be disclosed prior to account activation.</p> <br>
           <p>Profits will be credited based on the plan selected by the Client (e.g., Daily, Monthly, End of Term).</p> <br>
@@ -358,12 +358,12 @@
       </div>
 
       <!-- 5. Trading Authority -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 5. Trading Authority
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>By participating in the Fund Management Plan, the Client grants the Company limited trading authorization to execute buy/sell orders on their behalf.</p><br>
           <p>The Company will not have access to withdraw or transfer the Client's funds unless explicitly authorized by the Client.</p> <br>
           <p>Trading decisions remain solely at the discretion of the Company's analysts and fund managers.</p>
@@ -371,12 +371,12 @@
       </div>
 
       <!-- 6. Withdrawals & Payouts -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 6. Withdrawals & Payouts
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>The Client may request withdrawals based on the terms of their specific plan.</p> <br>
           <p>Withdrawals may be subject to processing time and compliance checks.</p> <br>
           <p>Early termination or withdrawal during an active plan may result in penalties or forfeiture of promotional profits.</p> <br>
@@ -385,12 +385,12 @@
       </div>
 
       <!-- 7. Fees & Charges -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 7. Fees & Charges
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>Management fees, service charges, spreads, or performance fees will be disclosed in advance.</p> <br>
           <p>The Company may deduct applicable fees from profits or the trading account based on the agreement.</p> <br>
           <p>The Company is not responsible for third-party charges, including bank fees, crypto network fees, or conversion charges.</p>
@@ -398,12 +398,12 @@
       </div>
 
       <!-- 8. Compliance & Regulations -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 8. Compliance & Regulations
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>Client funds must comply with Anti-Money Laundering (AML) and Know Your Customer (KYC) requirements.</p> <br>
           <p>The Company reserves the right to request identity documents, source-of-funds proof, or any relevant details.</p> <br>
           <p>The Client acknowledges that Forex trading services may not be regulated in all jurisdictions.</p>
@@ -411,12 +411,12 @@
       </div>
 
       <!-- 9. Liability Limitation -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 9. Liability Limitation
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>The Company shall not be held liable for trading losses due to:</p>
           <ul>
             <li>Market volatility</li>
@@ -430,12 +430,12 @@
       </div>
 
       <!-- 10. Termination of Agreement -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 10. Termination of Agreement
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>Either party may terminate the agreement with written notice.</p> <br>
           <p>Upon termination, all open trades may be closed immediately unless otherwise agreed.</p> <br>
           <p>The Client will receive their remaining capital minus applicable fees or losses.</p>
@@ -443,35 +443,35 @@
       </div>
 
       <!-- 11. Confidentiality -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 11. Confidentiality
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>All client information shall remain confidential and used solely for service delivery.</p> <br>
           <p>The Company may disclose information if required by law enforcement or legal authorities.</p>
         </div>
       </div>
 
       <!-- 12. Governing Law -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 12. Governing Law
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>This agreement shall be governed by and interpreted under the laws of the United Kingdom.</p>
         </div>
       </div>
 
       <!-- 13. Acceptance -->
-      <div class="legal-item">
-        <button class="legal-question">
+      <div class="faq-item">
+        <button class="faq-question">
           <i class="fa-solid fa-gavel"></i> 13. Acceptance
-          <span class="legal-icon">+</span>
+          <span class="faq-icon">+</span>
         </button>
-        <div class="legal-answer">
+        <div class="faq-answer">
           <p>By activating a trading account or depositing funds, the Client confirms acceptance of these terms and conditions.</p>
         </div>
       </div>
@@ -565,18 +565,7 @@ window.addEventListener("load", () => {
     });
 });
 
-const legalItems = document.querySelectorAll(".legal-item");
-
-legalItems.forEach(item => {
-  const question = item.querySelector(".legal-question");
-  question.addEventListener("click", () => {
-    item.classList.toggle("active");
-    legalItems.forEach(other => {
-      if (other !== item) other.classList.remove("active");
-    });
-  });
-});
-
+// FAQ accordion is handled by the shared script (public/js/test.js)
 </script>
 
 <script src="{{ asset('js/platform.js') }}"></script>

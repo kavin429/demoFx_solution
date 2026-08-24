@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
   <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
   <link rel="stylesheet" href="{{ asset('css/account.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/platform.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/trading.css') }}">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
   @stack('styles')

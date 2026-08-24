@@ -78,7 +78,7 @@
 @endsection
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/platform.css') }}">
+<link rel="stylesheet" href="{{ asset('css/trading.css') }}">
 @endpush
 
 @push('scripts')

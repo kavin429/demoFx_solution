@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ResourceController;
 /*
 |--------------------------------------------------------------------------
 | Static Landing Pages
@@ -24,6 +25,7 @@ Route::view('/risk-disclosure', 'risk-disclosure')->name('risk-disclosure');
 
 Route::get('/trading/{slug}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/company/{slug}', [CompanyController::class, 'show'])->name('products.company');
+Route::get('/resources/{slug}', [ResourceController::class, 'show'])->name('products.resources');
 
 /*
 |--------------------------------------------------------------------------

@@ -68,12 +68,11 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="{{ route('about') }}">Why Fundamental Capital Ltd</a></li>
-          <li><a href="#">Trading Calculators</a></li>
-          <li><a href="#">Economic Calendar</a></li>
-          <li><a href="#">Trading Glossary</a></li>
-          <li><a href="#">Education Center</a></li>
-          <li><a href="{{ route('contact') }}">Risk Disclosure</a></li>
+          <li><a href="{{ route('products.resources', 'trading-calculators') }}">Trading Calculators</a></li>
+          <li><a href="{{ route('products.resources', 'economic-calendar') }}">Economic Calendar</a></li>
+          <li><a href="{{ route('products.resources', 'trading-glossary') }}">Trading Glossary</a></li>
+          <li><a href="{{ route('products.resources', 'education-center') }}">Education Center</a></li>
+          <li><a href="{{ route('risk-disclosure') }}">Risk Disclosure</a></li>
         </ul>
       </div>
     </div>

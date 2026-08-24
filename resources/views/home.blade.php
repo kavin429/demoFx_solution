@@ -2,23 +2,75 @@
 
 @section('title', 'Fundamental Capital Ltd')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/home-sections.css') }}">
+@endpush
+
 @section('content')
+
 <!-- ===== HERO SECTION ===== -->
-<section class="hero">
+<section class="gc-hero">
+  <div class="gc-hero-inner">
+    <div class="gc-hero-copy reveal">
+      <span class="gc-badge"><i class="ph ph-gift"></i> Limited-Time &middot; 100% Deposit Bonus</span>
 
-   <div class="hero-content scroll-animate">
-<h1 id="hero-title" class="gradient-text">Empower Your Trading Journey to Success</h1>
-<p id="hero-text" class="gradient-text-small">Where strategy meets opportunity without limits</p>
+      <h1 class="gc-hero-title">Trade Smarter.<br><span class="grad">Grow Faster.</span></h1>
 
-    <div class="hero-buttons">
-      <a href="https://trade.fundamentalcapitalltd.com">Get Started</a>
-     <!-- <a href="#" id="watchVideoBtn">Watch Video</a> -->
+      <p class="gc-hero-sub">
+        Forex, Metals, Indices &amp; Cryptocurrencies on professional platforms &mdash;
+        raw spreads from 0.0 pips and lightning-fast execution.
+      </p>
+
+      <div class="gc-hero-buttons">
+        <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-solid">Start Trading <i class="ph ph-arrow-right"></i></a>
+        <a href="#markets" class="btn-ghost">Explore Markets</a>
+      </div>
+
+      <ul class="gc-hero-trust">
+        <li><strong>4.8/5</strong><span>50+ countries</span></li>
+        <li><strong>1:500</strong><span>leverage</span></li>
+        <li><strong>From 0.0</strong><span>pips</span></li>
+      </ul>
+    </div>
+
+    <div class="gc-hero-visual reveal">
+      <img src="{{ asset('pics/test.png') }}" alt="Trading Illustration">
+
+      <div class="gc-feature-grid">
+        <div class="gc-feature">
+          <i class="ph ph-chart-line-up"></i>
+          <div><strong>Raw spreads on majors</strong><span>No requotes, no dealing desk</span></div>
+        </div>
+        <div class="gc-feature">
+          <i class="ph ph-lightning"></i>
+          <div><strong>Fast execution</strong><span>No requotes, no dealing desk</span></div>
+        </div>
+        <div class="gc-feature">
+          <i class="ph ph-globe-hemisphere-west"></i>
+          <div><strong>180+ markets</strong><span>FX, metals, indices, crypto</span></div>
+        </div>
+        <div class="gc-feature">
+          <i class="ph ph-headset"></i>
+          <div><strong>24/5 support</strong><span>Real people, fast replies</span></div>
+        </div>
+      </div>
     </div>
   </div>
 
-
-  <div class="hero-image scroll-animate">
-    <img src="{{ asset('pics/test.png') }}" alt="Trading Illustration">
+  <!-- Rating strip -->
+  <div class="gc-rating-strip reveal">
+    <div class="gc-rating-left">
+      <i class="ph ph-star-fill"></i>
+      <div>
+        <strong>Excellent 4.8 / 5</strong>
+        <span>based on 54,477 reviews</span>
+      </div>
+    </div>
+    <a href="https://trade.fundamentalcapitalltd.com/register" class="rating-link">Open an Account</a>
+    <div class="gc-rating-right">
+      <i class="ph ph-headset"></i>
+      <span>24/7 Support</span>
+    </div>
   </div>
 </section>
 
@@ -26,32 +78,17 @@
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright">
-    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-      </a></div>
-  <script type="text/javascript" 
+    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a>
+  </div>
+  <script type="text/javascript"
   src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
   {
   "symbols": [
-    {
-      "proName": "FOREXCOM:SPXUSD",
-      "title": "S&P 500 Index"
-    },
-    {
-      "proName": "FOREXCOM:NSXUSD",
-      "title": "US 100 Cash CFD"
-    },
-    {
-      "proName": "FX_IDC:EURUSD",
-      "title": "EUR to USD"
-    },
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "Ethereum"
-    }
+    { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500 Index" },
+    { "proName": "FOREXCOM:NSXUSD", "title": "US 100 Cash CFD" },
+    { "proName": "FX_IDC:EURUSD", "title": "EUR to USD" },
+    { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
+    { "proName": "BITSTAMP:ETHUSD", "title": "Ethereum" }
   ],
   "colorTheme": "dark",
   "locale": "en",
@@ -64,397 +101,356 @@
 </div>
 <!-- TradingView Widget END -->
 
-<!-- ===== VIDEO POPUP MODAL ===== 
-<div id="videoPopup" class="video-popup">
-  <div class="video-popup-content">
-    <span id="closeVideo">&times;</span>
-    <iframe id="videoFrame" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div> -->
+<!-- ===== MARKETS ===== -->
+<section id="markets" class="gc-section gc-markets">
+  <p class="gc-label">What you can trade</p>
+  <h2 class="gc-title">Access <span class="grad">World-Class Markets</span></h2>
+  <p class="gc-subtitle">Diversify across the most liquid asset classes from a single account.</p>
 
-<!-- ========== ABOUT US SECTION ========== -->
-<section class="about">
-
-  <div class="about-coins">
-    <img src="{{ asset('pics/img1.png') }}" alt="coin">
-    <img src="{{ asset('pics/img2.png') }}" alt="coin">
-    <img src="{{ asset('pics/img3.png') }}" alt="coin">
- 
- 
-  </div>
-
-  <div class="about-container">
-    <!-- Left Side: Company Info -->
-<div class="about-info">
-  <div class="about-grid">
-
-      <!-- Stats Cards -->
-    <div class="about-stats">
-      <div class="stat-card green-dark">
-        <h3><span class="counter" data-target="95">0</span>%</h3>
-        <p>Client Satisfaction</p>
-      </div>
-      <div class="stat-card green-emerald">
-        <h3><span class="counter" data-target="90">0</span>%</h3>
-        <p>Transparency</p>
-      </div>
-      <div class="stat-card green-olive">
-        <h3><span class="counter" data-target="85">0</span>%</h3>
-        <p>Trading Success</p>
-      </div>
-    </div>
-    
-        <!-- Company Image -->
-    <div class="about-image">
-      <img src="{{ asset('pics/about1.png') }}" alt="About ITrade Solutions LTD">
-    </div>
-
-
-  </div>
- <div class="about-text">
-  <h2>About <span>Fundamental Capital Ltd</span></h2>
-
-  <p>
-    Fundamental Capital Ltd is a trading platform and financial service developed under 
-    CORE FINANCE LIMITED, a globally recognized company specializing in innovative 
-    financial solutions. Through this platform, we provide clients with seamless access 
-    to a wide range of trading instruments including Forex, Cryptocurrencies, Metals, 
-    and Indices.
-  </p>
-
-  <p>
-    Backed by the expertise and infrastructure of CORE FINANCE LIMITED, Fundamental Capital Ltd 
-    delivers a secure, transparent, and technology-driven trading environment. Our mission 
-    is to empower traders and investors with reliable tools, competitive conditions, 
-    and real-time market insights to achieve their financial goals.
-  </p>
-
-  <p>
-    We are committed to excellence in customer experience. Our dedicated support team 
-    is available 24/7 to assist with account management, technical support, and trading 
-    guidance — ensuring a smooth and efficient trading journey for every client.
-  </p>
-
-  <a href="{{ route('about') }}" class="about-btn">More About Us</a>
-</div>
-
-      <!-- Right Side: Features -->
-
-</div>
-<div class="circle-container">
-  <!-- SVG lines connecting cards -->
-  <svg class="connect-lines" width="100%" height="100%">
-    <path class="line-top-right" />
-    <path class="line-right-bottom" />
-    <path class="line-bottom-left" />
-    <path class="line-left-top" />
-  </svg>
-
-  <!-- Cards -->
-  <div class="feature-card top">
-    <i class="ph ph-seal-check"></i>
-    <h3>Experienced</h3>
-    <p>Our team of seasoned professionals brings years of expertise to deliver top-notch services and support.</p>
-  </div>
-
-  <div class="feature-card right">
-    <i class="ph ph-users-three"></i>
-    <h3>Professionals</h3>
-    <p>Our dedicated team of skilled experts is committed to providing personalized guidance and analysis.</p>
-  </div>
-
-  <div class="feature-card bottom">
-    <i class="ph ph-clock"></i>
-    <h3>Always Available</h3>
-    <p>Our platform offers 24/7 accessibility, ensuring you can trade anytime, anywhere.</p>
-  </div>
-
-  <div class="feature-card left">
-    <i class="ph ph-shield-check"></i>
-    <h3>We're Responsible</h3>
-    <p>We prioritize safety, compliance, and ethical practices, ensuring responsible trading environments.</p>
-  </div>
-</div>
-  </div>
-  <script>
-    // JavaScript to dynamically connect lines between cards
-const container = document.querySelector('.circle-container');
-const lines = {
-  topRight: document.querySelector('.line-top-right'),
-  rightBottom: document.querySelector('.line-right-bottom'),
-  bottomLeft: document.querySelector('.line-bottom-left'),
-  leftTop: document.querySelector('.line-left-top'),
-};
-
-function connectCards() {
-  const svg = container.querySelector('.connect-lines');
-  if (!svg || getComputedStyle(svg).display === 'none') return;
-
-  const top = document.querySelector('.feature-card.top').getBoundingClientRect();
-  const right = document.querySelector('.feature-card.right').getBoundingClientRect();
-  const bottom = document.querySelector('.feature-card.bottom').getBoundingClientRect();
-  const left = document.querySelector('.feature-card.left').getBoundingClientRect();
-  const svgRect = container.getBoundingClientRect();
-
-  function setCurve(line, start, end) {
-    const x1 = start.x - svgRect.left;
-    const y1 = start.y - svgRect.top;
-    const x2 = end.x - svgRect.left;
-    const y2 = end.y - svgRect.top;
-
-    const midX = (x1 + x2) / 2;
-    const midY = (y1 + y2) / 2;
-    const dx = x2 - x1;
-    const dy = y2 - y1;
-    const dist = Math.hypot(dx, dy) || 1;
-
-    const nx = -dy / dist;
-    const ny = dx / dist;
-    const curveStrength = Math.min(70, Math.max(28, dist * 0.12));
-
-    const cx = midX + nx * curveStrength;
-    const cy = midY + ny * curveStrength;
-
-    line.setAttribute('d', `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
-  }
-
-  setCurve(lines.topRight, {x: top.left + top.width/2, y: top.top + top.height/2}, {x: right.left + right.width/2, y: right.top + right.height/2});
-  setCurve(lines.rightBottom, {x: right.left + right.width/2, y: right.top + right.height/2}, {x: bottom.left + bottom.width/2, y: bottom.top + bottom.height/2});
-  setCurve(lines.bottomLeft, {x: bottom.left + bottom.width/2, y: bottom.top + bottom.height/2}, {x: left.left + left.width/2, y: left.top + left.height/2});
-  setCurve(lines.leftTop, {x: left.left + left.width/2, y: left.top + left.height/2}, {x: top.left + top.width/2, y: top.top + top.height/2});
-}
-
-// Run on load and on resize
-window.addEventListener('load', connectCards);
-window.addEventListener('resize', connectCards);
-    </script>
-</section>
-
-<section id="products">
-
-   <!-- Floating Background Coins -->
-   <!-- Floating Background Trading Images -->
-  <div class="products-bg">
-   <img src="{{ asset('pics/coin4 (1).png') }}" alt="Trading Icon 1">
-   <img src="{{ asset('pics/coin5 (2).png') }}" alt="Trading Icon 2">
-   <img src="{{ asset('pics/coin6 (3).png') }}" alt="Trading Icon 3">
-
-  </div>
-
-  <h2>Trading <span>Products</span></h2>
-  <div class="products-slider">
-    <div class="product-card">
-      
+  <div class="gc-market-grid">
+    <a href="{{ route('products.show', 'forex') }}" class="gc-market-card reveal">
+      <span class="gc-icon"><i class="ph ph-currency-circle-dollar"></i></span>
       <h3>Forex</h3>
-      <p>The foreign exchange market (Forex) is the largest and most liquid market in the world, 
-        open 24 hours a day, five days a week.</p>
-      <a href="{{ route('products.show', 'forex') }}" class="arrow-link">Learn More</a>
-    </div>
-    <div class="product-card">
-      
+      <p>Major, minor &amp; exotic pairs, 24/5.</p>
+      <span class="card-arrow"><i class="ph ph-arrow-right"></i></span>
+    </a>
+    <a href="{{ route('products.show', 'metals') }}" class="gc-market-card reveal">
+      <span class="gc-icon"><i class="ph ph-coin-vertical"></i></span>
       <h3>Metals</h3>
-      <p>Precious metals like gold, silver, platinum, and palladium 
-        are considered safe-haven assets, widely used by traders.</p>
-      <a href="{{ route('products.show', 'metals') }}" class="arrow-link">Learn More</a>
-    </div>
-    <div class="product-card">
-      
+      <p>Gold, silver, platinum &amp; palladium.</p>
+      <span class="card-arrow"><i class="ph ph-arrow-right"></i></span>
+    </a>
+    <a href="{{ route('products.show', 'indices') }}" class="gc-market-card reveal">
+      <span class="gc-icon"><i class="ph ph-chart-bar"></i></span>
       <h3>Indices</h3>
-      <p>Stock market indices represent the performance of groups of leading companies 
-        across global economies. Popular indices like S&P 500, NASDAQ, and FTSE provide exposure.</p>
-      <a href="{{ route('products.show', 'indices') }}" class="arrow-link">Learn More</a>
-    </div>
-    <div class="product-card">
-      
-      <h3>Crypto Currency</h3>
-      <p>Cryptocurrencies are decentralized digital assets built on blockchain technology. 
-        Popular coins like Bitcoin, and Ripple are known for high volatility and growth potential.</p>
-      <a href="{{ route('products.show', 'crypto') }}" class="arrow-link">Learn More</a>
-    </div>
-    
-    <!-- more cards -->
-  </div>
-  <div class="slider-dots"></div>
-</section>
-
-
-<!-- Onboarding Steps -->
-<section id="create-account">
-   <h2>Get Started <span> in Minutes</span></h2>
-  <div class="steps-wrapper">
-    <div class="step left">
-      <div class="step-number">1</div>
-      <div class="step-content">
-        <h3>Create Account</h3>
-        <p>Sign up and open your live trading account with Core Finance LTD.</p>
-      </div>
-    </div>
-    <div class="step right">
-      <div class="step-number">2</div>
-      <div class="step-content">
-        <h3>Verify</h3>
-        <p>Upload your documents to verify your account with Core Finance LTD.</p>
-      </div>
-    </div>
-    <div class="step left">
-      <div class="step-number">3</div>
-      <div class="step-content">
-        <h3>Invest</h3>
-        <p>Log in and fund your account to start investing.</p>
-      </div>
-    </div>
-    <div class="step right">
-      <div class="step-number">4</div>
-      <div class="step-content">
-        <h3>Trade</h3>
-        <p>Enjoy hassle-free trading on multiple financial products.</p>
-      </div>
-    </div>
-    <div class="step left">
-      <div class="step-number">5</div>
-      <div class="step-content">
-        <h3>Withdraw</h3>
-        <p>Withdraw your profit safe and securely.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Meet Our Client Section-->
-<section id="testimonials">
-  <div class="section-header">
-    <h2>Meet Our <span>Clients</span></h2>
-    <a href="https://trade.fundamentalcapitalltd.com/login" class="btn">Be Our Client</a>
-  </div>
-
- 
-
-
-  <div class="testimonial-wrapper">
-
-  <div class="testimonial-container">
-    <div class="testimonial-track">
-
-      <!-- Card 1 -->
-      <div class="testimonial-card">
-        <div class="client-top">
-          <img src="{{ asset('pics/client2.jpg') }}" alt="Daniel Thompson">
-          <h4>Daniel Thompson</h4>
-          <span class="location">London, United Kingdom</span>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-        </div>
-        <p>
-          Fundamental Capital Ltd delivers exceptional trading conditions. 
-          The execution speed is impressive, and the analytics tools help 
-          me make informed decisions. It's a reliable platform for serious traders.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="testimonial-card">
-        <div class="client-top">
-          <img src="{{ asset('pics/client.webp') }}" alt="Fatima Hassan">
-          <h4>Fatima Hassan</h4>
-          <span class="location">Doha, Qatar</span>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-        <p>
-          The platform is very user-friendly and secure. 
-          Deposits and withdrawals are processed smoothly, 
-          and customer support is available whenever I need help.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="testimonial-card">
-        <div class="client-top">
-          <img src="{{ asset('pics/client3.webp') }}" alt="Rahul Mehta">
-          <h4>Rahul Mehta</h4>
-          <span class="location">Chennai, India</span>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-        </div>
-        <p>
-          I appreciate the transparency and advanced charting tools. 
-          The mobile trading experience is smooth, and I can monitor 
-          markets anytime without issues.
-        </p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="testimonial-card">
-        <div class="client-top">
-          <img src="{{ asset('pics/client1.avif') }}" alt="Olivia Martinez">
-          <h4>Olivia Martinez</h4>
-          <span class="location">Madrid, Spain</span>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-        <p>
-          Trading with Fundamental Capital Ltd has been a great experience. 
-          The interface is modern, execution is reliable, and 
-          I feel confident managing my investments here.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- Place this where you want the ticker -->
-<div class="tradingview-widget-container">
-  <div id="tv-tape"></div>
-  <div class="tradingview-widget-copyright">
-    <a href="https://www.tradingview.com/markets/" target="_blank" rel="noopener nofollow">
+      <p>Exposure to global economies.</p>
+      <span class="card-arrow"><i class="ph ph-arrow-right"></i></span>
+    </a>
+    <a href="{{ route('products.show', 'crypto') }}" class="gc-market-card reveal">
+      <span class="gc-icon"><i class="ph ph-currency-btc"></i></span>
+      <h3>Crypto</h3>
+      <p>Digital assets, around the clock.</p>
+      <span class="card-arrow"><i class="ph ph-arrow-right"></i></span>
     </a>
   </div>
-</div>
+</section>
 
+<!-- ===== SPONSORSHIP ===== -->
+<section class="gc-section gc-sponsor">
+  <p class="gc-label">Official Trading Partners</p>
+  <h2 class="gc-title">Different Arenas. <span class="grad">The Same Pursuit of Excellence.</span></h2>
+  <p class="gc-subtitle">
+    We share the mindset of elite athletes &mdash; discipline, precision and performance under pressure.
+    Fundamental Capital Ltd is proud to support sport at the highest level, bringing that winning spirit to every trade.
+  </p>
 
+  <div class="gc-sponsor-tabs" role="tablist">
+    <button type="button" class="sponsor-tab active" data-cat="football">Football</button>
+    <button type="button" class="sponsor-tab" data-cat="motorsport">Motorsport</button>
+    <button type="button" class="sponsor-tab" data-cat="athletics">Athletics</button>
+  </div>
 
+  <div class="gc-sponsor-stage reveal">
+    <div class="sponsor-panel active" data-cat="football">
+      <i class="ph ph-soccer-ball panel-icon"></i>
+      <h3>On the pitch, precision wins.</h3>
+      <p>One touch decides the game. We sponsor top-tier football clubs that live and breathe performance under pressure &mdash; exactly how we approach execution on every order.</p>
+    </div>
+    <div class="sponsor-panel" data-cat="motorsport">
+      <i class="ph ph-car-profile panel-icon"></i>
+      <h3>GC Racing &mdash; built for pace.</h3>
+      <p><span class="new-tag">NEW</span> Trade at race pace. Our GC Racing partnership reflects millisecond execution, relentless engineering and the pursuit of zero compromise &mdash; 0.0 pip spreads at racing speed.</p>
+    </div>
+    <div class="sponsor-panel" data-cat="athletics">
+      <i class="ph ph-person-simple-run panel-icon"></i>
+      <h3>Every millisecond counts.</h3>
+      <p>Elite athletes train for marginal gains. Traders do too. We back athletics programmes that celebrate discipline, endurance and the drive to be consistently faster.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLATFORMS ===== -->
+<section class="gc-section gc-platforms">
+  <div class="gc-split">
+    <div class="split-copy reveal">
+      <p class="gc-label">Powerful platforms</p>
+      <h2 class="gc-title left">Trade Anywhere, <span class="grad">On Any Device</span></h2>
+      <p class="gc-subtitle left">
+        Professional-grade tools with advanced charting, fast execution and automated trading &mdash;
+        synced across all your devices.
+      </p>
+      <ul class="check-list">
+        <li><i class="ph ph-check-circle"></i> Low-latency order execution</li>
+        <li><i class="ph ph-check-circle"></i> Advanced charts &amp; indicators</li>
+        <li><i class="ph ph-check-circle"></i> Automated &amp; algorithmic trading</li>
+        <li><i class="ph ph-check-circle"></i> Secure, encrypted connections</li>
+      </ul>
+      <a href="{{ route('platform') }}" class="btn-solid">Discover Platforms <i class="ph ph-arrow-right"></i></a>
+    </div>
+
+    <div class="split-visual reveal">
+      <div class="device-frame">
+        <div class="frame-bar"><span></span><span></span><span></span></div>
+        <svg viewBox="0 0 420 240" class="mock-chart" aria-hidden="true">
+          <defs>
+            <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#a78bfa" stop-opacity=".35"/>
+              <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g stroke="#1f1f22" stroke-width="1">
+            <line x1="0" y1="60" x2="420" y2="60"/><line x1="0" y1="120" x2="420" y2="120"/>
+            <line x1="0" y1="180" x2="420" y2="180"/>
+          </g>
+          <path d="M0,190 L40,175 L80,182 L120,150 L160,158 L200,120 L240,128 L280,95 L320,105 L360,70 L420,55 L420,240 L0,240 Z" fill="url(#areaFill)"/>
+          <path d="M0,190 L40,175 L80,182 L120,150 L160,158 L200,120 L240,128 L280,95 L320,105 L360,70 L420,55" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/>
+          <g fill="#ffffff" opacity=".85">
+            <rect x="30" y="160" width="8" height="26" rx="2"/><rect x="70" y="168" width="8" height="20" rx="2"/>
+            <rect x="110" y="140" width="8" height="28" rx="2"/><rect x="190" y="112" width="8" height="26" rx="2"/>
+            <rect x="270" y="86" width="8" height="28" rx="2"/><rect x="350" y="62" width="8" height="30" rx="2"/>
+          </g>
+          <g fill="#a78bfa" opacity=".55">
+            <rect x="50" y="172" width="8" height="18" rx="2"/><rect x="90" y="176" width="8" height="14" rx="2"/>
+            <rect x="150" y="148" width="8" height="16" rx="2"/><rect x="230" y="118" width="8" height="20" rx="2"/>
+            <rect x="310" y="96" width="8" height="18" rx="2"/><rect x="390" y="52" width="8" height="22" rx="2"/>
+          </g>
+        </svg>
+        <div class="frame-caption">Desktop &middot; Web &middot; Mobile</div>
+      </div>
+      <div class="chip-float chip-a"><i class="ph ph-lightning"></i> 0.0 pips</div>
+      <div class="chip-float chip-b"><i class="ph ph-shield-check"></i> Encrypted</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRADINGVIEW PARTNER ===== -->
+<section class="gc-section gc-tvpartner">
+  <div class="tv-inner reveal">
+    <p class="gc-label">Official Charting Partner</p>
+    <h2 class="gc-title left">Advanced charts &amp; market analysis <span class="grad">powered by TradingView</span></h2>
+    <p class="gc-subtitle left">
+      Fundamental Capital Ltd has partnered with TradingView, a global leader in charting and market analysis trusted by millions of traders.
+      Access real-time market data and powerful tools &mdash; explore the Stock Screener, stay ahead of market-moving events with the Economic Calendar,
+      and follow live S&amp;P 500 indices, USD/JPY forex and gold commodities with advanced live charting.
+    </p>
+    <div class="tv-chips">
+      <a href="https://www.tradingview.com/screener/" target="_blank" rel="noopener" class="tv-chip"><i class="ph ph-funnel"></i> Stock Screener</a>
+      <a href="https://www.tradingview.com/economic-calendar/" target="_blank" rel="noopener" class="tv-chip"><i class="ph ph-calendar-blank"></i> Economic Calendar</a>
+      <a href="https://www.tradingview.com/symbols/SPX/" target="_blank" rel="noopener" class="tv-chip"><i class="ph ph-chart-line"></i> S&amp;P 500</a>
+      <a href="https://www.tradingview.com/symbols/USDJPY/" target="_blank" rel="noopener" class="tv-chip"><i class="ph ph-chart-line"></i> USD/JPY</a>
+      <a href="https://www.tradingview.com/symbols/XAUUSD/" target="_blank" rel="noopener" class="tv-chip"><i class="ph ph-chart-line"></i> Gold</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING / ACCOUNTS ===== -->
+<section class="gc-section gc-pricing" id="plans">
+  <p class="gc-label">Trading accounts</p>
+  <h2 class="gc-title">Pick a Plan, <span class="grad">Start in Minutes</span></h2>
+  <p class="gc-subtitle">
+    Whether you're just starting out or trading serious size, there's a Fundamental Capital account built for you.
+    Every account includes access to all markets, our full platform suite and 24/7 support &mdash; upgrade as you grow.
+  </p>
+
+  <div class="plan-grid">
+    <!-- Lite -->
+    <article class="plan-card reveal">
+      <header><h3>Lite</h3><span class="plan-price">$250</span><span class="plan-note">min. deposit</span></header>
+      <ul class="plan-list">
+        <li><i class="ph ph-check"></i> Forex</li>
+        <li><i class="ph ph-check"></i> 5% withdrawal commission</li>
+        <li><i class="ph ph-check"></i> Standard spreads</li>
+        <li><i class="ph ph-check"></i> 24/7 support</li>
+      </ul>
+      <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-outline full">Open Lite</a>
+    </article>
+
+    <!-- Pro -->
+    <article class="plan-card popular reveal">
+      <span class="popular-tag"><i class="ph ph-fire"></i> Popular</span>
+      <header><h3>Pro</h3><span class="plan-price">$2,500</span><span class="plan-note">min. deposit</span></header>
+      <ul class="plan-list">
+        <li><i class="ph ph-check"></i> Forex &amp; Commodities</li>
+        <li><i class="ph ph-check"></i> 5% withdrawal commission</li>
+        <li><i class="ph ph-check"></i> Standard spreads</li>
+        <li><i class="ph ph-check"></i> Priority support</li>
+      </ul>
+      <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-solid full">Open Pro</a>
+    </article>
+
+    <!-- VIP -->
+    <article class="plan-card reveal">
+      <header><h3>VIP</h3><span class="plan-price">$25,000</span><span class="plan-note">min. deposit</span></header>
+      <ul class="plan-list">
+        <li><i class="ph ph-check"></i> All markets &amp; assets</li>
+        <li><i class="ph ph-check"></i> 5% withdrawal commission</li>
+        <li><i class="ph ph-check"></i> Standard spreads</li>
+        <li><i class="ph ph-check"></i> VIP support</li>
+      </ul>
+      <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-outline full">Open VIP</a>
+    </article>
+
+    <!-- Raw -->
+    <article class="plan-card reveal">
+      <header><h3>Raw (0 Spread)</h3><span class="plan-price">$500</span><span class="plan-note">min. deposit</span></header>
+      <ul class="plan-list">
+        <li><i class="ph ph-check"></i> Commodities</li>
+        <li><i class="ph ph-check"></i> 5% withdrawal commission</li>
+        <li><i class="ph ph-check"></i> 0 spreads</li>
+        <li><i class="ph ph-check"></i> 24/7 support</li>
+      </ul>
+      <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-outline full">Open Raw</a>
+    </article>
+  </div>
+
+  <a href="{{ route('account') }}" class="compare-link">Compare All Accounts <i class="ph ph-arrow-right"></i></a>
+  <p class="plan-risk"><i class="ph ph-warning-circle"></i> Leverage involves a high level of risk and may not be suitable for all investors.</p>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="gc-section gc-why">
+  <p class="gc-label">Why Fundamental Capital</p>
+  <h2 class="gc-title">Built for <span class="grad">Serious Traders</span></h2>
+
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <span class="gc-icon"><i class="ph ph-arrows-out-line-horizontal"></i></span>
+      <h3>Tight Raw Spreads</h3>
+      <p>Institutional-grade pricing from 0.0 pips with fast order execution.</p>
+    </div>
+    <div class="why-card reveal">
+      <span class="gc-icon"><i class="ph ph-headset"></i></span>
+      <h3>24/7 Support</h3>
+      <p>An experienced team available around the clock to help you trade with confidence.</p>
+    </div>
+    <div class="why-card reveal">
+      <span class="gc-icon"><i class="ph ph-shield-check"></i></span>
+      <h3>Safety &amp; Compliance</h3>
+      <p>A firm commitment to safety, compliance and ethical practices.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS BAND ===== -->
+<section class="gc-stats-band">
+  <div class="stat-item">
+    <h3><span class="counter" data-target="180">0</span>+</h3>
+    <p>Tradable Instruments</p>
+  </div>
+  <div class="stat-item">
+    <h3>1:<span class="counter" data-target="500">0</span></h3>
+    <p>Max Leverage</p>
+  </div>
+  <div class="stat-item">
+    <h3><span class="counter" data-target="24">0</span>/7</h3>
+    <p>Hours Support</p>
+  </div>
+  <div class="stat-item">
+    <h3><span class="counter" data-target="18">0</span>+</h3>
+    <p>Payment Methods</p>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="gc-section gc-reviews">
+  <p class="gc-label">Client reviews</p>
+  <h2 class="gc-title">Trusted by Traders <span class="grad">Across the Region</span></h2>
+  <p class="gc-subtitle">Real feedback from our clients in India, the UAE and the Maldives.</p>
+
+  <div class="review-grid">
+    <article class="review-card reveal">
+      <div class="stars"><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i></div>
+      <p>"Spreads are genuinely tight and withdrawals hit my account fast. The mobile app makes it easy to manage trades between meetings."</p>
+      <footer><span class="avatar">RM</span><div><strong>Rohan Mehta</strong><span>Mumbai, India</span></div></footer>
+    </article>
+
+    <article class="review-card reveal">
+      <div class="stars"><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i></div>
+      <p>"I started with a small Lite account and upgraded as I grew. Support answered every question patiently &mdash; highly recommended."</p>
+      <footer><span class="avatar">PN</span><div><strong>Priya Nair</strong><span>Bengaluru, India</span></div></footer>
+    </article>
+
+    <article class="review-card reveal">
+      <div class="stars"><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i></div>
+      <p>"Execution speed is excellent even during news. As someone trading gold daily, that reliability matters a lot."</p>
+      <footer><span class="avatar">AM</span><div><strong>Ahmed Al Mansoori</strong><span>Dubai, UAE</span></div></footer>
+    </article>
+
+    <article class="review-card reveal">
+      <div class="stars"><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i></div>
+      <p>"Clean platform, clear pricing, no hidden surprises. The managed fund plans helped me diversify beyond my own trades."</p>
+      <footer><span class="avatar">LH</span><div><strong>Layla Hassan</strong><span>Dubai, UAE</span></div></footer>
+    </article>
+
+    <article class="review-card reveal">
+      <div class="stars"><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i></div>
+      <p>"24/7 support is real &mdash; I got help at 2am during a volatile session. Deposits and withdrawals have always been smooth."</p>
+      <footer><span class="avatar">IN</span><div><strong>Ibrahim Naseer</strong><span>Mal&eacute;, Maldives</span></div></footer>
+    </article>
+
+    <article class="review-card reveal">
+      <div class="stars"><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i></div>
+      <p>"The SIP calculator and managed funds made investing approachable for me. Transparent and genuinely trustworthy."</p>
+      <footer><span class="avatar">AR</span><div><strong>Aishath Reema</strong><span>Mal&eacute;, Maldives</span></div></footer>
+    </article>
+  </div>
+</section>
+
+<!-- ===== STEPS ===== -->
+<section class="gc-section gc-steps" id="steps">
+  <p class="gc-label">Get started in minutes</p>
+  <h2 class="gc-title">Start Trading in <span class="grad">4 Simple Steps</span></h2>
+
+  <div class="steps-grid">
+    <div class="step-box reveal">
+      <span class="step-no">1</span>
+      <h3>Register</h3>
+      <p>Create your account in minutes with just your email and basic details.</p>
+    </div>
+    <div class="step-box reveal">
+      <span class="step-no">2</span>
+      <h3>Verify</h3>
+      <p>Complete quick KYC verification to secure and activate your account.</p>
+    </div>
+    <div class="step-box reveal">
+      <span class="step-no">3</span>
+      <h3>Fund</h3>
+      <p>Deposit instantly via card, bank transfer or your preferred method.</p>
+    </div>
+    <div class="step-box reveal">
+      <span class="step-no">4</span>
+      <h3>Trade</h3>
+      <p>Access global markets and managed funds &mdash; start growing right away.</p>
+    </div>
+  </div>
+
+  <div class="center-cta">
+    <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-solid big">Open an Account <i class="ph ph-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="gc-final-cta">
+  <div class="cta-inner reveal">
+    <h2>Ready to Start <span class="grad">Trading?</span></h2>
+    <p>Open your Fundamental Capital Ltd account today and access global markets in minutes.</p>
+    <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-solid big">Open an Account</a>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
 <section id="faq">
-
-  <div class="faq-wrapper">
-
-    <!-- Full Width FAQ -->
-    <div class="faq-container full-width">
+  <div class="faq-container">
       <h2>Most Common <span>FAQs</span></h2>
 
-      <!-- FAQ Item -->
-      <div class="faq-item active">
-        <button class="faq-question">
+      <div class="faq-item">
+        <button type="button" class="faq-question">
           What Is CFD Trading?
-          <span class="faq-icon">&#9650;</span> <!-- ▲ -->
+          <i class="ph ph-plus faq-icon"></i>
         </button>
         <div class="faq-answer">
           <p>
-  A Contract for Difference (CFD) is a financial derivative that allows traders to speculate on the price movements of various assets — such as forex, stocks, indices, commodities, and cryptocurrencies — without actually owning the underlying asset.
+  A Contract for Difference (CFD) is a financial derivative that allows traders to speculate on the price movements of various assets &mdash; such as forex, stocks, indices, commodities, and cryptocurrencies &mdash; without actually owning the underlying asset.
 
   Instead of purchasing the asset itself, you enter into an agreement with a broker to exchange the difference in the asset's price between the time the contract is opened and when it is closed.
 
@@ -468,15 +464,15 @@ window.addEventListener('resize', connectCards);
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button type="button" class="faq-question">
           What Trading Platform Do You Offer?
-          <span class="faq-icon">&#9660;</span> <!-- ▼ -->
+          <i class="ph ph-plus faq-icon"></i>
         </button>
         <div class="faq-answer">
           <p>
   We offer a powerful and secure multi-asset trading platform designed to meet the needs of both beginner and professional traders. Our platform provides real-time market data, advanced charting tools, and a wide range of technical indicators to help you analyze market movements with precision.
 
-  Traders can access multiple asset classes including Forex, commodities, indices, stocks, and cryptocurrencies — all from a single intuitive interface. The platform supports instant trade execution, flexible order types (market, limit, stop-loss, take-profit), and customizable trading layouts.
+  Traders can access multiple asset classes including Forex, commodities, indices, stocks, and cryptocurrencies &mdash; all from a single intuitive interface. The platform supports instant trade execution, flexible order types (market, limit, stop-loss, take-profit), and customizable trading layouts.
 
   <br/> <br/>Our system is built with high-level encryption technology to ensure maximum security of your funds and personal data. It is accessible via desktop, web browser, and mobile devices, allowing you to trade anytime, anywhere.
 
@@ -486,9 +482,9 @@ window.addEventListener('resize', connectCards);
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button type="button" class="faq-question">
           How Do I Open A Trading Account?
-          <span class="faq-icon">&#9660;</span>
+          <i class="ph ph-plus faq-icon"></i>
         </button>
         <div class="faq-answer">
           <p>
@@ -502,9 +498,9 @@ window.addEventListener('resize', connectCards);
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button type="button" class="faq-question">
           What Is Online Trading, How It Work?
-          <span class="faq-icon">&#9660;</span>
+          <i class="ph ph-plus faq-icon"></i>
         </button>
         <div class="faq-answer">
           <p>
@@ -518,9 +514,9 @@ window.addEventListener('resize', connectCards);
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">
+        <button type="button" class="faq-question">
           What Risk Management Tools Are Available?
-          <span class="faq-icon">&#9660;</span>
+          <i class="ph ph-plus faq-icon"></i>
         </button>
         <div class="faq-answer">
           <p>
@@ -534,21 +530,19 @@ window.addEventListener('resize', connectCards);
       </div>
 
     </div>
-
-  </div>
 </section>
 
+<!-- ===== PAYMENT METHODS ===== -->
 <section id="payment-methods" class="payment-section">
   <div class="payment-content">
 
     <div class="payment-head">
       <div class="payment-head-left">
-        <p class="payment-label">Payment Methods</p>
-        <h2>Global channels trusted by demo clients</h2>
+        <p class="payment-label">Fast &amp; secure funding</p>
+        <h2>Flexible Funding Options</h2>
         <p>
-          We work with modern wallets, cards, and bank partners so you can top up your account
-          quickly and securely. Every deposit is routed through encrypted channels and reviewed
-          before it reaches your trading wallet.
+          Cards, wallets, crypto and bank partners worldwide &mdash; fund your account quickly and securely.
+          Every deposit is routed through encrypted channels and reviewed before it reaches your trading wallet.
         </p>
       </div>
 
@@ -571,86 +565,43 @@ window.addEventListener('resize', connectCards);
         <div class="route-node end"><span class="dot"></span> Trading wallet</div>
       </div>
 
+      @php
+  $paymentMethods = [
+    ['name' => 'Tether',                'image' => 'c1.png',  'category' => 'crypto'],
+    ['name' => 'Ethereum',              'image' => 'c2.png',  'category' => 'crypto'],
+    ['name' => 'PayPal',                'image' => 'c3.png',  'category' => 'wallets'],
+    ['name' => 'VISA',                  'image' => 'c4.png',  'category' => 'cards'],
+    ['name' => 'PayPal',                'image' => 'c5.png',  'category' => 'wallets'],
+    ['name' => 'PaymentAsia',           'image' => 'c6.png',  'category' => 'wallets'],
+    ['name' => 'PayTrust',              'image' => 'c7.png',  'category' => 'wallets'],
+    ['name' => 'PayPort',               'image' => 'c8.png',  'category' => 'wallets'],
+    ['name' => 'World Pay',             'image' => 'c9.png',  'category' => 'bank'],
+    ['name' => 'Verified by VISA',      'image' => 'c10.png', 'category' => 'cards'],
+    ['name' => 'myFatoorah',            'image' => 'c11.png', 'category' => 'bank'],
+    ['name' => 'Magic Pay',             'image' => 'c12.png', 'category' => 'wallets'],
+    ['name' => 'Dragon Pay',            'image' => 'c13.png', 'category' => 'bank'],
+    ['name' => 'Bank Transfer',         'image' => 'c14.png', 'category' => 'bank'],
+    ['name' => 'Google Pay',            'image' => 'c15.png', 'category' => 'cards'],
+    ['name' => 'Apple Pay',             'image' => 'c16.png', 'category' => 'cards'],
+    ['name' => 'MasterCard SecureCode', 'image' => 'c17.png', 'category' => 'cards'],
+    ['name' => 'Stripe',                'image' => 'c18.png', 'category' => 'cards'],
+  ];
+@endphp
+
       <div class="payment-grid" id="paymentGrid">
-        <article class="payment-card" data-cat="crypto">
-          <img src="{{ asset('pics/payment/c1.png') }}" alt="Tether">
-          <span>Tether</span>
-        </article>
-        <article class="payment-card" data-cat="crypto">
-          <img src="{{ asset('pics/payment/c2.png') }}" alt="Ethereum">
-          <span>Ethereum</span>
-        </article>
-        <article class="payment-card" data-cat="wallets">
-          <img src="{{ asset('pics/payment/c3.png') }}" alt="PayPal">
-          <span>PayPal</span>
-        </article>
-        <article class="payment-card" data-cat="cards">
-          <img src="{{ asset('pics/payment/c4.png') }}" alt="VISA">
-          <span>VISA</span>
-        </article>
-        <article class="payment-card" data-cat="wallets">
-          <img src="{{ asset('pics/payment/c5.png') }}" alt="PayPal">
-          <span>PayPal</span>
-        </article>
-        <article class="payment-card" data-cat="wallets">
-          <img src="{{ asset('pics/payment/c6.png') }}" alt="PaymentAsia">
-          <span>PaymentAsia</span>
-        </article>
-        <article class="payment-card" data-cat="wallets">
-          <img src="{{ asset('pics/payment/c7.png') }}" alt="PayTrust">
-          <span>PayTrust</span>
-        </article>
-        <article class="payment-card" data-cat="wallets">
-          <img src="{{ asset('pics/payment/c8.png') }}" alt="PayPort">
-          <span>PayPort</span>
-        </article>
-        <article class="payment-card" data-cat="bank">
-          <img src="{{ asset('pics/payment/c9.png') }}" alt="World Pay">
-          <span>World Pay</span>
-        </article>
-        <article class="payment-card" data-cat="cards">
-          <img src="{{ asset('pics/payment/c10.png') }}" alt="Verified by VISA">
-          <span>Verified by VISA</span>
-        </article>
-        <article class="payment-card" data-cat="bank">
-          <img src="{{ asset('pics/payment/c11.png') }}" alt="myFatoorah">
-          <span>myFatoorah</span>
-        </article>
-        <article class="payment-card" data-cat="wallets">
-          <img src="{{ asset('pics/payment/c12.png') }}" alt="Magic Pay">
-          <span>Magic Pay</span>
-        </article>
-        <article class="payment-card" data-cat="bank">
-          <img src="{{ asset('pics/payment/c13.png') }}" alt="Dragon Pay">
-          <span>Dragon Pay</span>
-        </article>
-        <article class="payment-card" data-cat="bank">
-          <img src="{{ asset('pics/payment/c14.png') }}" alt="Bank Transfer">
-          <span>Bank Transfer</span>
-        </article>
-        <article class="payment-card" data-cat="cards">
-          <img src="{{ asset('pics/payment/c15.png') }}" alt="Google Pay">
-          <span>Google Pay</span>
-        </article>
-        <article class="payment-card" data-cat="cards">
-          <img src="{{ asset('pics/payment/c16.png') }}" alt="Apple Pay">
-          <span>Apple Pay</span>
-        </article>
-        <article class="payment-card" data-cat="cards">
-          <img src="{{ asset('pics/payment/c17.png') }}" alt="MasterCard SecureCode">
-          <span>MasterCard SecureCode</span>
-        </article>
-        <article class="payment-card" data-cat="cards">
-          <img src="{{ asset('pics/payment/c18.png') }}" alt="Stripe">
-          <span>Stripe</span>
-        </article>
-      </div>
+  @foreach ($paymentMethods as $method)
+    <article class="payment-card" data-cat="{{ $method['category'] }}">
+      <img src="{{ asset('pics/payment/' . $method['image']) }}" alt="{{ $method['name'] }}">
+      <span>{{ $method['name'] }}</span>
+    </article>
+  @endforeach
+</div>
     </div>
 
     <div class="payment-foot">
       <div class="payment-note">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        <span>Deposits are usually processed quickly; you will be notified once the funds reach your account.</span>
+        <span>Risk warning: CFDs are complex instruments and carry a high risk of losing money rapidly due to leverage.</span>
       </div>
       <div class="payment-meta">Showing <strong id="countLabel">18</strong> channels</div>
     </div>
@@ -661,41 +612,37 @@ window.addEventListener('resize', connectCards);
 
 @push('scripts')
 <script>
-  const faqItems = document.querySelectorAll(".faq-item");
-
-  faqItems.forEach(item => {
-    const question = item.querySelector(".faq-question");
-
-    question.addEventListener("click", () => {
-
-      faqItems.forEach(i => {
-        if (i !== item) {
-          i.classList.remove("active");
-          i.querySelector(".faq-icon").innerHTML = "▼";
-        }
-      });
-
-      item.classList.toggle("active");
-
-      const icon = item.querySelector(".faq-icon");
-      icon.innerHTML = item.classList.contains("active") ? "▲" : "▼";
+/* Reveal on scroll */
+document.addEventListener("DOMContentLoaded", function () {
+  const els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(el => el.classList.add("visible"));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("visible");
+        io.unobserve(e.target);
+      }
     });
-  });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+});
 </script>
 
 <script>
+/* Stat counters */
 document.addEventListener("DOMContentLoaded", function () {
-  const counters = document.querySelectorAll(".stat-card .counter");
+  const counters = document.querySelectorAll(".gc-stats-band .counter");
   if (!counters.length) return;
 
-  function runCounter(counter) {
+  function run(counter) {
     if (counter.dataset.done === "1") return;
     counter.dataset.done = "1";
-
     const target = Number(counter.getAttribute("data-target")) || 0;
     let current = 0;
     const step = Math.max(1, Math.ceil(target / 80));
-
     const tick = () => {
       current += step;
       if (current < target) {
@@ -705,87 +652,49 @@ document.addEventListener("DOMContentLoaded", function () {
         counter.textContent = target;
       }
     };
-
     counter.textContent = "0";
     tick();
   }
 
-  const cards = document.querySelectorAll(".stat-card");
+  const band = document.querySelector(".gc-stats-band");
+  if (!band) return;
+
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const counter = entry.target.querySelector(".counter");
-          if (counter) runCounter(counter);
+          band.querySelectorAll(".counter").forEach(run);
+          io.disconnect();
         }
       });
-    }, { threshold: 0.1 });
-
-    cards.forEach((card) => io.observe(card));
+    }, { threshold: 0.3 });
+    io.observe(band);
   } else {
-    counters.forEach(runCounter);
+    counters.forEach(run);
   }
-
-  // Backup trigger for first render
-  setTimeout(() => counters.forEach(runCounter), 300);
 });
 </script>
+
 <script>
+/* Sponsorship tabs */
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.__heroSliderRunning) return;
-  window.__heroSliderRunning = true;
+  const tabs = document.querySelectorAll(".sponsor-tab");
+  const panels = document.querySelectorAll(".sponsor-panel");
 
-  const titleEl = document.getElementById("hero-title");
-  const textEl = document.getElementById("hero-text");
-  if (!titleEl || !textEl) return;
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      tabs.forEach(t => t.classList.remove("active"));
+      this.classList.add("active");
 
-  const slides = [
-    {
-      title: "Empower Your Trading Journey to Success",
-      text: "Where strategy meets opportunity without limits"
-    },
-    {
-      title: "Trade Smarter, Build Stronger Every Day",
-      text: "Advanced tools and live insights crafted for your success"
-    },
-    {
-      title: "Begin Your Journey to Financial Independence",
-      text: "Join a global network of motivated traders"
-    }
-  ];
-
-  let index = 0;
-  const animateTo = (nextIndex) => {
-    titleEl.classList.remove("zoom-in");
-    textEl.classList.remove("zoom-in");
-    titleEl.classList.add("zoom-out");
-    textEl.classList.add("zoom-out");
-
-    setTimeout(() => {
-      index = nextIndex % slides.length;
-      titleEl.classList.remove("zoom-out");
-      textEl.classList.remove("zoom-out");
-      titleEl.textContent = slides[index].title;
-      textEl.textContent = slides[index].text;
-      titleEl.classList.add("zoom-in");
-      textEl.classList.add("zoom-in");
-    }, 400);
-  };
-
-  setInterval(() => animateTo(index + 1), 3000);
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const steps = document.querySelectorAll("#create-account .step");
-  if (!steps.length) return;
-
-  steps.forEach((step, i) => {
-    setTimeout(() => step.classList.add("show"), i * 200);
+      const cat = this.dataset.cat;
+      panels.forEach(p => p.classList.toggle("active", p.dataset.cat === cat));
+    });
   });
 });
 </script>
+
 <script>
+/* Payment category filter */
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".payment-tab");
   const cards = document.querySelectorAll(".payment-card");

@@ -38,7 +38,7 @@
         <li>Standard spreads</li>
         <li>24/7 support</li>
       </ul>
-      <a href="https://trade.growthcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Lite</a>
+      <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Lite</a>
     </div>
 
     <!-- Pro (Popular) -->
@@ -55,7 +55,7 @@
         <li>Standard spreads</li>
         <li>Priority support</li>
       </ul>
-      <a href="https://trade.growthcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Pro</a>
+      <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Pro</a>
     </div>
 
     <!-- VIP -->
@@ -71,7 +71,7 @@
         <li>Standard spreads</li>
         <li>VIP support</li>
       </ul>
-      <a href="https://trade.growthcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open VIP</a>
+      <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open VIP</a>
     </div>
 
     <!-- Raw (0 Spread) -->
@@ -87,7 +87,7 @@
         <li>0 spreads</li>
         <li>24/7 support</li>
       </ul>
-      <a href="https://trade.growthcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Raw</a>
+      <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Raw</a>
     </div>
 
   </div>
@@ -123,7 +123,7 @@
       </div>
     </div>
 
-    <a href="https://trade.growthcapitalltd.com/register?type=LIVE" class="steps-cta">Open an Account</a>
+    <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="steps-cta">Open an Account</a>
   </div>
 </section>
 
@@ -190,7 +190,3 @@
 </section>
 
 @endsection
-
-@push('scripts')
-<script src="{{ asset('js/account.js') }}"></script>
-@endpush

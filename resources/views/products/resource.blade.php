@@ -93,6 +93,62 @@
         </section>
     @endisset
 
+    {{-- ===== MARKET NEWS ARTICLES — MARQUEE ===== --}}
+    @isset($page['articles'])
+        @php
+            $articleCollection = collect($page['articles']);
+            $twoRows  = $articleCollection->count() > 5;
+            $half     = $twoRows ? (int) ceil($articleCollection->count() / 2) : $articleCollection->count();
+            $topRow   = $articleCollection->slice(0, $half)->values();
+            $bottomRow = $twoRows ? $articleCollection->slice($half)->values() : collect();
+            if ($twoRows && $bottomRow->isEmpty()) { $bottomRow = $topRow; }
+        @endphp
+
+        <section class="highlights-section marquee-section">
+
+            <div class="marquee-row marquee-row--ltr">
+                <div class="marquee-track">
+                    @for ($pass = 0; $pass < 2; $pass++)
+                        @foreach ($topRow as $item)
+                            <article class="marquee-card fade-section">
+                                <h3>{{ $item['title'] }}</h3>
+                                <div class="card-copy">
+                                    <p>{{ $item['text'] ?? $item['excerpt'] ?? '' }}</p>
+                                    @isset($item['date'])
+                                        <span class="location">{{ $item['date'] }}</span>
+                                    @endisset
+                                </div>
+                                <a href="{{ $item['url'] ?? '#' }}" target="_blank" rel="noopener" class="marquee-btn">Read more</a>
+                            </article>
+                        @endforeach
+                    @endfor
+                </div>
+            </div>
+
+            @if ($twoRows)
+            <div class="marquee-row marquee-row--rtl">
+                <div class="marquee-track">
+                    @for ($pass = 0; $pass < 2; $pass++)
+                        @foreach ($bottomRow as $item)
+                            <article class="marquee-card fade-section">
+                                <h3>{{ $item['title'] }}</h3>
+                                <div class="card-copy">
+                                    <p>{{ $item['text'] ?? $item['excerpt'] ?? '' }}</p>
+                                    @isset($item['date'])
+                                        <span class="location">{{ $item['date'] }}</span>
+                                    @endisset
+                                </div>
+                                <a href="{{ $item['url'] ?? '#' }}" target="_blank" rel="noopener" class="marquee-btn">Read more</a>
+                            </article>
+                        @endforeach
+                    @endfor
+                </div>
+            </div>
+            @endif
+
+        </section>
+    @endisset
+
     {{-- ===== CLOSING CTA ===== --}}
     @isset($page['cta'])
         <section class="content-cta fade-section">
@@ -110,7 +166,7 @@
 @endsection
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/platform.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/trading.css') }}">
 @endpush
 
 @push('scripts')

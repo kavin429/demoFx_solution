@@ -18,10 +18,7 @@ return [
             ['icon' => 'ph-eye',          'title' => 'Full Transparency', 'text' => 'Clear pricing, no hidden fees, no dealing desk conflicts.'],
             ['icon' => 'ph-headset',      'title' => '24/5 Support',      'text' => 'Real support whenever markets are open.'],
         ],
-        'cta' => [
-            'title' => 'Ready to Start Trading?', 'text' => 'Open an account and see the difference for yourself.',
-            'btnText' => 'Open an Account', 'btnUrl' => 'https://trade.fundamentalcapitalltd.com/register?type=LIVE',
-        ],
+       
     ],
 
     'reviews' => [
@@ -42,16 +39,6 @@ return [
         'articles' => [
             ['title' => 'Understanding Leverage in CFD Trading', 'excerpt' => 'A practical look at how leverage amplifies gains and losses.', 'date' => 'Aug 2026', 'url' => '#'],
             ['title' => '5 Common Mistakes New Traders Make',     'excerpt' => 'Avoid these pitfalls when starting out.',                      'date' => 'Jul 2026', 'url' => '#'],
-        ],
-    ],
-
-    'market-updates' => [
-        'title'     => 'Market Updates',
-        'heroTitle' => 'Market Updates',
-        'heroText'  => 'Live insight on what is moving the markets.',
-        'articles' => [
-            ['title' => 'Gold holds above key support', 'text' => 'XAU/USD trades steady as investors weigh rate expectations.', 'date' => 'Aug 21, 2026'],
-            ['title' => 'EUR/USD volatility rises',      'text' => 'Pair swings amid mixed Eurozone data releases.',              'date' => 'Aug 20, 2026'],
         ],
     ],
 
