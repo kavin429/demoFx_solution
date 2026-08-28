@@ -283,3 +283,294 @@
   .product-description-inner { padding: 32px 26px; }
   .product-description p::first-letter { font-size: 36px; }
 }
+
+/* ============================================================
+   Platform Page — page-specific styles
+   Loaded only on the Platform page via @push('styles').
+   Reuses the design tokens (--surface-2, --lavender, --radius, etc.)
+   already defined in :root inside home.css.
+   ============================================================ */
+
+/* ============================================================
+   Hero Banner
+   ============================================================ */
+
+.platform-banner {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  text-align: center;
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.8) 100%),
+    url('/pics/cta.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.platform-banner__inner {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.platform-banner__tag {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--lavender-soft);
+  background: rgba(167, 139, 250, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+}
+
+.platform-banner__title {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.platform-banner__desc {
+  font-size: 15.5px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .platform-banner {
+    min-height: 340px;
+    padding: 48px 20px;
+  }
+  .platform-banner__title { font-size: 28px; }
+  .platform-banner__desc { font-size: 14px; }
+}
+
+.padding-top    { padding-top: 90px; }
+.padding-bottom { padding-bottom: 90px; }
+.bg-color       { background: var(--bg-alt); }
+.text-center    { text-align: center; }
+
+/* ---------- Generic buttons (btn-primary / btn-outline) ---------- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.btn-primary {
+  background: var(--lavender);
+  color: var(--text-on-accent);
+}
+.btn-primary:hover {
+  background: var(--lavender-strong);
+  color: var(--text-on-accent);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+.btn-outline:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* ---------- Shared section heading bits ---------- */
+.section-tag {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--lavender);
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 640px;
+}
+
+.section-header.text-center .section-desc { margin: 0 auto; }
+
+/* ============================================================
+   Sync / "One Account, Every Device" section
+   ============================================================ */
+
+.platform-sync__wrapper {
+  max-width: var(--container);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.platform-sync__content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.platform-sync__content .section-title { margin-bottom: 16px; }
+.platform-sync__content .section-desc { margin: 0 auto 28px; }
+
+/* ============================================================
+   Choose Your Platform — cards
+   ============================================================ */
+
+.platform-options .container,
+.platform-features .container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.platform-options .section-header,
+.platform-features .section-header {
+  max-width: 640px;
+  margin: 0 auto 48px;
+  display: block;
+}
+
+.platform-options__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.platform-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  text-align: center;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.platform-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+}
+
+.platform-card__icon {
+  display: block;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--lavender);
+  margin: 0 auto 16px;
+}
+
+.platform-card__label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--lavender);
+  margin-bottom: 10px;
+}
+
+.platform-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.platform-card__desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+/* ============================================================
+   Features / "Built for Reliability"
+   ============================================================ */
+
+.platform-features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-item {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.feature-item:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+}
+
+.feature-item__icon {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--lavender);
+  margin: 0 auto 14px;
+}
+
+.feature-item__title {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.feature-item__desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Final CTA
+   ============================================================ */
+
+.platform-final-cta .container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.platform-final-cta .section-title { margin-bottom: 14px; }
+.platform-final-cta .section-desc { margin: 0 auto 28px; }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .platform-options__grid { grid-template-columns: 1fr 1fr; }
+  .platform-features__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .padding-top    { padding-top: 60px; }
+  .padding-bottom { padding-bottom: 60px; }
+
+  .platform-options__grid { grid-template-columns: 1fr; }
+  .platform-features__grid { grid-template-columns: 1fr; }
+
+  .platform-card { padding: 24px 20px; }
+  .section-desc { font-size: 14px; }
+}

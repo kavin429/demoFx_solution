@@ -3,7 +3,7 @@
 @section('title', 'Fundamental Capital Ltd')
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/home-sections.css') }}">
+<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endpush
 
 @section('content')
@@ -34,7 +34,135 @@
     </div>
 
     <div class="gc-hero-visual reveal">
-      <img src="{{ asset('pics/test.png') }}" alt="Trading Illustration">
+      <svg class="gc-visual-chart" viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="coinTop" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#efe3ff"/>
+            <stop offset="55%" stop-color="#b49bfb"/>
+            <stop offset="100%" stop-color="#8b6ff0"/>
+          </linearGradient>
+          <linearGradient id="coinSide" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#9b7ef5"/>
+            <stop offset="100%" stop-color="#6c4de0"/>
+          </linearGradient>
+          <radialGradient id="floorGlowP" cx="50%" cy="0%" r="75%">
+            <stop offset="0%"  stop-color="#a78bfa" stop-opacity=".35"/>
+            <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="goldCoinP">
+            <stop offset="0"   stop-color="#fff2a6"/>
+            <stop offset=".35" stop-color="#ffd43b"/>
+            <stop offset="1"   stop-color="#f3a400"/>
+          </radialGradient>
+          <filter id="glowArrow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glowStack" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="7" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glowCoinP" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- floor glow -->
+        <ellipse cx="290" cy="312" rx="250" ry="18" fill="url(#floorGlowP)"/>
+
+        <!-- ===== coin stacks (purple), increasing height, ring lines visible ===== -->
+
+        <!-- stack 1: 2 coins -->
+        <g class="coin-stack" style="animation-delay:.05s" transform="translate(70,312)" filter="url(#glowStack)">
+          <rect x="-30" y="-18" width="60" height="18" fill="url(#coinSide)"/>
+          <ellipse cy="0"   rx="30" ry="9" fill="url(#coinSide)"/>
+          <line x1="-30" y1="-9" x2="30" y2="-9" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <ellipse cy="-18" rx="30" ry="9" fill="url(#coinTop)"/>
+        </g>
+
+        <!-- stack 2: 4 coins -->
+        <g class="coin-stack" style="animation-delay:.18s" transform="translate(155,312)" filter="url(#glowStack)">
+          <rect x="-30" y="-36" width="60" height="36" fill="url(#coinSide)"/>
+          <ellipse cy="0"   rx="30" ry="9" fill="url(#coinSide)"/>
+          <line x1="-30" y1="-9"  x2="30" y2="-9"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-18" x2="30" y2="-18" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-27" x2="30" y2="-27" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <ellipse cy="-36" rx="30" ry="9" fill="url(#coinTop)"/>
+        </g>
+
+        <!-- stack 3: 7 coins -->
+        <g class="coin-stack" style="animation-delay:.31s" transform="translate(240,312)" filter="url(#glowStack)">
+          <rect x="-30" y="-63" width="60" height="63" fill="url(#coinSide)"/>
+          <ellipse cy="0" rx="30" ry="9" fill="url(#coinSide)"/>
+          <line x1="-30" y1="-9"  x2="30" y2="-9"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-18" x2="30" y2="-18" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-27" x2="30" y2="-27" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-36" x2="30" y2="-36" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-45" x2="30" y2="-45" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-54" x2="30" y2="-54" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <ellipse cy="-63" rx="30" ry="9" fill="url(#coinTop)"/>
+        </g>
+
+        <!-- stack 4: 10 coins -->
+        <g class="coin-stack" style="animation-delay:.44s" transform="translate(325,312)" filter="url(#glowStack)">
+          <rect x="-30" y="-90" width="60" height="90" fill="url(#coinSide)"/>
+          <ellipse cy="0" rx="30" ry="9" fill="url(#coinSide)"/>
+          <line x1="-30" y1="-9"  x2="30" y2="-9"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-18" x2="30" y2="-18" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-27" x2="30" y2="-27" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-36" x2="30" y2="-36" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-45" x2="30" y2="-45" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-54" x2="30" y2="-54" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-63" x2="30" y2="-63" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-72" x2="30" y2="-72" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-81" x2="30" y2="-81" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <ellipse cy="-90" rx="30" ry="9" fill="url(#coinTop)"/>
+        </g>
+
+        <!-- stack 5: 13 coins (tallest) -->
+        <g class="coin-stack" style="animation-delay:.57s" transform="translate(410,312)" filter="url(#glowStack)">
+          <rect x="-30" y="-117" width="60" height="117" fill="url(#coinSide)"/>
+          <ellipse cy="0" rx="30" ry="9" fill="url(#coinSide)"/>
+          <line x1="-30" y1="-9"   x2="30" y2="-9"   stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-18"  x2="30" y2="-18"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-27"  x2="30" y2="-27"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-36"  x2="30" y2="-36"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-45"  x2="30" y2="-45"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-54"  x2="30" y2="-54"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-63"  x2="30" y2="-63"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-72"  x2="30" y2="-72"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-81"  x2="30" y2="-81"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-90"  x2="30" y2="-90"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-99"  x2="30" y2="-99"  stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <line x1="-30" y1="-108" x2="30" y2="-108" stroke="#5a3fd0" stroke-width="1.5" opacity=".7"/>
+          <ellipse cy="-117" rx="30" ry="9" fill="url(#coinTop)"/>
+        </g>
+
+        <!-- ===== glowing zigzag arrow, traced above stack tops ===== -->
+        <path class="hero-trendline" d="M20,300 L95,260 L140,278 L200,205 L260,232 L320,148 L365,172 L470,55"
+              fill="none" stroke="#a78bfa" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowArrow)"/>
+        <path class="hero-trend-arrow" d="M450,38 L478,52 L462,80" fill="none" stroke="#a78bfa" stroke-width="7"
+              stroke-linecap="round" stroke-linejoin="round" filter="url(#glowArrow)"/>
+
+        <!-- ===== floating gold coins along the arrow ===== -->
+        <g class="float-coin fc-a" filter="url(#glowCoinP)">
+          <circle cx="118" cy="252" r="15" fill="url(#goldCoinP)" stroke="#fff2a6" stroke-width="1.3"/>
+          <text x="118" y="258" text-anchor="middle" font-size="15" font-weight="800" fill="#7a4a00">$</text>
+        </g>
+        <g class="float-coin fc-b" filter="url(#glowCoinP)">
+          <circle cx="230" cy="192" r="17" fill="url(#goldCoinP)" stroke="#fff2a6" stroke-width="1.4"/>
+          <text x="230" y="198" text-anchor="middle" font-size="17" font-weight="800" fill="#7a4a00">$</text>
+        </g>
+        <g class="float-coin fc-c" filter="url(#glowCoinP)">
+          <circle cx="342" cy="120" r="18" fill="url(#goldCoinP)" stroke="#fff2a6" stroke-width="1.5"/>
+          <text x="342" y="126" text-anchor="middle" font-size="18" font-weight="800" fill="#7a4a00">$</text>
+        </g>
+        <g class="float-coin fc-d" filter="url(#glowCoinP)">
+          <circle cx="440" cy="65" r="20" fill="url(#goldCoinP)" stroke="#fff2a6" stroke-width="1.6"/>
+          <text x="440" y="71" text-anchor="middle" font-size="20" font-weight="800" fill="#7a4a00">$</text>
+        </g>
+      </svg>
 
       <div class="gc-feature-grid">
         <div class="gc-feature">
@@ -103,68 +231,85 @@
 
 <!-- ===== MARKETS ===== -->
 <section id="markets" class="gc-section gc-markets">
-  <p class="gc-label">What you can trade</p>
-  <h2 class="gc-title">Access <span class="grad">World-Class Markets</span></h2>
-  <p class="gc-subtitle">Diversify across the most liquid asset classes from a single account.</p>
+  <p class="gc-label">Our Trading Markets</p>
+  <h2 class="gc-title">Connect <span class="grad">to Global Markets</span></h2>
+  <p class="gc-subtitle">One account, four asset classes &mdash; trade the markets that move the world.</p>
 
   <div class="gc-market-grid">
-    <a href="{{ route('products.show', 'forex') }}" class="gc-market-card reveal">
-      <span class="gc-icon"><i class="ph ph-currency-circle-dollar"></i></span>
-      <h3>Forex</h3>
-      <p>Major, minor &amp; exotic pairs, 24/5.</p>
-      <span class="card-arrow"><i class="ph ph-arrow-right"></i></span>
+
+    <a href="{{ route('products.show', 'forex') }}" class="gc-market-card reveal" style="background-image:url('{{ asset('pics/platform/forex.png') }}')">
+      <div class="gc-market-overlay"></div>
+      <div class="gc-market-content">
+        <span class="gc-icon"><i class="ph ph-currency-circle-dollar"></i></span>
+        <h3>Forex</h3>
+        <p>150+ currency pairs, tight spreads, round-the-clock liquidity.</p>
+        <span class="card-arrow">Trade Forex <i class="ph ph-arrow-right"></i></span>
+      </div>
     </a>
-    <a href="{{ route('products.show', 'metals') }}" class="gc-market-card reveal">
-      <span class="gc-icon"><i class="ph ph-coin-vertical"></i></span>
-      <h3>Metals</h3>
-      <p>Gold, silver, platinum &amp; palladium.</p>
-      <span class="card-arrow"><i class="ph ph-arrow-right"></i></span>
+
+    <a href="{{ route('products.show', 'metals') }}" class="gc-market-card reveal" style="background-image:url('{{ asset('pics/platform/metals.png') }}')">
+      <div class="gc-market-overlay"></div>
+      <div class="gc-market-content">
+        <span class="gc-icon"><i class="ph ph-coin-vertical"></i></span>
+        <h3>Metals</h3>
+        <p>Gold, silver &amp; precious metals &mdash; a hedge that never sleeps.</p>
+        <span class="card-arrow">Trade Metals <i class="ph ph-arrow-right"></i></span>
+      </div>
     </a>
-    <a href="{{ route('products.show', 'indices') }}" class="gc-market-card reveal">
-      <span class="gc-icon"><i class="ph ph-chart-bar"></i></span>
-      <h3>Indices</h3>
-      <p>Exposure to global economies.</p>
-      <span class="card-arrow"><i class="ph ph-arrow-right"></i></span>
+
+    <a href="{{ route('products.show', 'indices') }}" class="gc-market-card reveal" style="background-image:url('{{ asset('pics/platform/indices.png') }}')">
+      <div class="gc-market-overlay"></div>
+      <div class="gc-market-content">
+        <span class="gc-icon"><i class="ph ph-chart-bar"></i></span>
+        <h3>Indices</h3>
+        <p>Trade entire economies &mdash; S&amp;P 500, Nasdaq, DAX &amp; more.</p>
+        <span class="card-arrow">Trade Indices <i class="ph ph-arrow-right"></i></span>
+      </div>
     </a>
-    <a href="{{ route('products.show', 'crypto') }}" class="gc-market-card reveal">
-      <span class="gc-icon"><i class="ph ph-currency-btc"></i></span>
-      <h3>Crypto</h3>
-      <p>Digital assets, around the clock.</p>
-      <span class="card-arrow"><i class="ph ph-arrow-right"></i></span>
+
+    <a href="{{ route('products.show', 'crypto') }}" class="gc-market-card reveal" style="background-image:url('{{ asset('pics/platform/crypto.png') }}')">
+      <div class="gc-market-overlay"></div>
+      <div class="gc-market-content">
+        <span class="gc-icon"><i class="ph ph-currency-btc"></i></span>
+        <h3>Crypto</h3>
+        <p>Bitcoin, Ethereum &amp; top digital assets, live 24/7.</p>
+        <span class="card-arrow">Trade Crypto <i class="ph ph-arrow-right"></i></span>
+      </div>
     </a>
+
   </div>
 </section>
 
-<!-- ===== SPONSORSHIP ===== -->
+<!-- ===== TOOLS & FEATURES ===== -->
 <section class="gc-section gc-sponsor">
-  <p class="gc-label">Official Trading Partners</p>
-  <h2 class="gc-title">Different Arenas. <span class="grad">The Same Pursuit of Excellence.</span></h2>
+  <p class="gc-label">Built-In Trading Tools</p>
+  <h2 class="gc-title">Everything You Need <span class="grad">to Trade with Confidence</span></h2>
   <p class="gc-subtitle">
-    We share the mindset of elite athletes &mdash; discipline, precision and performance under pressure.
-    Fundamental Capital Ltd is proud to support sport at the highest level, bringing that winning spirit to every trade.
+    From advanced charting to automated strategies and disciplined risk control &mdash;
+    our platform gives you the tools professional traders rely on.
   </p>
 
   <div class="gc-sponsor-tabs" role="tablist">
-    <button type="button" class="sponsor-tab active" data-cat="football">Football</button>
-    <button type="button" class="sponsor-tab" data-cat="motorsport">Motorsport</button>
-    <button type="button" class="sponsor-tab" data-cat="athletics">Athletics</button>
+    <button type="button" class="sponsor-tab active" data-cat="charting">Charting</button>
+    <button type="button" class="sponsor-tab" data-cat="automation">Automation</button>
+    <button type="button" class="sponsor-tab" data-cat="risk">Risk Management</button>
   </div>
 
   <div class="gc-sponsor-stage reveal">
-    <div class="sponsor-panel active" data-cat="football">
-      <i class="ph ph-soccer-ball panel-icon"></i>
-      <h3>On the pitch, precision wins.</h3>
-      <p>One touch decides the game. We sponsor top-tier football clubs that live and breathe performance under pressure &mdash; exactly how we approach execution on every order.</p>
+    <div class="sponsor-panel active" data-cat="charting">
+      <i class="ph ph-chart-line panel-icon"></i>
+      <h3>Advanced charting, built in.</h3>
+      <p>Real-time price data, dozens of technical indicators and multiple timeframes &mdash; powered by our TradingView integration so you can spot opportunities the moment they appear.</p>
     </div>
-    <div class="sponsor-panel" data-cat="motorsport">
-      <i class="ph ph-car-profile panel-icon"></i>
-      <h3>GC Racing &mdash; built for pace.</h3>
-      <p><span class="new-tag">NEW</span> Trade at race pace. Our GC Racing partnership reflects millisecond execution, relentless engineering and the pursuit of zero compromise &mdash; 0.0 pip spreads at racing speed.</p>
+    <div class="sponsor-panel" data-cat="automation">
+      <i class="ph ph-robot panel-icon"></i>
+      <h3>Trade around the clock.</h3>
+      <p><span class="new-tag">NEW</span> Automate your strategy with algorithmic and Expert Advisor support. Backtest, deploy and let your rules execute &mdash; even while you're away from the screen.</p>
     </div>
-    <div class="sponsor-panel" data-cat="athletics">
-      <i class="ph ph-person-simple-run panel-icon"></i>
-      <h3>Every millisecond counts.</h3>
-      <p>Elite athletes train for marginal gains. Traders do too. We back athletics programmes that celebrate discipline, endurance and the drive to be consistently faster.</p>
+    <div class="sponsor-panel" data-cat="risk">
+      <i class="ph ph-shield-check panel-icon"></i>
+      <h3>Trade with discipline.</h3>
+      <p>Stop-loss, take-profit and trailing stop orders, plus real-time margin monitoring &mdash; so you stay in control of every position and protect your capital as markets move.</p>
     </div>
   </div>
 </section>
@@ -252,55 +397,73 @@
     Every account includes access to all markets, our full platform suite and 24/7 support &mdash; upgrade as you grow.
   </p>
 
-  <div class="plan-grid">
-    <!-- Lite -->
-    <article class="plan-card reveal">
-      <header><h3>Lite</h3><span class="plan-price">$250</span><span class="plan-note">min. deposit</span></header>
-      <ul class="plan-list">
-        <li><i class="ph ph-check"></i> Forex</li>
-        <li><i class="ph ph-check"></i> 5% withdrawal commission</li>
-        <li><i class="ph ph-check"></i> Standard spreads</li>
-        <li><i class="ph ph-check"></i> 24/7 support</li>
-      </ul>
-      <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-outline full">Open Lite</a>
-    </article>
+  <div class="plans-grid">
 
-    <!-- Pro -->
-    <article class="plan-card popular reveal">
-      <span class="popular-tag"><i class="ph ph-fire"></i> Popular</span>
-      <header><h3>Pro</h3><span class="plan-price">$2,500</span><span class="plan-note">min. deposit</span></header>
-      <ul class="plan-list">
-        <li><i class="ph ph-check"></i> Forex &amp; Commodities</li>
-        <li><i class="ph ph-check"></i> 5% withdrawal commission</li>
-        <li><i class="ph ph-check"></i> Standard spreads</li>
-        <li><i class="ph ph-check"></i> Priority support</li>
+    <!-- Lite -->
+    <div class="plan-card">
+      <div class="plan-card__name">Lite</div>
+      <div class="plan-card__price">
+        <span class="amount">$250</span>
+        <span class="label">min. deposit</span>
+      </div>
+      <ul class="plan-card__features">
+        <li>Forex</li>
+        <li>5% withdrawal commission</li>
+        <li>Standard spreads</li>
+        <li>24/7 support</li>
       </ul>
-      <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-solid full">Open Pro</a>
-    </article>
+      <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Lite</a>
+    </div>
+
+    <!-- Pro (Popular) -->
+    <div class="plan-card plan-card--popular">
+      <span class="plan-card__badge">Popular</span>
+      <div class="plan-card__name">Pro</div>
+      <div class="plan-card__price">
+        <span class="amount">$2,500</span>
+        <span class="label">min. deposit</span>
+      </div>
+      <ul class="plan-card__features">
+        <li>Forex &amp; Commodities</li>
+        <li>5% withdrawal commission</li>
+        <li>Standard spreads</li>
+        <li>Priority support</li>
+      </ul>
+      <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Pro</a>
+    </div>
 
     <!-- VIP -->
-    <article class="plan-card reveal">
-      <header><h3>VIP</h3><span class="plan-price">$25,000</span><span class="plan-note">min. deposit</span></header>
-      <ul class="plan-list">
-        <li><i class="ph ph-check"></i> All markets &amp; assets</li>
-        <li><i class="ph ph-check"></i> 5% withdrawal commission</li>
-        <li><i class="ph ph-check"></i> Standard spreads</li>
-        <li><i class="ph ph-check"></i> VIP support</li>
+    <div class="plan-card">
+      <div class="plan-card__name">VIP</div>
+      <div class="plan-card__price">
+        <span class="amount">$25,000</span>
+        <span class="label">min. deposit</span>
+      </div>
+      <ul class="plan-card__features">
+        <li>All markets &amp; assets</li>
+        <li>5% withdrawal commission</li>
+        <li>Standard spreads</li>
+        <li>VIP support</li>
       </ul>
-      <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-outline full">Open VIP</a>
-    </article>
+      <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open VIP</a>
+    </div>
 
-    <!-- Raw -->
-    <article class="plan-card reveal">
-      <header><h3>Raw (0 Spread)</h3><span class="plan-price">$500</span><span class="plan-note">min. deposit</span></header>
-      <ul class="plan-list">
-        <li><i class="ph ph-check"></i> Commodities</li>
-        <li><i class="ph ph-check"></i> 5% withdrawal commission</li>
-        <li><i class="ph ph-check"></i> 0 spreads</li>
-        <li><i class="ph ph-check"></i> 24/7 support</li>
+    <!-- Raw (0 Spread) -->
+    <div class="plan-card">
+      <div class="plan-card__name">Raw (0 Spread)</div>
+      <div class="plan-card__price">
+        <span class="amount">$500</span>
+        <span class="label">min. deposit</span>
+      </div>
+      <ul class="plan-card__features">
+        <li>Commodities</li>
+        <li>5% withdrawal commission</li>
+        <li>0 spreads</li>
+        <li>24/7 support</li>
       </ul>
-      <a href="https://trade.fundamentalcapitalltd.com/register" class="btn-outline full">Open Raw</a>
-    </article>
+      <a href="https://trade.fundamentalcapitalltd.com/register?type=LIVE" class="plan-card__cta">Open Raw</a>
+    </div>
+
   </div>
 
   <a href="{{ route('account') }}" class="compare-link">Compare All Accounts <i class="ph ph-arrow-right"></i></a>
@@ -450,16 +613,12 @@
         </button>
         <div class="faq-answer">
           <p>
-  A Contract for Difference (CFD) is a financial derivative that allows traders to speculate on the price movements of various assets &mdash; such as forex, stocks, indices, commodities, and cryptocurrencies &mdash; without actually owning the underlying asset.
-
-  Instead of purchasing the asset itself, you enter into an agreement with a broker to exchange the difference in the asset's price between the time the contract is opened and when it is closed.
-
-  CFDs allow traders to profit in both rising and falling markets by taking either a <strong>long position</strong> (buy) if they expect the price to increase, or a <strong>short position</strong> (sell) if they expect the price to decrease. <br/><br/>
-
-  One of the key advantages of CFD trading is the use of <strong>leverage</strong>, which enables traders to control larger positions with a smaller amount of capital. However, while leverage can increase potential profits, it also significantly increases the level of risk.
-
-  CFDs are popular among traders because they offer flexibility, access to global markets, fast execution, and the ability to hedge existing investments. Proper risk management strategies such as stop-loss and take-profit orders are strongly recommended when trading CFDs.
-</p>
+            A Contract for Difference (CFD) is a financial derivative that allows traders to speculate on the price movements of various assets &mdash; such as forex, stocks, indices, commodities, and cryptocurrencies &mdash; without actually owning the underlying asset.
+            Instead of purchasing the asset itself, you enter into an agreement with a broker to exchange the difference in the asset's price between the time the contract is opened and when it is closed.
+            CFDs allow traders to profit in both rising and falling markets by taking either a <strong>long position</strong> (buy) if they expect the price to increase, or a <strong>short position</strong> (sell) if they expect the price to decrease. <br/><br/>
+            One of the key advantages of CFD trading is the use of <strong>leverage</strong>, which enables traders to control larger positions with a smaller amount of capital. However, while leverage can increase potential profits, it also significantly increases the level of risk.
+            CFDs are popular among traders because they offer flexibility, access to global markets, fast execution, and the ability to hedge existing investments. Proper risk management strategies such as stop-loss and take-profit orders are strongly recommended when trading CFDs.
+          </p>
         </div>
       </div>
 
@@ -470,14 +629,12 @@
         </button>
         <div class="faq-answer">
           <p>
-  We offer a powerful and secure multi-asset trading platform designed to meet the needs of both beginner and professional traders. Our platform provides real-time market data, advanced charting tools, and a wide range of technical indicators to help you analyze market movements with precision.
-
-  Traders can access multiple asset classes including Forex, commodities, indices, stocks, and cryptocurrencies &mdash; all from a single intuitive interface. The platform supports instant trade execution, flexible order types (market, limit, stop-loss, take-profit), and customizable trading layouts.
-
-  <br/> <br/>Our system is built with high-level encryption technology to ensure maximum security of your funds and personal data. It is accessible via desktop, web browser, and mobile devices, allowing you to trade anytime, anywhere.
-
-  Whether you are just starting your trading journey or managing advanced strategies, our platform provides the performance, stability, and tools required to trade with confidence.
-</p>
+            We offer a powerful and secure multi-asset trading platform designed to meet the needs of both beginner and professional traders. Our platform provides real-time market data, advanced charting tools, and a wide range of technical indicators to help you analyze market movements with precision.
+            Traders can access multiple asset classes including Forex, commodities, indices, stocks, and cryptocurrencies &mdash; all from a single intuitive interface. The platform supports instant trade execution, flexible order types (market, limit, stop-loss, take-profit), and customizable trading layouts.
+            <br/><br/>
+            Our system is built with high-level encryption technology to ensure maximum security of your funds and personal data. It is accessible via desktop, web browser, and mobile devices, allowing you to trade anytime, anywhere.
+            Whether you are just starting your trading journey or managing advanced strategies, our platform provides the performance, stability, and tools required to trade with confidence.
+          </p>
         </div>
       </div>
 
@@ -488,12 +645,10 @@
         </button>
         <div class="faq-answer">
           <p>
-  Opening a trading account with us is a simple and secure process. First, complete the online registration form by providing your basic personal information. Once registered, you will need to verify your identity by submitting valid identification documents (such as a passport or national ID) and proof of address, in compliance with regulatory requirements.
-
-  After verification is approved, you can fund your account using one of our secure payment methods, including bank transfer, credit/debit card, or supported online payment systems. Once your deposit is confirmed, you can access the trading platform, explore available markets, and begin trading immediately.
-
-  Our support team is available to assist you throughout the entire onboarding process to ensure a smooth and hassle-free experience.
-</p>
+            Opening a trading account with us is a simple and secure process. First, complete the online registration form by providing your basic personal information. Once registered, you will need to verify your identity by submitting valid identification documents (such as a passport or national ID) and proof of address, in compliance with regulatory requirements.
+            After verification is approved, you can fund your account using one of our secure payment methods, including bank transfer, credit/debit card, or supported online payment systems. Once your deposit is confirmed, you can access the trading platform, explore available markets, and begin trading immediately.
+            Our support team is available to assist you throughout the entire onboarding process to ensure a smooth and hassle-free experience.
+          </p>
         </div>
       </div>
 
@@ -504,12 +659,10 @@
         </button>
         <div class="faq-answer">
           <p>
-  Online trading is the process of buying and selling financial instruments such as Forex, stocks, commodities, indices, and cryptocurrencies through an internet-based trading platform. Instead of contacting a broker by phone, traders can access global markets instantly using a computer or mobile device.
-
-  The process works by placing buy (long) or sell (short) orders based on your market analysis and trading strategy. When you open a trade, you speculate on the price movement of an asset. If the market moves in your favor, you can close the trade to realize a profit. If it moves against you, a loss may occur.
-
-  Modern trading platforms provide real-time pricing, advanced charting tools, risk management features, and instant execution to help traders make informed decisions efficiently.
-</p>
+            Online trading is the process of buying and selling financial instruments such as Forex, stocks, commodities, indices, and cryptocurrencies through an internet-based trading platform. Instead of contacting a broker by phone, traders can access global markets instantly using a computer or mobile device.
+            The process works by placing buy (long) or sell (short) orders based on your market analysis and trading strategy. When you open a trade, you speculate on the price movement of an asset. If the market moves in your favor, you can close the trade to realize a profit. If it moves against you, a loss may occur.
+            Modern trading platforms provide real-time pricing, advanced charting tools, risk management features, and instant execution to help traders make informed decisions efficiently.
+          </p>
         </div>
       </div>
 
@@ -520,16 +673,14 @@
         </button>
         <div class="faq-answer">
           <p>
-  We provide a comprehensive range of risk management tools to help traders protect their capital and manage market exposure effectively. These tools include Stop-Loss orders, which automatically close a trade at a predetermined loss level, and Take-Profit orders, which secure profits once a target price is reached.
-
-  Additionally, Trailing Stop orders allow traders to lock in profits dynamically as the market moves in their favor. Margin monitoring tools and real-time account analytics are also available to help you maintain control over your risk levels.
-
-  While these tools are designed to support disciplined trading, we strongly encourage traders to apply proper risk management strategies and never risk more than they can afford to lose.
-</p>
+            We provide a comprehensive range of risk management tools to help traders protect their capital and manage market exposure effectively. These tools include Stop-Loss orders, which automatically close a trade at a predetermined loss level, and Take-Profit orders, which secure profits once a target price is reached.
+            Additionally, Trailing Stop orders allow traders to lock in profits dynamically as the market moves in their favor. Margin monitoring tools and real-time account analytics are also available to help you maintain control over your risk levels.
+            While these tools are designed to support disciplined trading, we strongly encourage traders to apply proper risk management strategies and never risk more than they can afford to lose.
+          </p>
         </div>
       </div>
 
-    </div>
+  </div>
 </section>
 
 <!-- ===== PAYMENT METHODS ===== -->
@@ -545,14 +696,6 @@
           Every deposit is routed through encrypted channels and reviewed before it reaches your trading wallet.
         </p>
       </div>
-
-      <div class="payment-tabs" role="tablist">
-        <button class="payment-tab active" data-cat="all">All <span class="count">18</span></button>
-        <button class="payment-tab" data-cat="crypto">Crypto <span class="count">2</span></button>
-        <button class="payment-tab" data-cat="cards">Cards <span class="count">6</span></button>
-        <button class="payment-tab" data-cat="wallets">Wallets <span class="count">6</span></button>
-        <button class="payment-tab" data-cat="bank">Bank <span class="count">4</span></button>
-      </div>
     </div>
 
     <div class="route-stage">
@@ -566,36 +709,47 @@
       </div>
 
       @php
-  $paymentMethods = [
-    ['name' => 'Tether',                'image' => 'c1.png',  'category' => 'crypto'],
-    ['name' => 'Ethereum',              'image' => 'c2.png',  'category' => 'crypto'],
-    ['name' => 'PayPal',                'image' => 'c3.png',  'category' => 'wallets'],
-    ['name' => 'VISA',                  'image' => 'c4.png',  'category' => 'cards'],
-    ['name' => 'PayPal',                'image' => 'c5.png',  'category' => 'wallets'],
-    ['name' => 'PaymentAsia',           'image' => 'c6.png',  'category' => 'wallets'],
-    ['name' => 'PayTrust',              'image' => 'c7.png',  'category' => 'wallets'],
-    ['name' => 'PayPort',               'image' => 'c8.png',  'category' => 'wallets'],
-    ['name' => 'World Pay',             'image' => 'c9.png',  'category' => 'bank'],
-    ['name' => 'Verified by VISA',      'image' => 'c10.png', 'category' => 'cards'],
-    ['name' => 'myFatoorah',            'image' => 'c11.png', 'category' => 'bank'],
-    ['name' => 'Magic Pay',             'image' => 'c12.png', 'category' => 'wallets'],
-    ['name' => 'Dragon Pay',            'image' => 'c13.png', 'category' => 'bank'],
-    ['name' => 'Bank Transfer',         'image' => 'c14.png', 'category' => 'bank'],
-    ['name' => 'Google Pay',            'image' => 'c15.png', 'category' => 'cards'],
-    ['name' => 'Apple Pay',             'image' => 'c16.png', 'category' => 'cards'],
-    ['name' => 'MasterCard SecureCode', 'image' => 'c17.png', 'category' => 'cards'],
-    ['name' => 'Stripe',                'image' => 'c18.png', 'category' => 'cards'],
-  ];
-@endphp
+        $paymentMethods = [
+          ['name' => 'Tether',       'type' => 'svg',  'icon' => 'tether',     'color' => '26A17B'],
+          ['name' => 'Ethereum',     'type' => 'svg',  'icon' => 'ethereum',   'color' => '3C3C3D'],
+          ['name' => 'Bitcoin',      'type' => 'svg',  'icon' => 'bitcoin',    'color' => 'F7931A'],
+          ['name' => 'VISA',         'type' => 'svg',  'icon' => 'visa',       'color' => '1A1F71'],
+          ['name' => 'PayPal',       'type' => 'svg',  'icon' => 'paypal',     'color' => '00457C'],
+          ['name' => 'Bank Wire',    'type' => 'icon', 'icon' => 'ph-bank'],
+          ['name' => 'Mastercard',   'type' => 'svg',  'icon' => 'mastercard', 'color' => 'EB001B'],
+          ['name' => 'Bank Transfer','type' => 'icon', 'icon' => 'ph-bank'],
+          ['name' => 'Google Pay',   'type' => 'svg',  'icon' => 'googlepay',  'color' => '4285F4'],
+          ['name' => 'Apple Pay',    'type' => 'svg',  'icon' => 'applepay',   'color' => '000000'],
+          ['name' => 'Stripe',       'type' => 'svg',  'icon' => 'stripe',     'color' => '635BFF'],
+          ['name' => 'Skrill',       'type' => 'icon', 'icon' => 'ph-wallet'],
+        ];
+        $rows = array_chunk($paymentMethods, 6); // 2 rows of 6
+      @endphp
 
       <div class="payment-grid" id="paymentGrid">
-  @foreach ($paymentMethods as $method)
-    <article class="payment-card" data-cat="{{ $method['category'] }}">
-      <img src="{{ asset('pics/payment/' . $method['image']) }}" alt="{{ $method['name'] }}">
-      <span>{{ $method['name'] }}</span>
-    </article>
-  @endforeach
-</div>
+        @foreach ($rows as $i => $row)
+          <div class="marquee-row {{ $i % 2 === 1 ? 'reverse' : '' }}">
+            <div class="marquee-track">
+              {{-- duplicate the row so the loop is seamless --}}
+              @for ($copy = 0; $copy < 2; $copy++)
+                @foreach ($row as $method)
+                  <article class="payment-card">
+                    <span class="payment-card__logo">
+                      @if ($method['type'] === 'svg')
+                        <img src="https://cdn.simpleicons.org/{{ $method['icon'] }}/{{ $method['color'] }}" alt="{{ $method['name'] }}" loading="lazy">
+                      @else
+                        <i class="ph {{ $method['icon'] }}"></i>
+                      @endif
+                    </span>
+                    <span>{{ $method['name'] }}</span>
+                  </article>
+                @endforeach
+              @endfor
+            </div>
+          </div>
+        @endforeach
+      </div>
+
     </div>
 
     <div class="payment-foot">
@@ -603,11 +757,11 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         <span>Risk warning: CFDs are complex instruments and carry a high risk of losing money rapidly due to leverage.</span>
       </div>
-      <div class="payment-meta">Showing <strong id="countLabel">18</strong> channels</div>
     </div>
 
   </div>
 </section>
+
 @endsection
 
 @push('scripts')
@@ -694,27 +848,15 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script>
-/* Payment category filter */
+/* FAQ accordion */
 document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll(".payment-tab");
-  const cards = document.querySelectorAll(".payment-card");
-  const countLabel = document.getElementById("countLabel");
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", function () {
-      tabs.forEach(t => t.classList.remove("active"));
-      this.classList.add("active");
-
-      const cat = this.dataset.cat;
-      let visible = 0;
-
-      cards.forEach(card => {
-        const show = cat === "all" || card.dataset.cat === cat;
-        card.style.display = show ? "" : "none";
-        if (show) visible++;
-      });
-
-      countLabel.textContent = visible;
+  const items = document.querySelectorAll(".faq-item");
+  items.forEach(item => {
+    const btn = item.querySelector(".faq-question");
+    btn.addEventListener("click", function () {
+      const isOpen = item.classList.contains("open");
+      items.forEach(i => i.classList.remove("open"));
+      if (!isOpen) item.classList.add("open");
     });
   });
 });

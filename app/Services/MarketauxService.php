@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
@@ -13,41 +12,29 @@ class MarketauxService
 
     public function getMarketUpdates(array $symbols = ['EURUSD', 'XAUUSD', 'GBPUSD'], int $limit = 12): array
     {
-        return Cache::remember('marketaux_updates', now()->addMinutes(15), function () use ($symbols, $limit) {
-            $response = Http::get("{$this->baseUrl}/news/all", [
-                'api_token'       => config('services.marketaux.token'),
-                'symbols'         => implode(',', $symbols),
-                'filter_entities' => 'true',
-                'language'        => 'en',
-                'limit'           => $limit,
-                'sort'            => 'published_at',
-            ]);
+        $response = Http::get("{$this->baseUrl}/news/all", [
+            'api_token'       => config('services.marketaux.token'),
+            'symbols'         => implode(',', $symbols),
+            'filter_entities' => 'true',
+            'language'        => 'en',
+            'limit'           => $limit,
+            'sort'            => 'published_at',
+        ]);
 
-            if (! $response->successful()) {
-                return [];
-            }
-
-            return $this->mapArticles($response->json('data', []));
-        });
+        return $response->successful() ? $this->mapArticles($response->json('data', [])) : [];
     }
 
     public function getLatestNews(int $limit = 12): array
     {
-        return Cache::remember('marketaux_latest_news', now()->addMinutes(15), function () use ($limit) {
-            $response = Http::get("{$this->baseUrl}/news/all", [
-                'api_token'     => config('services.marketaux.token'),
-                'language'      => 'en',
-                'limit'         => $limit,
-                'sort'          => 'published_at',
-                'group_similar' => 'true',
-            ]);
+        $response = Http::get("{$this->baseUrl}/news/all", [
+            'api_token'     => config('services.marketaux.token'),
+            'language'      => 'en',
+            'limit'         => $limit,
+            'sort'          => 'published_at',
+            'group_similar' => 'true',
+        ]);
 
-            if (! $response->successful()) {
-                return [];
-            }
-
-            return $this->mapArticles($response->json('data', []));
-        });
+        return $response->successful() ? $this->mapArticles($response->json('data', [])) : [];
     }
 
     protected function mapArticles(array $articles): array

@@ -2,64 +2,138 @@
 
 @section('title', 'Platform - Fundamental Capital Ltd')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/platform.css') }}">
+@endpush
+
 @section('content')
-<section class="platform-layout">
-    <div class="container platform-layout-grid">
 
-      <div class="platform-left">
-        <section class="platform-section">
-          <h1 class="page-title">Fundamental Capital Ltd Financial Services Platform</h1>
-          <p class="page-desc">
-              The Fundamental Capital Ltd platform is designed to provide efficient and secure
-  access to professional accounting, bookkeeping, tax consultancy, and financial
-  management services. Our system enables clients to manage financial records,
-  monitor reports, and access essential documentation through a user-friendly interface.
-  <br/><br/>
-  Built for individuals and businesses alike, the platform ensures accuracy,
-  confidentiality, and compliance with UK regulations. With secure data protection,
-  streamlined reporting tools, and reliable support, we help our clients make
-  informed financial decisions and maintain long-term financial stability.
-          </p>
-        </section>
-      </div>
-
-      <div class="platform-right">
-        <section class="cta padding-top padding-bottom bg-color">
-          <div class="cta__wrapper">
-            <div class="cta__newsletter justify-content-center">
-              <div class="cta__newsletter-inner aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                <div class="cta__subscribe">
-                  <h2><span>Download</span> Our Platform</h2>
-
-                  <div class="store-list">
-                    <div class="store store-row">
-                      <a href="{{ url('/download/android') }}">
-                        <img src="{{ asset('pics/googlePlay.png') }}" alt="Download for Android">
-                      </a>
-                    </div>
-
-                    <div class="store store-row">
-                      <a href="{{ url('/download/windows') }}">
-                        <img src="{{ asset('pics/windowsStore.png') }}" alt="Download for Windows">
-                      </a>
-                    </div>
-
-                    <div class="store store-row">
-                      <a href="{{ url('/download/ios') }}">
-                        <img src="{{ asset('pics/appStore.png') }}" alt="Download for iOS">
-                      </a>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
+{{-- HERO BANNER --}}
+<section class="platform-banner">
+    <div class="platform-banner__inner">
+        <span class="platform-banner__tag">Financial Services Platform</span>
+        <h1 class="platform-banner__title">Fundamental Capital Ltd</h1>
+        <p class="platform-banner__desc">
+            Secure, easy access to professional accounting, bookkeeping, tax consultancy,
+            and financial management — built for individuals and businesses, fully compliant
+            with UK regulations.
+        </p>
+        <a href="https://trade.fundamentalcapitalltd.com/login" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
     </div>
-  </section>
+</section>
+
+{{-- SYNC / ONE ACCOUNT SECTION --}}
+<section class="platform-sync padding-top padding-bottom">
+    <div class="container platform-sync__wrapper">
+        <div class="platform-sync__content" data-aos="fade-up" data-aos-duration="1000">
+            <span class="section-tag">One Account, Every Device</span>
+            <h2 class="section-title">Stay Connected, Wherever You Work</h2>
+            <p class="section-desc">
+                Start reviewing your accounts on desktop, check in from your browser during
+                the day, and approve a report from your phone in the evening — your data,
+                documents, and dashboard stay perfectly synced across every device.
+            </p>
+            <a href="https://trade.fundamentalcapitalltd.com/login" target="_blank" rel="noopener" class="btn btn-primary">Launch Platform</a>
+        </div>
+    </div>
+</section>
+
+{{-- CHOOSE YOUR PLATFORM --}}
+<section class="platform-options padding-top padding-bottom bg-color">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
+            <span class="section-tag">Choose Your Platform</span>
+            <h2 class="section-title">Access Fundamental Capital Your Way</h2>
+            <p class="section-desc">Each version is built around how and where you like to work.</p>
+        </div>
+
+        <div class="platform-options__grid">
+
+            <div class="platform-card" data-aos="fade-up" data-aos-duration="1000">
+                <i class="ph ph-desktop platform-card__icon"></i>
+                <span class="platform-card__label">Desktop</span>
+                <h3 class="platform-card__title">Desktop Application</h3>
+                <p class="platform-card__desc">
+                    A complete workspace with advanced reporting tools, document management
+                    and offline access for accountants and finance teams who need full control.
+                </p>
+                <a href="https://trade.fundamentalcapitalltd.com/login" target="_blank" rel="noopener" class="btn btn-outline">Download</a>
+            </div>
+
+            <div class="platform-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <i class="ph ph-globe platform-card__icon"></i>
+                <span class="platform-card__label">Web Portal</span>
+                <h3 class="platform-card__title">Client Web Portal</h3>
+                <p class="platform-card__desc">
+                    Log in instantly from any browser — nothing to install. View statements,
+                    upload documents and message your accountant in a clean, fast interface.
+                </p>
+                <a href="https://trade.fundamentalcapitalltd.com/login" target="_blank" rel="noopener" class="btn btn-outline">Open Web Portal</a>
+            </div>
+
+            <div class="platform-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <i class="ph ph-device-mobile platform-card__icon"></i>
+                <span class="platform-card__label">Mobile</span>
+                <h3 class="platform-card__title">Mobile App</h3>
+                <p class="platform-card__desc">
+                    Manage your finances on the move with real-time notifications, secure
+                    biometric login, and instant access to your reports on iOS and Android.
+                </p>
+                <a href="https://trade.fundamentalcapitalltd.com/login" target="_blank" rel="noopener" class="btn btn-outline">Get the App</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{-- FEATURES / BUILT FOR --}}
+<section class="platform-features padding-top padding-bottom">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
+            <span class="section-tag">Built for Reliability</span>
+            <h2 class="section-title">Why Clients Trust Our Platform</h2>
+        </div>
+
+        <div class="platform-features__grid">
+
+            <div class="feature-item" data-aos="fade-up" data-aos-duration="1000">
+                <i class="ph ph-lightning feature-item__icon"></i>
+                <h3 class="feature-item__title">Fast Processing</h3>
+                <p class="feature-item__desc">Quick, reliable handling of your records on secure, institutional-grade infrastructure.</p>
+            </div>
+
+            <div class="feature-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <i class="ph ph-clock-countdown feature-item__icon"></i>
+                <h3 class="feature-item__title">Automated Reporting</h3>
+                <p class="feature-item__desc">Generate recurring statements and tax summaries automatically, with full audit trails.</p>
+            </div>
+
+            <div class="feature-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <i class="ph ph-chart-line-up feature-item__icon"></i>
+                <h3 class="feature-item__title">Financial Insights</h3>
+                <p class="feature-item__desc">Clear dashboards and analysis tools that help you track performance at a glance.</p>
+            </div>
+
+            <div class="feature-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <i class="ph ph-shield-check feature-item__icon"></i>
+                <h3 class="feature-item__title">Secure by Design</h3>
+                <p class="feature-item__desc">End-to-end encryption and robust account protection across every device you use.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{-- FINAL CTA --}}
+<section class="platform-final-cta padding-top padding-bottom bg-color">
+    <div class="container text-center" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="section-title">Your Finances, On Every Screen</h2>
+        <p class="section-desc">Open an account and manage your finances seamlessly across desktop, web and mobile.</p>
+        <a href="https://trade.fundamentalcapitalltd.com/login" target="_blank" rel="noopener" class="btn btn-primary">Open an Account</a>
+    </div>
+</section>
+
 @endsection
 
 @push('scripts')
